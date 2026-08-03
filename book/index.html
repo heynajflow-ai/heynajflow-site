@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Discovery Call | HeyNaj Flow</title>
+
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+
+    <meta name="description" content="Book a 15-minute discovery call with HeyNaj Flow and see how an AI assistant can capture more leads from your website.">
+    <meta property="og:title" content="Book a Discovery Call | HeyNaj Flow">
+    <meta property="og:description" content="Book a 15-minute discovery call with HeyNaj Flow and see how an AI assistant can capture more leads from your website.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hn-bg: #f5f5f0;
+            --hn-surface: rgba(255, 255, 255, 0.8);
+            --hn-text: #161616;
+            --hn-muted: #5f6570;
+            --hn-yellow: #ffdc32;
+            --hn-shadow: 0 30px 90px -35px rgba(17, 24, 39, 0.28);
+            --hn-glow: 0 22px 60px -24px rgba(255, 220, 50, 0.65);
+        }
+
+        [x-cloak] { display: none !important; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            color: var(--hn-text);
+            background:
+                radial-gradient(circle at top left, rgba(255, 220, 50, 0.14), transparent 22%),
+                radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.9), transparent 26%),
+                linear-gradient(180deg, #faf9f4 0%, #f1f2ee 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bg-noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.08;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.95) 0.85px, transparent 0.85px);
+            background-size: 18px 18px;
+            mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
+            z-index: -2;
+        }
+
+        .ambient-orb {
+            position: fixed;
+            border-radius: 999px;
+            filter: blur(52px);
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.82;
+        }
+
+        .ambient-orb.one {
+            width: 320px;
+            height: 320px;
+            top: 90px;
+            left: -70px;
+            background: rgba(255, 220, 50, 0.16);
+        }
+
+        .ambient-orb.two {
+            width: 280px;
+            height: 280px;
+            top: 46%;
+            right: -70px;
+            background: rgba(255, 255, 255, 0.62);
+        }
+
+        .nav-shell {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            box-shadow: 0 20px 60px -35px rgba(15, 23, 42, 0.35);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .glass-card {
+            background: var(--hn-surface);
+            border: 1px solid rgba(255, 255, 255, 0.78);
+            box-shadow: var(--hn-shadow);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+        }
+
+        .glass-card-soft {
+            background: rgba(255, 255, 255, 0.68);
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            box-shadow: 0 24px 60px -38px rgba(17, 24, 39, 0.28);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            box-shadow: 0 12px 26px -22px rgba(15, 23, 42, 0.45);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #3e4652;
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+        }
+
+        .section-badge-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 999px;
+            background: var(--hn-yellow);
+            box-shadow: 0 0 0 6px rgba(255, 220, 50, 0.18);
+            flex: 0 0 auto;
+        }
+
+        .micro-glow:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 220, 50, 0.48);
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 24px 54px -28px rgba(255, 220, 50, 0.88);
+        }
+
+        .cta-primary {
+            background: linear-gradient(180deg, #ffe45e 0%, #ffdc32 100%);
+            color: #111827;
+            box-shadow: var(--hn-glow);
+            transition: transform 0.26s ease, box-shadow 0.26s ease;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 26px 70px -30px rgba(255, 220, 50, 0.9);
+        }
+
+        .cta-secondary {
+            transition: transform 0.26s ease, border-color 0.26s ease;
+        }
+
+        .cta-secondary:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 220, 50, 0.6);
+        }
+
+        .hover-pop {
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .hover-pop:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 34px 82px -36px rgba(255, 220, 50, 0.88);
+            border-color: rgba(255, 220, 50, 0.48);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 430px);
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+        }
+
+        .hero-chip {
+            padding: 0.85rem 1rem;
+            border-radius: 1.2rem;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            color: #303846;
+            font-size: 0.86rem;
+            font-weight: 700;
+            box-shadow: 0 18px 30px -28px rgba(15, 23, 42, 0.45);
+        }
+
+        .booking-preview {
+            padding: 1.55rem;
+            border-radius: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-preview::after {
+            content: "";
+            position: absolute;
+            inset: auto -20% -35% auto;
+            width: 220px;
+            height: 220px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(255, 220, 50, 0.22) 0%, rgba(255, 220, 50, 0) 70%);
+            pointer-events: none;
+        }
+
+        .preview-stat {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            border-radius: 1.35rem;
+            padding: 1rem 1rem 0.95rem;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .step-card {
+            border-radius: 1.9rem;
+            padding: 1.4rem;
+        }
+
+        .step-number {
+            width: 2.3rem;
+            height: 2.3rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 220, 50, 0.18);
+            color: #111827;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1.4rem;
+            align-items: start;
+        }
+
+        .booking-guide {
+            padding: 1.6rem;
+            border-radius: 2rem;
+            position: sticky;
+            top: 6.8rem;
+        }
+
+        .booking-shell {
+            padding: 1rem;
+            border-radius: 2rem;
+        }
+
+        .booking-copy {
+            padding: 1.7rem;
+            border-radius: 2rem;
+        }
+
+        .booking-iframe-wrap {
+            border-radius: 1.55rem;
+            overflow: hidden;
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            background: rgba(255, 255, 255, 0.86);
+            min-height: 640px;
+        }
+
+        .booking-iframe-wrap iframe {
+            display: block;
+            width: 100%;
+            border: 0;
+            background: white;
+        }
+
+        .booking-placeholder {
+            min-height: 640px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.2rem;
+        }
+
+        .placeholder-inner {
+            max-width: 520px;
+            text-align: center;
+        }
+
+        .checklist-stack {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .check-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.95rem;
+            padding: 1rem 1.05rem;
+            border-radius: 1.45rem;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            box-shadow: 0 20px 34px -28px rgba(15, 23, 42, 0.34);
+        }
+
+        .check-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 220, 50, 0.18);
+            color: #111827;
+            font-size: 0.9rem;
+            font-weight: 800;
+            flex: 0 0 auto;
+        }
+
+        .authority-shell {
+            padding: 1.4rem 1.5rem;
+            border-radius: 2rem;
+        }
+
+        .logo-pill {
+            min-width: 220px;
+            min-height: 108px;
+            padding: 1.25rem 1.5rem;
+            border-radius: 1.4rem;
+            transition: border-color 0.28s ease, background 0.28s ease;
+        }
+
+        .logo-mark {
+            height: 52px;
+            max-width: 100%;
+            width: auto;
+            filter: grayscale(1) saturate(0) brightness(0.45);
+            opacity: 0.78;
+            transition: filter 0.28s ease, opacity 0.28s ease, transform 0.28s ease;
+        }
+
+        .logo-band:hover .logo-pill {
+            border-color: rgba(255, 220, 50, 0.22);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo-band:hover .logo-mark {
+            filter: none;
+            opacity: 1;
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .infra-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: #8b93a2;
+        }
+
+        .conversion-note {
+            padding: 0.35rem 0 0;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .conversion-note-title {
+            font-size: clamp(1.65rem, 2vw, 2.15rem);
+            line-height: 1.12;
+            font-weight: 800;
+            font-style: italic;
+            letter-spacing: -0.02em;
+            color: #18223a;
+        }
+
+        .conversion-note-copy {
+            max-width: 48rem;
+            font-size: 1.08rem;
+            line-height: 1.75;
+            font-weight: 500;
+            font-style: italic;
+            color: #5f6570;
+        }
+
+        .faq-grid-shell {
+            position: relative;
+            padding-bottom: 0;
+            z-index: 3;
+            overflow: visible;
+        }
+
+        .faq-grid-shell.faq-grid-active {
+            padding-bottom: 0;
+        }
+
+        .faq-grid-shell.faq-grid-active .faq-cap-card:not(.cap-active) {
+            filter: blur(2px);
+            opacity: 0.42;
+            transform: scale(0.98);
+        }
+
+        .faq-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-auto-rows: 166px;
+            gap: 1.2rem;
+        }
+
+        .faq-cap-card {
+            cursor: pointer;
+            min-height: 166px;
+            border-radius: 1.8rem;
+            padding: 1.2rem;
+            overflow: hidden;
+            transform-origin: center center;
+            transition: transform 0.35s ease 0.08s, box-shadow 0.35s ease 0.08s, filter 0.35s ease, opacity 0.35s ease, border-color 0.35s ease;
+        }
+
+        .faq-cap-card.cap-active {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 62px -30px rgba(255, 220, 50, 0.68);
+            border-color: rgba(255, 220, 50, 0.45);
+            z-index: 2;
+        }
+
+        .faq-card-summary {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.8rem;
+            height: 100%;
+        }
+
+        .faq-overlay {
+            position: absolute;
+            top: calc(100% - 1.15rem);
+            left: 50%;
+            width: min(100%, 960px);
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .faq-overlay-card {
+            min-height: 232px;
+            padding: 0.95rem 1.2rem;
+            border-radius: 1.9rem;
+            border-color: rgba(255, 220, 50, 0.48);
+            box-shadow: 0 34px 84px -38px rgba(255, 220, 50, 0.92);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 0.65rem;
+            will-change: transform, opacity;
+        }
+
+        .faq-overlay-card.faq-overlay-animate-center {
+            animation: faqOverlayFloat 0.48s cubic-bezier(0.16, 0.82, 0.22, 1);
+        }
+
+        .faq-overlay-card.faq-overlay-animate-forward {
+            animation: faqOverlayFloat 0.48s cubic-bezier(0.16, 0.82, 0.22, 1);
+        }
+
+        .faq-overlay-card.faq-overlay-animate-backward {
+            animation: faqOverlayFloat 0.48s cubic-bezier(0.16, 0.82, 0.22, 1);
+        }
+
+        @keyframes faqOverlayFloat {
+            0% {
+                opacity: 0.86;
+                transform: translate3d(0, 8px, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .faq-overlay-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 0.38rem;
+            align-items: center;
+            max-width: 44rem;
+        }
+
+        .faq-overlay-copy {
+            max-width: 42rem;
+            font-size: 1rem;
+            line-height: 1.82;
+            color: #5f6570;
+            font-weight: 500;
+        }
+
+        .footer-cta {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1100px) {
+            .hero-grid,
+            .booking-grid,
+            .step-grid,
+            .footer-cta {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-guide {
+                position: static;
+            }
+
+            .faq-grid-shell {
+                padding-bottom: 0;
+            }
+
+            .faq-grid-shell.faq-grid-active {
+                padding-bottom: 0;
+            }
+
+            .faq-bento-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+            }
+
+            .faq-cap-card {
+                min-height: 0;
+            }
+
+            .faq-overlay {
+                position: static;
+                width: 100%;
+                transform: none;
+                margin-top: 1rem;
+            }
+
+            .faq-overlay-card {
+                min-height: 0;
+                padding: 1.05rem 1.15rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background:
+                    radial-gradient(circle at top left, rgba(255, 220, 50, 0.18), transparent 26%),
+                    linear-gradient(180deg, #faf9f4 0%, #f1f2ee 100%);
+            }
+
+            .booking-preview,
+            .booking-guide,
+            .booking-shell {
+                border-radius: 1.6rem;
+            }
+
+            .booking-iframe-wrap,
+            .step-card {
+                border-radius: 1.35rem;
+            }
+
+            .faq-overlay-copy {
+                font-size: 0.95rem;
+                line-height: 1.72;
+            }
+
+        }
+    </style>
+</head>
+<body x-data="bookPage()" x-init="init()">
+    <div class="bg-noise"></div>
+    <div class="ambient-orb one"></div>
+    <div class="ambient-orb two"></div>
+
+    <header class="px-5 md:px-8 pt-5 md:pt-7">
+        <div class="max-w-xl mx-auto nav-shell rounded-[2rem] px-6 md:px-8 py-4">
+            <div class="flex items-center justify-center">
+                <a href="https://heynajflow.com/" class="flex items-center gap-3 min-w-0">
+                    <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-10 h-10 rounded-2xl shadow-sm">
+                    <div class="font-extrabold tracking-tight text-xl text-slate-900 min-w-0">
+                        <span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-5 md:px-8 pb-16 md:pb-24">
+        <section class="pt-10 md:pt-14">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-6xl">
+                    <div class="section-badge micro-glow mb-6">
+                        <span class="section-badge-dot"></span>
+                        <span x-text="config.book_badge || '15-Minute Discovery Call'"></span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.book_title || `Let's Build Your Digital Employee.`"></h1>
+                    <p class="mt-5 text-lg md:text-xl font-medium leading-relaxed text-slate-600 max-w-5xl" x-text="config.book_desc || 'Pick a time below. We will look at your website and show you exactly how an AI assistant can capture leads for your specific business.'"></p>
+                </div>
+
+                <div id="book-calendar" class="glass-card booking-shell hover-pop mt-16 md:mt-20">
+                    <div class="max-w-4xl px-2 pb-4">
+                        <div class="section-badge micro-glow mb-5">
+                            <span class="section-badge-dot"></span>
+                            <span x-text="config.book_section_badge || 'Live Booking Calendar'"></span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.book_section_title || 'Select a slot that works for you.'"></h2>
+                        <p class="mt-4 text-base md:text-lg font-medium leading-relaxed text-slate-600" x-text="config.book_section_desc || 'Select your timezone and pick an available slot below.'"></p>
+                    </div>
+
+    …1865 tokens truncated…xt-[1.45rem] md:text-[1.62rem] leading-[1.08] font-extrabold tracking-tight text-slate-900" x-text="faq.q"></div>
+                                    </div>
+                                </div>
+                            </article>
+                        </template>
+                    </div>
+
+                    <template x-if="getActiveFaq()">
+                        <div class="faq-overlay" x-transition.opacity.duration.220ms>
+                            <div class="glass-card faq-overlay-card" :class="getFaqOverlayAnimationClass()">
+                                <div class="faq-overlay-summary">
+                                    <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="getActiveFaq().label"></div>
+                                    <div class="text-[2rem] md:text-[2.35rem] leading-tight font-extrabold tracking-tight text-slate-900" x-text="getActiveFaq().q"></div>
+                                    <p class="faq-overlay-copy" x-text="getActiveFaq().a"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="glass-card mt-10 rounded-[2rem] p-6 md:p-8">
+                    <div class="footer-cta">
+                        <div>
+                            <div class="text-[0.72rem] uppercase tracking-[0.22em] font-extrabold text-slate-400" x-text="config.book_footer_badge || 'Ready when you are'"></div>
+                            <h3 class="mt-4 text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900" x-text="config.book_footer_title || 'Ready to see it in action?'"></h3>
+                            <p class="mt-3 max-w-4xl text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="config.book_footer_body || 'Lock in your 14-day free pilot and waive your setup fee today.'"></p>
+                        </div>
+
+                        <div class="flex flex-col gap-3 items-stretch md:items-end">
+                            <a href="#book-calendar" class="cta-primary inline-flex items-center justify-center rounded-full px-6 py-4 text-base font-extrabold whitespace-nowrap">
+                                <span x-text="config.book_footer_cta || config.book_primary_cta || 'Book Your Call'"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        window.HN_WIDGET_EMBED_STORAGE_KEY = "hn_widget_embed_cache";
+        window.HN_WIDGET_EMBED_FALLBACK = (() => {
+            try {
+                return window.localStorage.getItem(window.HN_WIDGET_EMBED_STORAGE_KEY) || "";
+            } catch (error) {
+                return "";
+            }
+        })();
+
+        window.BOOK_CONFIG = {
+            brand_name: "HeyNaj Flow",
+            book_meta_title: "Book a Discovery Call | HeyNaj Flow",
+            book_meta_description: "Book a 15-minute discovery call with HeyNaj Flow and see how an AI assistant can capture more leads from your website.",
+            book_badge: "15-Minute Discovery Call",
+            book_title: "Let's Build Your Digital Employee.",
+            book_desc: "Pick a time below. We will look at your website and show you exactly how an AI assistant can capture leads for your specific business.",
+            book_primary_cta: "Book Your Call",
+            book_checklist_badge: "What to Expect",
+            book_checklist_heading: "What we'll cover on our call.",
+            book_checklist_desc: "Three simple steps we'll walk through on our call.",
+            book_checklist_title: "What we'll cover on our call:",
+            book_checklist_1_title: "Your Current Flow",
+            book_checklist_1_desc: "A quick look at how you currently capture leads.",
+            book_checklist_2_title: "Live Demo",
+            book_checklist_2_desc: "See how the AI handles your specific business questions.",
+            book_checklist_3_title: "Fit Check",
+            book_checklist_3_desc: "If we're a match, we'll get your AI built and launched. If not, no sweat!",
+            book_note_title: "No aggressive pitch. No awkward pressure.",
+            book_note_body: "Just a fast strategy call to see if HeyNaj Flow can scale your business.",
+            book_section_badge: "Live Booking Calendar",
+            book_section_title: "Select a slot that works for you.",
+            book_section_desc: "Select your timezone and pick an available slot below.",
+            book_embed_url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1PPWEi1-6VQiF_R9c0NiEk5005GlUrjAUGu7PgqsHcLLI7uTnB09HVXO5_dxU0a69JhXkdjQq_?gv=true",
+            book_embed_html: "",
+            book_booking_link: "",
+            book_embed_height: "600",
+            widget_embed: window.HN_WIDGET_EMBED_FALLBACK,
+            logos_heading: "Built on Enterprise Infrastructure",
+            book_faq_badge: "Mini FAQ",
+            book_faq_title: "A few quick answers before we chat.",
+            book_faq_desc: "Everything you need to know before we jump on our call.",
+            book_faq_1_q: "Do I need a credit card for the call?",
+            book_faq_1_a: "No. We offer a 14-day free pilot. You only pay if the system actually brings you leads.",
+            book_faq_2_q: "Do I need to know how to code?",
+            book_faq_2_a: "Not at all. We handle 100% of the setup. You just give us your business details, and we build your AI.",
+            book_faq_3_q: "Will the AI book meetings directly?",
+            book_faq_3_a: "It acts as a smart receptionist. It qualifies your leads, then seamlessly hands them your personal booking link to secure a spot.",
+            book_footer_badge: "Ready when you are",
+            book_footer_title: "Ready to see it in action?",
+            book_footer_body: "Lock in your 14-day free pilot and waive your setup fee today.",
+            book_footer_cta: "Book Your Call",
+            logo_google_cloud: "https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776000917/HeyNaj_Collab_4_spoa78.png",
+            logo_workspace: "https://res.cloudinary.com/dt5j91krt/image/upload/v1776000917/HeyNaj_Collab_3_ystxzi.png",
+            logo_openai: "https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776159568/HeyNaj_Collab_2_R_sqges8.png",
+            logo_gemini: "https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776159568/HeyNaj_Collab_1_R_yv4wjc.png",
+        };
+
+        function bookPage() {
+            return {
+                config: { ...window.BOOK_CONFIG },
+                PREVIEW_WITH_LOCAL_CONTENT: false,
+                liveBotName: "",
+                widgetMounted: false,
+                BRAIN_URL: "https://script.google.com/macros/s/AKfycbybNgIc64SnrZQTv4a-c5rTplxrqRPrbxg5oKNLgExdpdt0kr0a2OXco9-inYkdZUg6yg/exec",
+                SCRIPT_URL: "https://script.google.com/macros/s/AKfycbw8gEAD6zg9jRwmyGzQkUXWQZCyN0kRKIUecHdGG_MCwGXvNwBV_PyzAy9OZz1DuSwyGw/exec",
+                activeFaq: null,
+                faqHoverTimer: null,
+                faqOverlayTimer: null,
+                faqOverlayDirection: "center",
+                faqOverlayAnimating: false,
+                compactFaqLayout: false,
+                faqViewportListenerAttached: false,
+
+                init() {
+                    this.config = this.normalizeConfig();
+                    this.syncFaqLayout();
+                    this.attachFaqViewportListener();
+                    this.injectWidget();
+
+                    const siteConfigPromise = this.loadSiteConfig()
+                        .finally(() => {
+                            this.updateMeta();
+                            this.$nextTick(() => this.injectWidget());
+                        });
+                    const widgetSettingsPromise = this.fetchLiveWidgetSettings()
+                        .finally(() => {
+                            this.$nextTick(() => this.injectWidget());
+                        });
+
+                    Promise.allSettled([siteConfigPromise, widgetSettingsPromise])
+                        .finally(() => {
+                            this.$nextTick(() => this.injectWidget());
+                        });
+                },
+
+                normalizeConfig(data = {}) {
+                    const source = Object.fromEntries(
+                        Object.entries(data || {}).filter(([_, value]) => {
+                            if (value === null || value === undefined) return false;
+                            return String(value).trim() !== "";
+                        })
+                    );
+                    return { ...window.BOOK_CONFIG, ...source };
+                },
+
+                getDisplayAiName() {
+                    return (this.liveBotName || "Naji").split("|")[0].trim();
+                },
+
+                fetchLiveWidgetSettings() {
+                    return fetch(this.BRAIN_URL, {
+                        method: "POST",
+                        headers: { "Content-Type": "text/plain;charset=utf-8" },
+                        body: JSON.stringify({ type: "get_settings" })
+                    })
+                        .then((res) => res.json())
+                        .then((data) => {
+                            const liveName =
+                                (data && (data.botName || data.bot_name || (data.widgetSettings && data.widgetSettings.botName))) ||
+                                "";
+                            if (liveName) {
+                                this.liveBotName = liveName;
+                                const headerTitle = document.getElementById("hn-header-title");
+                                if (headerTitle) headerTitle.innerText = this.getDisplayAiName();
+                            }
+                        })
+                        .catch(() => {});
+                },
+
+                loadSiteConfig() {
+                    if (this.PREVIEW_WITH_LOCAL_CONTENT) {
+                        this.config = this.normalizeConfig();
+                        return Promise.resolve();
+                    }
+
+                    return fetch(this.SCRIPT_URL + "?type=get_site_data")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            const remoteWidgetEmbed = data && (data.widget_embed || data.WIDGET_EMBED);
+                            if (remoteWidgetEmbed) {
+                                try {
+                                    window.localStorage.setItem(window.HN_WIDGET_EMBED_STORAGE_KEY, remoteWidgetEmbed);
+                                } catch (error) {}
+                            }
+                            this.config = this.normalizeConfig(data);
+                        })
+                        .catch((error) => {
+                            console.error("External data fetch failed, using local booking defaults.", error);
+                            this.config = this.normalizeConfig();
+                        });
+                },
+
+                updateMeta() {
+                    document.title = this.config.book_meta_title || "Book a Discovery Call | HeyNaj Flow";
+                    const description = this.config.book_meta_description || "Book a 15-minute discovery call with HeyNaj Flow and see how an AI assistant can capture more leads from your website.";
+                    const meta = document.querySelector('meta[name=\"description\"]');
+                    if (meta) meta.setAttribute("content", description);
+                    const ogTitle = document.querySelector('meta[property=\"og:title\"]');
+                    if (ogTitle) ogTitle.setAttribute("content", document.title);
+                    const ogDescription = document.querySelector('meta[property=\"og:description\"]');
+                    if (ogDescription) ogDescription.setAttribute("content", description);
+                },
+
+                attachFaqViewportListener() {
+                    if (this.faqViewportListenerAttached) return;
+                    this.faqViewportListenerAttached = true;
+                    window.addEventListener("resize", () => this.syncFaqLayout(), { passive: true });
+                },
+
+                syncFaqLayout() {
+                    const narrowScreen = window.matchMedia("(max-width: 1100px)").matches;
+                    const noHover = window.matchMedia("(hover: none)").matches;
+                    this.compactFaqLayout = narrowScreen || noHover;
+
+                    if (this.compactFaqLayout) {
+                        clearTimeout(this.faqHoverTimer);
+                    }
+                },
+
+                getBookEmbedUrl() {
+                    if (this.config.book_embed_url) return this.config.book_embed_url;
+                    const html = String(this.config.book_embed_html || "");
+                    const match = html.match(/src=(["'])(.*?)\1/i);
+                    return match ? match[2] : "";
+                },
+
+                getBookEmbedHeight() {
+                    const height = parseInt(this.config.book_embed_height || "940", 10);
+                    return Number.isFinite(height) && height > 0 ? height : 940;
+                },
+
+                injectWidget() {
+                    let embedCode = this.config.widget_embed || this.config.WIDGET_EMBED || window.HN_WIDGET_EMBED_FALLBACK;
+                    if (!embedCode || embedCode === "MOCK_WIDGET") return;
+
+                    const existingBubble = document.getElementById("hn-chat-bubble");
+                    if (existingBubble || this.widgetMounted) return;
+
+                    embedCode = embedCode
+                        .split("[AI_NAME]").join(this.getDisplayAiName())
+                        .split("[bot_name]").join(this.getDisplayAiName())
+                        .split("[ai_name]").join(this.getDisplayAiName())
+                        .replace(/[\u201C\u201D]/g, "\"")
+                        .replace(/[\u2018\u2019]/g, "'");
+
+                    const container = document.getElementById("real-widget-container");
+                    if (!container) return;
+
+                    container.innerHTML = embedCode;
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach((oldScript) => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach((attr) => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                    this.widgetMounted = true;
+                },
+
+                getBookChecklist() {
+                    return [
+                        {
+                            title: this.config.book_checklist_1_title || "Your Current Flow",
+                            desc: this.config.book_checklist_1_desc || "A quick look at how you currently capture leads.",
+                        },
+                        {
+                            title: this.config.book_checklist_2_title || "Live Demo",
+                            desc: this.config.book_checklist_2_desc || "See how the AI handles your specific business questions.",
+                        },
+                        {
+                            title: this.config.book_checklist_3_title || "Fit Check",
+                            desc: this.config.book_checklist_3_desc || "If we're a match, we'll get your AI built and launched. If not, no sweat!",
+                        },
+                    ];
+                },
+
+                getBookFaqs() {
+                    const faqs = [
+                        {
+                            q: this.config.book_faq_1_q || "Do I need a credit card for the call?",
+                            a: this.config.book_faq_1_a || "No. We offer a 14-day free pilot. You only pay if the system actually brings you leads.",
+                        },
+                        {
+                            q: this.config.book_faq_2_q || "Do I need to know how to code?",
+                            a: this.config.book_faq_2_a || "Not at all. We handle 100% of the setup. You just give us your business details, and we build your AI.",
+                        },
+                        {
+                            q: this.config.book_faq_3_q || "Will the AI book meetings directly?",
+                            a: this.config.book_faq_3_a || "It acts as a smart receptionist. It qualifies your leads, then seamlessly hands them your personal booking link to secure a spot.",
+                        },
+                    ];
+
+                    if (this.config.book_faq_4_q && this.config.book_faq_4_a) {
+                        faqs.push({
+                            q: this.config.book_faq_4_q,
+                            a: this.config.book_faq_4_a,
+                        });
+                    }
+
+                    return faqs.map((faq, index) => ({
+                        ...faq,
+                        label: `FAQ ${String(index + 1).padStart(2, "0")}`,
+                    }));
+                },
+
+                getActiveFaq() {
+                    const faqs = this.getBookFaqs();
+                    return this.activeFaq !== null ? faqs[this.activeFaq] : null;
+                },
+
+                getFaqOverlayAnimationClass() {
+                    return this.faqOverlayAnimating ? `faq-overlay-animate-${this.faqOverlayDirection}` : "";
+                },
+
+                setActiveFaq(index, options = {}) {
+                    const { scrollIntoView = false } = options;
+                    const previousIndex = this.activeFaq;
+                    if (previousIndex === index) return;
+
+                    this.activeFaq = index;
+
+                    if (index === null) {
+                        this.faqOverlayAnimating = false;
+                        clearTimeout(this.faqOverlayTimer);
+                        return;
+                    }
+
+                    if (previousIndex === null) {
+                        this.faqOverlayDirection = "center";
+                    } else {
+                        this.faqOverlayDirection = index > previousIndex ? "forward" : "backward";
+                    }
+
+                    this.faqOverlayAnimating = true;
+                    clearTimeout(this.faqOverlayTimer);
+                    this.faqOverlayTimer = setTimeout(() => {
+                        this.faqOverlayAnimating = false;
+                    }, 520);
+
+                    if (scrollIntoView) {
+                        this.$nextTick(() => {
+                            document.querySelector(".faq-overlay")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                        });
+                    }
+                },
+
+                queueFaq(index) {
+                    if (this.compactFaqLayout) return;
+                    clearTimeout(this.faqHoverTimer);
+                    this.faqHoverTimer = setTimeout(() => {
+                        this.setActiveFaq(index);
+                    }, 90);
+                },
+
+                clearAllFaqs() {
+                    if (this.compactFaqLayout) return;
+                    clearTimeout(this.faqHoverTimer);
+                    this.setActiveFaq(null);
+                },
+
+                toggleFaq(index) {
+                    if (!this.compactFaqLayout) return;
+                    clearTimeout(this.faqHoverTimer);
+                    this.setActiveFaq(this.activeFaq === index ? null : index, {
+                        scrollIntoView: this.activeFaq !== index
+                    });
+                },
+            };
+        }
+    </script>
+    <div id="real-widget-container"></div>
+</body>
+</html>
+
