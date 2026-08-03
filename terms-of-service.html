@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | HeyNaj Flow</title>
+    <meta name="description" content="Terms of Service for HeyNaj Flow.">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hn-bg: #f5f5f0;
+            --hn-surface: rgba(255, 255, 255, 0.84);
+            --hn-text: #161616;
+            --hn-muted: #5f6570;
+            --hn-line: rgba(17, 24, 39, 0.08);
+            --hn-yellow: #ffdc32;
+            --hn-shadow: 0 30px 90px -35px rgba(17, 24, 39, 0.28);
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            color: var(--hn-text);
+            background:
+                radial-gradient(circle at top left, rgba(255, 220, 50, 0.14), transparent 24%),
+                radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.9), transparent 26%),
+                linear-gradient(180deg, #faf9f4 0%, #f1f2ee 100%);
+        }
+
+        a { color: inherit; }
+
+        .shell {
+            width: min(960px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .nav-shell,
+        .glass-card {
+            background: var(--hn-surface);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: var(--hn-shadow);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+        }
+
+        .nav-shell {
+            margin-top: 20px;
+            padding: 14px 18px;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #0f172a;
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            border-radius: 16px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 12px 18px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .hero {
+            padding: 30px 0 18px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.24em;
+            color: #64748b;
+            font-weight: 800;
+        }
+
+        h1 {
+            margin: 14px 0 10px;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 0.98;
+            letter-spacing: -0.05em;
+        }
+
+        .hero p {
+            margin: 0;
+            color: var(--hn-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 720px;
+        }
+
+        .content-card {
+            padding: 28px;
+            border-radius: 32px;
+            margin-bottom: 36px;
+        }
+
+        .meta {
+            margin: 0 0 26px;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin: 30px 0 12px;
+            font-size: 1.22rem;
+            letter-spacing: -0.02em;
+        }
+
+        p, li {
+            color: #334155;
+            line-height: 1.72;
+            font-size: 0.98rem;
+        }
+
+        ul {
+            margin: 12px 0 0 18px;
+            padding: 0;
+        }
+
+        li + li {
+            margin-top: 8px;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .legal-links a {
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #475569;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(17, 24, 39, 0.1);
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        footer {
+            padding: 0 0 34px;
+        }
+
+        .footer-note {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: space-between;
+            align-items: center;
+            color: #64748b;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 720px) {
+            .nav-shell {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .content-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <div class="nav-shell">
+            <a class="brand" href="/">
+                <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo">
+                <span>HeyNaj Flow<span style="color:#ffdc32;">&reg;</span></span>
+            </a>
+            <a class="back-link" href="/">Back to Home</a>
+        </div>
+
+        <section class="hero">
+            <div class="eyebrow">Legal</div>
+            <h1>Terms of Service</h1>
+            <p>These Terms explain how HeyNaj Flow is provided, what customers are responsible for, and the limits that apply when using the service.</p>
+        </section>
+
+        <main class="glass-card content-card">
+            <p class="meta"><strong>Last Updated:</strong> July 11, 2026</p>
+
+            <p>These Terms of Service ("Terms") govern your access to and use of the HeyNaj Flow website, chat widgets, applications, dashboards, integrations, and related services (collectively, the "Service"). By using the Service, you agree to these Terms.</p>
+
+            <p>If you use the Service on behalf of a business or organization, you confirm that you have authority to bind that business or organization to these Terms. In that case, "you" and "your" refer to that business or organization.</p>
+
+            <h2>1. Who We Are</h2>
+            <p>HeyNaj Flow is operated by Renzhu Rhy Tayko, doing business as HeyNaj Flow.</p>
+            <ul>
+                <li>Name: Renzhu Rhy Tayko</li>
+                <li>Brand Name: HeyNaj Flow</li>
+                <li>Address: Batinguel, Dumaguete City, Negros Oriental 6200, Philippines</li>
+                <li>Email: heynajflow@gmail.com</li>
+                <li>Website: https://heynajflow.com</li>
+            </ul>
+
+            <h2>2. What the Service Is</h2>
+            <p>HeyNaj Flow is an AI-assisted website engagement and lead-capture service. Depending on the plan or setup, the Service may include text chat, optional voice chat, AI-assisted answers based on business-specific materials, lead capture workflows, booking-link handoff, promotional callouts, instant notifications, abandonment alerts, private dashboard or app access where included, and managed setup or support services.</p>
+
+            <p>Our standard delivery model is managed by our team. Customers usually provide business information, FAQs, files, links, and instructions through a secured Google Drive folder or another approved channel, and we configure the Service based on those materials.</p>
+
+            <h2>3. Eligibility</h2>
+            <p>You may use the Service only if you can legally enter into a binding agreement and are authorized to do so. You agree to provide accurate setup, contact, and business information and to keep your content updated if your services, pricing, offers, contact details, or business details change.</p>
+
+            <h2>4. Customer Content</h2>
+            <p>You may provide content, files, documents, FAQs, links, business details, branding materials, instructions, and other information to configure your HeyNaj Flow deployment ("Customer Content").</p>
+            <p>You keep ownership of your Customer Content. By providing it to us, you give HeyNaj Flow a limited, non-exclusive right to host, copy, process, display, transmit, and use that content only as needed to set up, operate, support, improve, secure, and maintain the Service for you.</p>
+            <ul>
+                <li>make sure you have the right to provide the content;</li>
+                <li>make sure the content is lawful, accurate, and appropriate;</li>
+                <li>review the approved answers, fallback responses, booking links, promotions, and lead-capture settings used in your deployment; and</li>
+                <li>update outdated or conflicting information promptly.</li>
+            </ul>
+
+            <h2>5. Managed Setup and Customer Cooperation</h2>
+            <p>HeyNaj Flow is typically configured by our team using the content you provide. You agree to cooperate by supplying reasonably complete and accurate materials and instructions.</p>
+            <p>If your plan includes private dashboard or app access, you are responsible for keeping any login information secure and for limiting access to authorized people only.</p>
+
+            <h2>6. Free Pilots, Paid Plans, Billing, and Refunds</h2>
+            <p>We may offer a 14-day free pilot, monthly plans, multi-month plans, custom plans, reseller pricing, referral arrangements, or bespoke service packages.</p>
+            <ul>
+                <li>a pilot may be limited in time, features, or scope;</li>
+                <li>if a pilot is offered, it does not create an automatic paid subscription unless that is clearly agreed in writing;</li>
+                <li>paid service begins based on the plan, invoice, or approval you accept;</li>
+                <li>fees must be paid according to the agreed plan or invoice;</li>
+                <li>one-time setup, onboarding, configuration, implementation, or deployment fees are non-refundable once work has started;</li>
+                <li>if a refund is approved for recurring service fees, the setup fee still applies and is not waived;</li>
+                <li>if a setup fee was previously waived as part of a promotion, it may be deducted from the refund or billed separately if the refund is granted after setup work has already been completed; and</li>
+                <li>we may suspend or deactivate the Service if payment remains overdue after any applicable notice or grace period.</li>
+            </ul>
+
+            <h2>7. Acceptable Use</h2>
+            <p>You may not use the Service to break the law, upload content you do not have rights to use, infringe another person's rights, submit malicious code or spam, harass or defraud others, misrepresent who you are, or attempt unauthorized access to the Service or another customer's deployment.</p>
+
+            <h2>8. AI Output and Service Limitations</h2>
+            <p>HeyNaj Flow uses AI-assisted features. AI responses depend on the files, FAQs, rules, prompts, fallback messages, links, and other instructions used to configure the Service.</p>
+            <ul>
+                <li>AI output may sometimes be incomplete, inaccurate, outdated, or unsuitable;</li>
+                <li>answer quality depends in part on the quality and consistency of the materials you provide;</li>
+                <li>off-topic protection, fallback behavior, booking handoff, and lead-capture behavior depend on configuration;</li>
+                <li>HeyNaj Flow is designed to assist with website questions, lead handling, and visitor guidance, not to replace regulated professional advice unless separately agreed and properly configured; and</li>
+                <li>we do not promise uninterrupted service, perfect accuracy, or specific business results.</li>
+            </ul>
+
+            <h2>9. Third-Party Services</h2>
+            <p>The Service may rely on or connect with third-party tools and providers, including but not limited to Google services, Google Drive, AppSheet, OpenAI, Gemini, booking tools, email providers, analytics tools, and other infrastructure or workflow tools.</p>
+
+            <h2>10. Intellectual Property</h2>
+            <p>HeyNaj Flow retains all rights in the Service itself, including our branding, software, systems, methods, designs, and materials, except for Customer Content owned by the customer.</p>
+
+            <h2>11. Copyright and Infringement Complaints</h2>
+            <p>You must not provide content that infringes another person's copyright, trademark, or other rights. If you believe content used in or through HeyNaj Flow infringes your rights, contact us at heynajflow@gmail.com with enough detail for us to review the issue.</p>
+
+            <h2>12. Privacy and Data Handling</h2>
+            <p>Our handling of personal data is described in our Privacy Policy and, where applicable, our Data Processing Addendum / Data Handling Policy. By using the Service, you acknowledge those policies.</p>
+
+            <h2>13. Suspension and Termination</h2>
+            <p>You may stop using the Service at any time, subject to any minimum term or payment obligations you agreed to. We may suspend or terminate access if you materially breach these Terms, payment remains overdue, your use creates legal or security risk, we are required to do so by law, or we discontinue the Service or a feature.</p>
+
+            <h2>14. Warranty Disclaimer</h2>
+            <p>To the fullest extent allowed by law, the Service is provided "as is" and "as available." We disclaim implied warranties, including merchantability, fitness for a particular purpose, title, and non-infringement.</p>
+
+            <h2>15. Limitation of Liability</h2>
+            <p>To the fullest extent allowed by law, we are not liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, lost revenue, lost goodwill, lost data, or lost business opportunity.</p>
+            <p>Our total liability arising out of or relating to the Service or these Terms will not exceed the total amount you paid us for the Service during the 12 months before the event giving rise to the claim. Nothing in these Terms excludes liability that cannot be excluded by law.</p>
+
+            <h2>16. Indemnity</h2>
+            <p>You agree to defend, indemnify, and hold harmless HeyNaj Flow and its personnel from third-party claims arising out of your Customer Content, your misuse of the Service, your breach of these Terms, or your violation of law or another person's rights.</p>
+
+            <h2>17. Governing Law and Venue</h2>
+            <p>These Terms are governed by the laws of the Republic of the Philippines. Any dispute arising out of or relating to these Terms or the Service will be resolved in the courts of Dumaguete City, Negros Oriental, Philippines, unless applicable law requires otherwise.</p>
+
+            <h2>18. Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. If we make material changes, we may post the updated version on our website, revise the "Last Updated" date, or give notice through another reasonable method. Your continued use of the Service after the updated Terms take effect means you accept the updated Terms.</p>
+
+            <h2>19. Contact</h2>
+            <p>For questions about these Terms, contact heynajflow@gmail.com.</p>
+
+            <div class="legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/data-handling-policy.html">Data Handling Policy</a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-note">
+                <div>&copy; 2026 HeyNaj Flow. All rights reserved.</div>
+                <div>Built to help websites answer faster and capture cleaner leads.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
