@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/book"
+  to = "/book/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/book/"
+  to = "/book/index.html"
+  status = 200
+  force = false
