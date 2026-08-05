@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="https://res.cloudinary.com/dt5j91krt/image/upload/v1776513358/HeyNaj_Demo_Thumbnail_yaonad.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --hn-bg: #f5f5f0;
@@ -45,7 +45,7 @@
 
         body {
             margin: 0;
-            font-family: "Inter", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             color: var(--hn-text);
             background:
                 radial-gradient(circle at top left, rgba(255, 220, 50, 0.14), transparent 22%),
@@ -649,6 +649,28 @@
             filter: none;
             opacity: 1;
             transform: translateY(-1px) scale(1.02);
+        }
+
+        .blog-preview-card {
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .blog-preview-card:hover,
+        .blog-preview-card:focus-within {
+            transform: translateY(-5px);
+            border-color: rgba(255, 220, 50, 0.72);
+            box-shadow: 0 28px 70px -36px rgba(15, 23, 42, 0.42), 0 18px 38px -28px rgba(255, 220, 50, 0.45);
+        }
+
+        .blog-preview-image {
+            aspect-ratio: 2.2 / 1;
+            object-fit: cover;
+        }
+
+        @media (max-width: 767px) {
+            .blog-preview-image {
+                aspect-ratio: 16 / 9;
+            }
         }
 
         .infra-title {
@@ -2152,6 +2174,7 @@
             <a href="#capabilities" class="quiet-link transition">Capabilities</a>
             <a href="#control-center" class="quiet-link transition">Command Center</a>
             <a href="#pricing" class="quiet-link transition">Pricing</a>
+            <a href="#blog" class="quiet-link transition">Blog</a>
         </div>
 
         <a :href="config.cta_link || '#'" target="_blank" class="cta-primary transition px-5 md:px-6 py-3 rounded-full text-sm font-extrabold whitespace-nowrap">
@@ -2571,6 +2594,43 @@
                         </article>
                     </template>
                 </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-12 md:py-16">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-badge micro-glow mb-4">
+                    <span class="section-badge-dot"></span>
+                    <span>Latest from HeyNaj Flow</span>
+                </div>
+                <div class="grid gap-4 md:grid-cols-[1.25fr_1fr_auto] md:items-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Practical answers for better website conversations.</h2>
+                    <a href="/blog/" class="quiet-link inline-flex items-center gap-2 font-extrabold text-slate-900 whitespace-nowrap md:justify-self-end">Explore all blogs <span aria-hidden="true">&rarr;</span></a>
+                </div>
+
+                <!-- BLOG_REGISTRY:HOME_START -->
+<div class="mt-7 grid gap-5 md:grid-cols-2">
+                    <a href="/blog/after-hours-lead-capture-chatbot/" class="blog-preview-card glass-card overflow-hidden rounded-[1.75rem] block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#ffdc32]/45">
+                        <img src="/blog/assets/featured-playbook-hero-concept-v3.png" alt="HeyNaj Flow chat conversation becoming a qualified lead alert" class="blog-preview-image w-full" loading="lazy">
+                        <div class="p-5 md:p-6">
+                            <div class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-400"><span>Featured playbook</span><span aria-hidden="true">&bull;</span><span>8 min read</span></div>
+                            <h3 class="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">What Happens to Leads After Business Hours?</h3>
+                            <p class="mt-2 text-sm md:text-base font-medium leading-relaxed text-slate-600">A practical guide to keeping website conversations moving when your team is offline.</p>
+                            <span class="mt-4 inline-flex font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4">Read article <span aria-hidden="true" class="ml-2">&rarr;</span></span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/advanced-chatbot-features-customer-loyalty/" class="blog-preview-card glass-card overflow-hidden rounded-[1.75rem] block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#ffdc32]/45">
+                        <img src="/blog/assets/individual-blog-hero-concept.png" alt="HeyNaj Flow assistant connected to a qualified lead summary card" class="blog-preview-image w-full" loading="lazy">
+                        <div class="p-5 md:p-6">
+                            <div class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-400"><span>Cluster guide</span><span aria-hidden="true">&bull;</span><span>7 min read</span></div>
+                            <h3 class="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">Unlock Lasting Loyalty: Advanced Chatbot Features for Deeper Customer Engagement</h3>
+                            <p class="mt-2 text-sm md:text-base font-medium leading-relaxed text-slate-600">Discover how personalization, proactive support, and intelligent handoffs build stronger customer experiences.</p>
+                            <span class="mt-4 inline-flex font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4">Read article <span aria-hidden="true" class="ml-2">&rarr;</span></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- BLOG_REGISTRY:HOME_END -->
             </div>
         </section>
     </main>
