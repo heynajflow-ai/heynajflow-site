@@ -1,0 +1,290 @@
+<!--
+  HEYNAJ BLOG ARTICLE CONTRACT
+  THESIS: Show what happens to a website lead after business hours, and why lead capture should continue when the team is offline.
+  OWN-WORLD: Warm ivory canvas, white reading surfaces, navy ink, signal yellow actions, rounded HeyNaj navigation.
+  STORY: The reader sees the after-hours gap, follows the capture-to-handoff workflow, and understands how HeyNaj can close it.
+  FIRST VIEWPORT: Breadcrumb and article metadata lead into a focused title/summary beside the hero image; reading begins immediately below.
+  FORM: Read surface; Featured Playbook with a direct answer, practical workflow, FAQ, verified reference, and restrained CTA.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Happens to Leads After Business Hours? | HeyNaj Flow</title>
+  <meta name="description" content="Learn how AI chatbots capture, qualify, summarize, and route website leads after business hours without leaving visitors at a dead end.">
+  <link rel="canonical" href="https://heynajflow.com/blog/after-hours-lead-capture-chatbot/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Happens to Leads After Business Hours?">
+  <meta property="og:description" content="Learn how AI chatbots capture, qualify, summarize, and route website leads after business hours without leaving visitors at a dead end.">
+  <meta property="og:url" content="https://heynajflow.com/blog/after-hours-lead-capture-chatbot/">
+  <meta property="og:image" content="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Happens to Leads After Business Hours?">
+  <meta name="twitter:description" content="Learn how AI chatbots capture, qualify, summarize, and route website leads after business hours without leaving visitors at a dead end.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"What Happens to Leads After Business Hours? How Chatbots Capture and Qualify Demand","description":"Learn how AI chatbots capture, qualify, summarize, and route website leads after business hours without leaving visitors at a dead end.","author":{"@type":"Organization","name":"HeyNaj Flow"},"publisher":{"@type":"Organization","name":"HeyNaj Flow"},"datePublished":"2026-08-05","dateModified":"2026-08-05","mainEntityOfPage":"https://heynajflow.com/blog/after-hours-lead-capture-chatbot/","image":["https://heynajflow.com/blog/assets/featured-playbook-hero-concept-v3.png"],"keywords":["chatbots for lead generation","after-hours customer service chatbot","lead qualification chatbots","automating lead capture with chatbots","24/7 customer service chatbot","always-on customer support AI"],"wordCount":1700},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://heynajflow.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://heynajflow.com/blog/"},{"@type":"ListItem","position":3,"name":"What Happens to Leads After Business Hours?","item":"https://heynajflow.com/blog/after-hours-lead-capture-chatbot/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens to a website lead after business hours?","acceptedAnswer":{"@type":"Answer","text":"Without an after-hours process, the lead may wait for a reply or leave. An AI website assistant can answer approved questions, capture contact details, qualify intent, and prepare context for the next human follow-up."}},{"@type":"Question","name":"Can a chatbot qualify leads without replacing a human?","acceptedAnswer":{"@type":"Answer","text":"Yes. The chatbot can gather useful details, identify buying intent, and route the conversation while leaving complex or sensitive decisions to the human team."}},{"@type":"Question","name":"How much does HeyNaj Flow cost after the free pilot?","acceptedAnswer":{"@type":"Answer","text":"HeyNaj Flow offers a monthly plan at $18.99 per month and a six-month plan at $99.99 for six months. Confirm the current offer before publishing pricing changes."}}]}]}</script>
+  <script src="https://cdn.tailwindcss.com">
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--yellow:#ffdc32;--ink:#0f172a;--slate:#475569;--ground:#fffdf5;--line:#e2e8f0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ground);color:var(--ink);font-family:'Be Vietnam Pro',system-ui,sans-serif}a{color:inherit}
+    .pill{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .85rem;font-size:.7rem;font-weight:800;letter-spacing:.16em;color:var(--slate)}.pill i{width:.55rem;height:.55rem;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px rgba(255,220,50,.18)}
+    .surface{border:1px solid var(--line);background:#fff;border-radius:2rem;box-shadow:0 24px 70px -48px rgba(15,23,42,.45);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.surface:hover{transform:translateY(-3px);border-color:rgba(255,220,50,.7);box-shadow:0 0 0 3px rgba(255,220,50,.1),0 28px 70px -36px rgba(15,23,42,.5)}
+    .hero-media{min-height:330px;position:relative;overflow:hidden;border-radius:1.5rem;background:linear-gradient(135deg,#0f172a 0 46%,#ffdc32 46% 100%);display:flex;align-items:flex-end;padding:1.25rem}.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.media-note{position:relative;border:1px solid rgba(255,255,255,.65);background:rgba(255,255,255,.9);border-radius:1rem;padding:.9rem 1rem;font-size:.72rem;font-weight:800;line-height:1.4;color:var(--ink)}
+    .reading-surface{border:0!important;background:transparent!important;border-radius:0!important;box-shadow:none!important}.article-divider{height:9rem;margin:3.5rem 0;border-radius:1.25rem;background:linear-gradient(135deg,#0f172a 0 38%,#64748b 38% 62%,#ffdc32 62% 100%);box-shadow:0 20px 55px -40px rgba(15,23,42,.65);position:relative;overflow:hidden}.article-divider::after{content:'A practical answer, one step at a time';position:absolute;right:1.25rem;bottom:1rem;background:rgba(255,255,255,.92);border-radius:999px;padding:.55rem .8rem;color:var(--ink);font-size:.68rem;font-weight:800;letter-spacing:.06em}
+    .article-copy{max-width:70ch;font-size:1rem;line-height:1.75;color:#334155}.article-copy h2{margin:2.75rem 0 .85rem;font-size:clamp(1.5rem,2.3vw,1.875rem);line-height:1.2;color:var(--ink);letter-spacing:-.025em}.article-copy h3{margin:1.8rem 0 .65rem;font-size:1.15rem;line-height:1.3;color:var(--ink);font-weight:800}.article-copy p{margin:1rem 0}.article-copy ul{list-style:disc;margin:1.1rem 0;padding-left:1.35rem}.article-copy ol{list-style:decimal;margin:1.1rem 0;padding-left:1.35rem}.article-copy li{margin:.45rem 0}.article-copy a{font-weight:700;text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:3px;text-underline-offset:4px}.article-copy blockquote{margin:1.75rem 0;border-radius:1rem;background:#fff8d9;padding:1.1rem 1.25rem;font-weight:700;color:var(--ink)}
+    #takeaways-heading{max-width:70ch}#faq-heading + .article-copy{counter-reset:faq}.faq-section .article-copy h3{margin-top:1.35rem;margin-bottom:.5rem;font-weight:800}.faq-section .article-copy h3::before{counter-increment:faq;content:counter(faq) ". ";color:#64748b}.faq-section .article-copy h3 + p{margin:0 0 1rem;border-radius:1rem;background:#fff8d9;border:1px solid #f4d327;padding:1.1rem 1.25rem;color:var(--ink);font-style:normal}.references-section{border:0;background:#f8fafc;border-radius:1.25rem;box-shadow:none;border-top:1px solid var(--line)}.article-cta{margin-top:2rem;border-radius:1.5rem;background:var(--yellow);padding:1.5rem 1.75rem;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.article-cta a{display:inline-flex;align-items:center;border-radius:999px;background:var(--ink);padding:.75rem 1rem;color:#fff;font-size:.875rem;font-weight:800;white-space:nowrap}.article-cta a:hover{color:#fff}
+.photo-slot{margin:2.5rem 0;border:1px dashed #94a3b8;border-radius:1.25rem;background:#f8fafc;overflow:hidden}.photo-slot img{display:block;width:100%;aspect-ratio:16/8;object-fit:cover}.photo-slot figcaption{padding:.8rem 1rem;font-size:.78rem;line-height:1.5;color:#64748b}.photo-slot strong{color:var(--ink)}
+ .product-shot{margin:2.5rem 0;border:1px solid var(--line);border-radius:1.25rem;background:#f8fafc;overflow:hidden;box-shadow:0 18px 45px -34px rgba(15,23,42,.5)}.product-shot img{display:block;width:100%;max-height:560px;object-fit:contain;object-position:center;background:#f8fafc}.product-shot figcaption{padding:.8rem 1rem;font-size:.78rem;line-height:1.5;color:#64748b}.product-shot strong{color:var(--ink)}
+    .toc a{display:block;padding:.45rem 0;font-size:.82rem;font-weight:700;color:#64748b}.toc a:hover{color:var(--ink)}.toc{position:sticky;top:1.25rem}
+    .source-list{font-size:.82rem;line-height:1.6;color:#64748b}.source-list a{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--yellow);text-underline-offset:3px}
+    .footer-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem 1.5rem;margin:1.5rem auto 0;font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8}.footer-legal a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#cbd5e1}
+    @media(max-width:900px){.toc{position:static}.surface:hover{transform:none}.article-cta{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.surface{transition:none}.surface:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <header class="mx-auto max-w-7xl px-5 pt-5 md:px-8">
+    <nav class="relative flex items-center justify-between rounded-[1.35rem] border border-slate-200 bg-white px-4 py-3 shadow-sm">
+      <a href="https://heynajflow.com/" class="flex items-center gap-3">
+<img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="h-9 w-9 rounded-2xl">
+<span class="font-extrabold tracking-tight">HeyNaj Flow<span class="text-[#ffdc32]">®</span>
+</span>
+</a>
+      <div class="hidden items-center gap-5 text-xs font-bold text-slate-600 md:flex">
+<a href="https://heynajflow.com/">Home</a>
+<a href="https://heynajflow.com/#product-demo">Product Demo</a>
+<a href="https://heynajflow.com/#pricing">Pricing</a>
+<a href="/blog/" aria-current="page" class="text-slate-900">Blog</a>
+</div>
+      <button type="button" class="mobile-menu-toggle rounded-full border border-slate-200 px-4 py-2 text-sm font-extrabold text-slate-900 md:hidden" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+      <a href="https://heynajflow.com/book/" class="rounded-full bg-[#ffdc32] px-4 py-2 text-sm font-extrabold text-slate-900">Start Free Pilot</a>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu-panel mt-3 hidden rounded-[1.35rem] border border-slate-200 bg-white p-4 shadow-sm md:hidden">
+      <nav class="flex flex-col gap-1 text-sm font-bold text-slate-700" aria-label="Mobile navigation">
+        <a class="rounded-xl px-4 py-3 hover:bg-slate-50 focus:bg-slate-50" href="https://heynajflow.com/">Home</a>
+        <a class="rounded-xl px-4 py-3 hover:bg-slate-50 focus:bg-slate-50" href="https://heynajflow.com/#product-demo">Product Demo</a>
+        <a class="rounded-xl px-4 py-3 hover:bg-slate-50 focus:bg-slate-50" href="https://heynajflow.com/#pricing">Pricing</a>
+        <a class="rounded-xl px-4 py-3 hover:bg-slate-50 focus:bg-slate-50" href="/blog/" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-5 pb-20 pt-12 md:px-8 md:pt-20">
+    <a href="/blog/" class="text-sm font-bold text-slate-500 hover:text-slate-900">← HeyNaj Flow Blog</a>
+
+    <article class="mt-7">
+      <section class="surface grid gap-8 p-6 md:p-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+        <div>
+          <span class="pill">
+<i>
+</i>FEATURED PLAYBOOK</span>
+          <p class="mt-6 text-sm font-bold italic text-slate-500">August 5, 2026 · 8 min read · chatbots for lead generation</p>
+          <h1 class="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-[-.04em] md:text-5xl">What Happens to Leads After Business Hours?</h1>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600">A practical guide to capturing visitor intent, qualifying demand, and preparing a useful handoff when your team is offline.</p>
+        </div>
+        <figure class="hero-media">
+          <img src="/blog/assets/featured-playbook-hero-concept-v3.png" alt="HeyNaj Flow chat conversation becoming a qualified lead alert" loading="eager" onerror="this.style.display='none'">
+          <figcaption class="media-note">Hero image · A visual summary of a website conversation becoming a qualified lead</figcaption>
+        </figure>
+      </section>
+
+      <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-start">
+        <div>
+          <div class="reading-surface p-0 md:p-2">
+            <p class="text-base font-bold leading-7 text-slate-900">The short answer: when a lead arrives after hours, an AI website assistant can keep the conversation moving, capture useful details, and prepare your team for a better follow-up.</p>
+            <section class="mt-7 rounded-2xl border border-[#f4d327] bg-[#fff8d9] p-5 md:p-6" aria-labelledby="takeaways-heading">
+              <span class="pill">
+<i>
+</i>KEY TAKEAWAYS</span>
+<h2 id="takeaways-heading" class="mt-4 text-2xl font-extrabold tracking-tight">What matters most</h2>
+<div class="article-copy mt-3">
+<ul>
+<li>After-hours visitors should not be forced to wait for a basic answer.</li>
+<li>Lead capture should feel like a natural next step, not a sudden form.</li>
+<li>Qualification is more useful when it preserves the visitor’s actual intent.</li>
+<li>A concise AI summary helps the human team continue without starting over.</li>
+<li>Automation should route complex decisions to people instead of pretending to replace them.</li>
+</ul>
+</div>
+            </section>
+            <div class="article-copy mt-10">
+<p>When a new visitor arrives after business hours, the question is not whether your team is working. The question is whether the visitor can still make progress.</p>
+<p>If the only option is a contact form, the person may leave, forget to return, or contact a competitor that responds first. An <strong>after-hours customer service chatbot</strong> gives the visitor a useful next step while preserving the information your team needs for follow-up.</p>
+
+<h2 id="short-answer">The short answer: keep the conversation moving</h2>
+<p>A chatbot should not pretend to be the owner, salesperson, or technical expert. Its job is narrower and more useful: answer approved questions, understand what the visitor is trying to do, capture relevant details, and make the handoff clearer.</p>
+<p>For a service business, that can mean explaining a service, clarifying the next step, identifying a serious enquiry, and providing a booking link when the visitor is ready. The visitor receives help now, while the business receives a better-qualified conversation later.</p>
+
+<h2 id="after-hours-gap">What happens when a lead arrives after hours?</h2>
+<p>Most after-hours journeys follow one of three paths:</p>
+<ul>
+<li>The visitor submits a short form and waits without knowing what happens next.</li>
+<li>The visitor searches for an answer elsewhere and may never return.</li>
+<li>The visitor starts a guided conversation that answers basic questions and records their intent.</li>
+</ul>
+<p>The third path is the opportunity. It does not require a business to promise an immediate human response. It requires a clear, grounded experience that sets expectations and keeps the lead from becoming invisible.</p>
+<blockquote>The goal is not to automate every decision. The goal is to prevent a genuine enquiry from becoming a dead end simply because it arrived at the wrong time.</blockquote>
+<figure class="product-shot"><img src="/blog/assets/featured-playbook-assets/email-notification.jpg" alt="HeyNaj Flow lead alert notification on a mobile device" loading="lazy"><figcaption><strong>What happens next:</strong> a lead alert can reach the business while the team is away, so the enquiry is not lost before the next follow-up.</figcaption></figure>
+
+<h2 id="capture-intent">1. Capture intent before asking for everything</h2>
+<p>Good lead capture begins with the visitor's question. A person asking about pricing needs a different conversation from someone looking for urgent support or comparing service options.</p>
+<p>Instead of presenting a long form immediately, the assistant can first understand the request and then ask for the details needed to continue. HeyNaj Flow supports flexible lead capture, so the experience can be configured as required, soft, or off depending on the business goal.</p>
+<p>The important principle is to collect information for a reason. Name, email, phone, service interest, project details, or timing should help the next step - not create unnecessary friction.</p>
+
+<h2 id="qualify">2. Qualify the lead with useful questions</h2>
+<p>Qualification is not about interrogating the visitor. It is about finding enough context to separate a real opportunity from a casual question and to make the next human conversation more productive.</p>
+<ul>
+<li>
+<strong>Need:</strong> What problem is the visitor trying to solve?</li>
+<li>
+<strong>Fit:</strong> Does the request match the business's services, location, and normal customer profile?</li>
+<li>
+<strong>Timing:</strong> Is the person researching, comparing options, or ready to book?</li>
+<li>
+<strong>Next step:</strong> Should the visitor read more, submit details, book a call, or wait for a human response?</li>
+</ul>
+<p>These questions can be grounded in the business's own Knowledge Vault. That keeps the assistant aligned with the services, policies, qualifying rules, and FAQs supplied during onboarding.</p>
+<figure class="product-shot"><img src="/blog/assets/featured-playbook-assets/leads-dashboard.jpg" alt="HeyNaj Flow mobile Leads dashboard showing captured conversations" loading="lazy"><figcaption><strong>What the team receives:</strong> captured conversations are organized in the Leads dashboard so the team can review intent and choose the next action.</figcaption></figure>
+
+<h2 id="answer">3. Answer questions from the business Knowledge Vault</h2>
+<p>An AI assistant is only as useful as the information it is allowed to use. HeyNaj Flow uses a private business Knowledge Vault where the company's services, pricing policy, FAQs, operating hours, service area, dealbreakers, promotions, and handoff rules can be documented.</p>
+<p>This gives the assistant a reliable source for visitor questions instead of encouraging it to guess. When an answer is not in the approved knowledge, the safer response is to explain that a human team member will follow up.</p>
+<p>Business owners can update their documents when services, offers, or instructions change. That makes the website assistant easier to maintain than a system that requires a developer for every wording change.</p>
+<figure class="product-shot"><img src="/blog/assets/featured-playbook-assets/ai-settings.jpg" alt="HeyNaj Flow AI Settings screen showing bot instructions and booking link" loading="lazy"><figcaption><strong>What keeps answers grounded:</strong> the AI Settings screen holds the bot instructions, tone, booking link, fallback message, voice settings, and business knowledge connection.</figcaption></figure>
+
+<h2 id="summary">4. Turn the conversation into a useful lead summary</h2>
+<p>A captured lead should not arrive as a name and an empty notification. The more useful the context, the easier it is for the team to decide what to do next.</p>
+<p>HeyNaj's lead workflow can include the visitor's contact details, page or source context, conversation transcript, and a concise AI-generated summary. The summary is designed to help the business understand the lead without reading the entire conversation first.</p>
+<p>This is especially valuable after hours. By the time the team returns, the notification can show whether the visitor was exploring lead generation, asking about customer support automation, requesting a booking, or looking for a human response.</p>
+<figure class="product-shot"><img src="/blog/assets/featured-playbook-assets/smart-intent-email.jpg" alt="HeyNaj Flow Smart Intent Alert email with lead snapshot and AI generated summary" loading="lazy"><figcaption><strong>What the alert looks like:</strong> the email includes a lead snapshot, contact details, page context, and an AI-generated summary before the team opens the conversation.</figcaption></figure>
+
+<h2 id="handoff">5. Make the human handoff feel continuous</h2>
+<p>Automation works best when it prepares the human conversation instead of hiding it. If the visitor asks for a person, reaches a sensitive question, or needs a decision outside the assistant's scope, the flow should route them clearly.</p>
+<p>A strong handoff carries context: the visitor's details, what they asked, what the assistant already explained, and why the conversation needs attention. This avoids the familiar experience of repeating the same story to a new person.</p>
+<p>When the visitor is ready to book, HeyNaj Flow can provide the business's existing booking link, such as Calendly, Acuity, or Google Calendar. When the visitor is not ready, the assistant can capture the enquiry and set a reasonable expectation for follow-up.</p>
+<figure class="product-shot"><img src="/blog/assets/featured-playbook-assets/lead-detail-dashboard.jpg" alt="HeyNaj Flow individual lead dashboard showing contact details, summary, and chat transcript" loading="lazy"><figcaption><strong>Where context continues:</strong> an individual lead view keeps the summary and chat transcript together so the team can continue from the visitor's actual conversation.</figcaption></figure>
+
+<h2 id="abandonment">6. Recover value when the visitor leaves early</h2>
+<p>Not every visitor will complete a formal lead form. That does not mean the conversation has no value.</p>
+<p>HeyNaj Flow includes an abandonment alert path that can preserve the conversation and whatever information the visitor already provided. This gives the business a chance to understand where the visitor stopped and whether the experience needs a clearer prompt or a better answer.</p>
+<p>Abandonment data can also improve the website. Repeated unanswered questions may become a new FAQ, a service-page revision, or a future content opportunity.</p>
+<figure class="product-shot"><img src="/blog/assets/featured-playbook-assets/abandoned-chat-dashboard.jpg" alt="HeyNaj Flow individual lead view showing an abandoned chat and follow-up context" loading="lazy"><figcaption><strong>When a visitor leaves early:</strong> the conversation can still reveal intent and show where the visitor stopped before completing the lead capture flow.</figcaption></figure>
+
+<h2 id="implementation">How to implement an after-hours lead flow</h2>
+<ol>
+<li>
+<strong>Choose the first problem.</strong> Start with one high-value question, service, or conversion point instead of automating the entire website at once.</li>
+<li>
+<strong>Prepare the Knowledge Vault.</strong> Add the services, pricing policy, service area, hours, dealbreakers, FAQs, promotions, and human-handoff rules the assistant should use.</li>
+<li>
+<strong>Define the capture policy.</strong> Decide whether the assistant should request details before the conversation, gather them naturally, or keep the experience frictionless.</li>
+<li>
+<strong>Set the next-step rules.</strong> Add the approved booking link, fallback message, escalation behavior, and notification email.</li>
+<li>
+<strong>Test real questions.</strong> Ask about pricing, services, availability, promotions, off-topic requests, and human support before launch.</li>
+<li>
+<strong>Review the first conversations.</strong> Improve the greeting, knowledge, and qualification questions using real visitor behavior.</li>
+</ol>
+<p>HeyNaj Flow's process is designed to be hands-off for the business owner: provide the website and brand details, complete the business information, and the system can be configured, tested, and prepared for the pilot.</p>
+
+<h2 id="cost">What does HeyNaj Flow cost?</h2>
+<p>HeyNaj Flow offers a 14-day free pilot so a business can test the experience before deciding whether it fits. After the pilot, the current plans are <strong>$18.99 per month</strong> or <strong>$99.99 for six months</strong>. Pricing and promotional terms should always be confirmed before a live page is published.</p>
+
+<h2 id="conclusion">The practical answer for businesses</h2>
+<p>Leads do not stop arriving when a team signs off for the day. The opportunity is not to replace every human interaction; it is to make sure a useful enquiry is understood, recorded, and ready for the next step.</p>
+<p>With grounded answers, flexible capture, lead qualification, AI summaries, abandonment alerts, and clear human handoffs, an after-hours chatbot can become a practical part of the customer journey - not another disconnected pop-up.</p>
+<p>If you want to see how this approach could work on your website, explore the <a href="https://heynajflow.com/#product-demo">HeyNaj product demo</a>, review the <a href="https://heynajflow.com/#pricing">current plans</a>, or <a href="https://heynajflow.com/book/">start a free pilot conversation</a>.</p>
+
+            </div>
+          </div>
+
+          <div class="article-divider" role="img" aria-label="Brand visual separator between sections">
+</div>
+
+          <section class="faq-section surface mt-10 p-6 md:p-8" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="text-2xl font-extrabold tracking-tight">Questions readers ask</h2>
+<div class="article-copy mt-3">
+<h3>What happens to a website lead after business hours?</h3>
+<p>An AI website assistant can answer approved questions, capture contact details, qualify intent, and prepare a summary for the human team to review later.</p>
+<h3>Can a chatbot qualify leads without replacing a human?</h3>
+<p>Yes. The assistant can gather useful context and identify buying intent while leaving complex, sensitive, or final decisions to the business team.</p>
+<h3>What information should an after-hours chatbot collect?</h3>
+<p>Collect only what supports the next step, such as name, email, phone, service interest, timing, location, or the details needed for a booking or follow-up.</p>
+<h3>How quickly can HeyNaj Flow be set up?</h3>
+<p>HeyNaj Flow is designed around a hands-off onboarding process. After the business information and brand assets are provided, the system can be configured and prepared for testing within the stated setup timeline.</p>
+<h3>How much does HeyNaj Flow cost after the pilot?</h3>
+<p>The current plans are $18.99 per month or $99.99 for six months. Confirm the current offer before publishing any pricing information.</p>
+</div>
+          </section>
+        </div>
+
+        <aside class="toc surface p-5" aria-label="Article navigation">
+<p class="text-xs font-extrabold uppercase tracking-[.16em] text-slate-500">On this page</p>
+<nav class="mt-4">
+<a href="#takeaways-heading">Key takeaways</a>
+<a href="#faq-heading">Common questions</a>
+<a href="#sources">Sources</a>
+</nav>
+</aside>
+      </div>
+
+      <section id="sources" class="references-section mt-12 p-6 md:p-8">
+<p class="text-xs font-extrabold uppercase tracking-[.16em] text-slate-500">Sources</p>
+<h2 class="mt-2 text-xl font-extrabold tracking-tight">References</h2>
+<div class="source-list mt-3">
+<p class="text-sm text-slate-600">This Featured Playbook is based on HeyNaj Flow's current FAQ, onboarding materials, Business Knowledge Vault process, and product screenshots. Confirm current features, pricing, and promotional terms before publication.</p>
+</div>
+</section>
+    </article>
+  </main>
+
+  <footer class="px-5 pb-10 md:px-8">
+<div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_22px_60px_-40px_rgba(15,23,42,.35)] md:flex-row md:items-center md:p-8">
+<div>
+<a href="https://heynajflow.com/" class="flex items-center gap-3">
+<img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="h-9 w-9 rounded-2xl">
+<span class="font-extrabold tracking-tight">HeyNaj Flow<span class="text-[#ffdc32]">®</span>
+</span>
+</a>
+<p class="mt-4 text-sm font-medium text-slate-600">The proactive AI chat widget that captures leads while you sleep.</p>
+</div>
+<div class="flex flex-col gap-4 md:items-end">
+<a href="https://heynajflow.com/book/" class="rounded-full bg-[#ffdc32] px-6 py-3 text-center text-sm font-extrabold text-slate-900">Start Free Pilot</a>
+<p class="text-xs font-extrabold uppercase tracking-[.16em] text-slate-400">© 2026 HeyNaj Flow. All rights reserved.</p>
+</div>
+</div>
+<div class="footer-legal">
+<a href="/terms-of-service.html">Terms of Service</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/data-handling-policy.html">Data Handling Policy</a>
+</div>
+</footer>
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    menuToggle?.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu?.classList.toggle('hidden', expanded);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
