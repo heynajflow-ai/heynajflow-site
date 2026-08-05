@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-05T10:51:52.832Z",
+  "posts": [
+    {
+      "content_id": "featured-playbook-after-hours",
+      "title": "What Happens to Leads After Business Hours?",
+      "slug": "after-hours-lead-capture-chatbot",
+      "excerpt": "A practical guide to keeping website conversations moving when your team is offline.",
+      "article_type": "featured_playbook",
+      "status": "published",
+      "source": "approved local article",
+      "published_at": "2026-08-04",
+      "hero_image_url": "/blog/assets/featured-playbook-hero-concept-v3.png",
+      "hero_image_alt": "HeyNaj Flow chat conversation becoming a qualified lead alert",
+      "read_time": 8
+    },
+    {
+      "content_id": "blog-20260729-091906",
+      "title": "Unlock Lasting Loyalty: Advanced Chatbot Features for Deeper Customer Engagement",
+      "slug": "advanced-chatbot-features-customer-loyalty",
+      "excerpt": "Discover how personalization, proactive support, and intelligent handoffs build stronger customer experiences.",
+      "article_type": "cluster_guide",
+      "status": "published",
+      "source": "Blog Drafts workbook",
+      "published_at": "2026-07-31",
+      "hero_image_url": "/blog/assets/individual-blog-hero-concept.png",
+      "hero_image_alt": "HeyNaj Flow assistant connected to a qualified lead summary card",
+      "read_time": 7
+    }
+  ]
+}
