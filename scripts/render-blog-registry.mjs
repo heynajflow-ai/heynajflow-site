@@ -7,7 +7,7 @@ const site = path.resolve(here, '..');
 const registryPath = fs.existsSync(path.join(site, 'data', 'blog-registry.json'))
   ? path.join(site, 'data', 'blog-registry.json')
   : path.join(site, 'data', 'blog-registry.seed.json');
-const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8').replace(/^\uFEFF/, ''));
 const published = registry.posts
   .filter(post => post.status === 'published')
   .map(post => ({

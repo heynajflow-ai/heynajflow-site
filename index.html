@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeyNaj Flow</title>
+    <meta name="description" content="HeyNaj Flow is a proactive AI website assistant that captures and qualifies leads while you sleep.">
+    <link rel="canonical" href="https://heynajflow.com/">
 
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://heynajflow.com/#organization",
+          "name": "HeyNaj Flow",
+          "url": "https://heynajflow.com/",
+          "logo": "https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png",
+          "sameAs": ["https://www.linkedin.com/company/heynajflow/"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://heynajflow.com/#website",
+          "url": "https://heynajflow.com/",
+          "name": "HeyNaj Flow",
+          "publisher": {"@id": "https://heynajflow.com/#organization"},
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
 
     <meta property="og:title" content="HeyNaj Flow">
     <meta property="og:description" content="A smart AI website helper that chats by text or voice, captures leads, sends instant alerts, and matches your brand.">
@@ -97,6 +120,40 @@
             box-shadow: 0 20px 60px -35px rgba(15, 23, 42, 0.35);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+        }
+
+        .home-mobile-menu {
+            position: absolute;
+            top: calc(100% + 0.75rem);
+            right: 0;
+            width: min(18rem, calc(100vw - 2rem));
+            padding: 0.75rem;
+            border: 1px solid rgba(226, 232, 240, 0.95);
+            border-radius: 1.25rem;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 22px 60px -40px rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .home-mobile-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            color: #475569;
+            font-size: 0.875rem;
+            font-weight: 800;
+        }
+
+        .home-mobile-menu a:hover,
+        .home-mobile-menu a:focus-visible {
+            background: #f8fafc;
+            color: #0f172a;
+            outline: none;
+        }
+
+        @media (max-width: 1023px) {
+            .home-desktop-menu { display: none; }
         }
 
         .glass-card {
@@ -532,8 +589,8 @@
         }
 
         .hero-body {
-            max-width: 34rem;
-            font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+            max-width: 32rem;
+            font-size: clamp(1.05rem, 1.35vw, 1.25rem);
             line-height: 1.55;
         }
 
@@ -1340,23 +1397,23 @@
             logo_workspace: "https://res.cloudinary.com/dt5j91krt/image/upload/v1776000917/HeyNaj_Collab_3_ystxzi.png",
                     logo_openai: "https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776159568/HeyNaj_Collab_2_R_sqges8.png",
                     logo_gemini: "https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776159568/HeyNaj_Collab_1_R_yv4wjc.png",
-            shot_ai_settings: "file:///C:/Users/rrata/Downloads/AI%20Settings.jpg",
-            shot_leads_dashboard: "file:///C:/Users/rrata/Downloads/Leads%20Dashboard.jpg",
-            shot_leads_view: "file:///C:/Users/rrata/Downloads/Leads%20View.jpg",
-            shot_widget_settings: "file:///C:/Users/rrata/Downloads/Widget%20Settings.jpg",
-            shot_widget_session: "file:///C:/Users/rrata/Downloads/Widget.png",
-            shot_email_received: "file:///C:/Users/rrata/Downloads/Email%20Received.jpg",
-            shot_email_notification: "file:///C:/Users/rrata/Downloads/Email%20Notification.jpg",
-            shot_email_received_full: "file:///C:/Users/rrata/Downloads/Full%20email%20notification.png",
-            shot_faq_template: "file:///C:/Users/rrata/Downloads/file%20previewopen%20document%20screenshot%20FAQ%20Template.png",
-            shot_stays_on_topic: "file:///C:/Users/rrata/Downloads/Stays%20on%20Topic.png",
-            shot_drive_vault: "file:///C:/Users/rrata/Downloads/driver.png",
-            shot_link_sent: "file:///C:/Users/rrata/Downloads/Link%20sent.png",
-            shot_language_change: "file:///C:/Users/rrata/Downloads/language%20change.png",
-            shot_conversation_multilingual: "file:///C:/Users/rrata/Downloads/Conversation%20Multilingual%20change.jpg",
-            shot_lead_toggle: "file:///C:/Users/rrata/Downloads/Lead%20Flow%20%28Toggle%29.jpg",
-            shot_voice_speaking: "file:///C:/Users/rrata/OneDrive/Pictures/Screenshots%201/Voice%20%28Speaking%29.png",
-            shot_voice_listening: "file:///C:/Users/rrata/OneDrive/Pictures/Screenshots%201/Voice%20%28Listening%29.png",
+            shot_ai_settings: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941180/heynaj-flow/homepage/ai-settings-dashboard.jpg",
+            shot_leads_dashboard: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941227/heynaj-flow/homepage/leads-dashboard.jpg",
+            shot_leads_view: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941223/heynaj-flow/homepage/individual-leads-dashboard.jpg",
+            shot_widget_settings: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941230/heynaj-flow/homepage/widget-settings-dashboard.jpg",
+            shot_widget_session: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941237/heynaj-flow/homepage/widget.png",
+            shot_email_received: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941233/heynaj-flow/homepage/email-received.jpg",
+            shot_email_notification: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941241/heynaj-flow/blog/featured-playbook/email-notification.jpg",
+            shot_email_received_full: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941367/heynaj-flow/homepage/full-email-notification.png",
+            shot_faq_template: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941369/heynaj-flow/homepage/faq-template.png",
+            shot_stays_on_topic: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941390/heynaj-flow/homepage/safety-stays-on-topic.png",
+            shot_drive_vault: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941374/heynaj-flow/homepage/drive-vault.png",
+            shot_link_sent: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941376/heynaj-flow/homepage/link-sent.png",
+            shot_language_change: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941378/heynaj-flow/homepage/language-change.png",
+            shot_conversation_multilingual: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941381/heynaj-flow/homepage/conversation-multilingual.jpg",
+            shot_lead_toggle: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941383/heynaj-flow/homepage/lead-flow-toggle.jpg",
+            shot_voice_speaking: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941386/heynaj-flow/homepage/voice-speaking.png",
+            shot_voice_listening: "https://res.cloudinary.com/dt5j91krt/image/upload/v1785941387/heynaj-flow/homepage/voice-listening.png",
             capabilities_badge: "Capabilities",
             logos_heading: "Built on Enterprise Infrastructure",
             capabilities_title: "What It Can Do For You.",
@@ -1428,7 +1485,7 @@
             ],
             command_badge: "Command Center",
             command_title: "The Executive Command Center",
-            command_intro: "Clear alerts. Clean context. Live control without extra software chaos.",
+            command_intro: "Update settings, review transcripts, and track incoming leads from any device: Mac, PC, iOS, or Android.",
             command_panel_1_eyebrow: "Alert Email",
             command_panel_1_title: "Instant Lead Alerts",
             command_panel_1_desc: "Get the exact context you need the moment a lead is ready to buy.",
@@ -2149,7 +2206,9 @@
         }
     </script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</head>
+            <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260807">
+    <link rel="apple-touch-icon" href="/favicon.png?v=20260807">
+  </head>
 <body x-data="app()" x-init="init()" x-cloak class="antialiased">
     <div class="loader-screen" x-show="loading" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
         <div class="flex flex-col items-center">
@@ -2162,7 +2221,7 @@
     <div class="ambient-orb one"></div>
     <div class="ambient-orb two"></div>
 
-    <nav class="fixed top-3 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 px-3.5 md:px-4 py-2.5 flex items-center justify-between rounded-[1.35rem] nav-shell">
+    <nav class="fixed top-3 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 px-3.5 md:px-4 py-2.5 flex items-center justify-between rounded-[1.35rem] nav-shell relative" aria-label="Primary">
         <div class="flex items-center gap-3">
             <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-[34px] h-[34px] rounded-2xl shadow-sm">
             <div class="font-extrabold tracking-tight text-[1.02rem]" :style="'color:' + (config.color_heading || '#161616')">
@@ -2170,16 +2229,26 @@
             </div>
         </div>
 
-        <div class="hidden lg:flex items-center gap-8 text-sm font-extrabold text-slate-500">
+        <div class="home-desktop-menu hidden lg:flex items-center gap-8 text-sm font-extrabold text-slate-500">
             <a href="#capabilities" class="quiet-link transition">Capabilities</a>
             <a href="#control-center" class="quiet-link transition">Command Center</a>
             <a href="#pricing" class="quiet-link transition">Pricing</a>
             <a href="/blog/" class="quiet-link transition">Blog</a>
         </div>
 
+        <button type="button" class="mobile-menu-toggle flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-900 lg:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="home-mobile-menu">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+        </button>
         <a :href="config.cta_link || '#'" target="_blank" class="cta-primary transition px-5 md:px-6 py-3 rounded-full text-sm font-extrabold whitespace-nowrap">
             <span x-text="config.cta_text || config.hero_primary_cta || 'Start Free Pilot'"></span>
         </a>
+
+        <div id="home-mobile-menu" class="home-mobile-menu hidden lg:hidden" aria-label="Mobile navigation">
+            <a href="#capabilities">Capabilities</a>
+            <a href="#control-center">Command Center</a>
+            <a href="#pricing">Pricing</a>
+            <a href="/blog/">Blog</a>
+        </div>
     </nav>
 
     <main class="px-6 md:px-8">
@@ -2192,11 +2261,11 @@
                     </div>
 
                     <h1 class="hero-heading font-extrabold text-slate-900">
-                        <span class="block whitespace-pre-line" x-text="config.hero_title || `Your Business Doesn't Sleep.`"></span>
-                        <span class="block text-slate-400 mt-4 whitespace-pre-line" x-text="config.hero_sub || 'Meet Your Newest Employee.'"></span>
+                        <span class="block whitespace-pre-line" x-text="config.hero_title || `Your Business Doesn't Sleep.`">Your Business Doesn't Sleep.</span>
+                        <span class="block text-slate-400 mt-4 whitespace-pre-line" x-text="config.hero_sub || 'Meet Your Newest Employee.'">Meet Your Newest Employee.</span>
                     </h1>
 
-                    <p class="hero-body mt-6 font-medium text-slate-600" x-text="config.hero_desc"></p>
+                    <p class="hero-body mt-6 font-medium text-slate-600" x-text="config.hero_desc">HeyNaj Flow gives you a smart AI website helper that chats by text or voice, captures leads, sends instant alerts, and matches your brand.</p>
 
                     <div class="hero-note mt-7">
                         <div class="hero-chip micro-glow" x-text="config.hero_chip_1 || 'Text + voice support'"></div>
@@ -2247,8 +2316,8 @@
                                     </button>
                                 </div>
 
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/IPhone_Keyboard.png/800px-IPhone_Keyboard.png"
-                                     alt="iPhone keyboard"
+                                <img src="/blog/assets/featured-playbook-assets/heynaj-widget.png"
+                                     alt="HeyNaj Flow website chat widget preview"
                                      class="absolute bottom-0 left-0 w-full transform translate-y-full transition-transform duration-500"
                                      :class="step >= 2 && step < 3 ? 'translate-y-0' : ''">
                             </div>
@@ -2280,7 +2349,7 @@
             </div>
         </section>
 
-        <section id="infrastructure" class="pt-12 md:pt-16 pb-20">
+        <section id="infrastructure" class="pt-12 md:pt-16 pb-16 md:pb-20">
             <div class="max-w-7xl mx-auto pop-entry">
                 <div class="glass-card rounded-[2rem] px-6 md:px-8 py-6 logo-band">
                     <div class="text-center">
@@ -2304,7 +2373,7 @@
             </div>
         </section>
 
-        <section id="capabilities" class="pt-12 md:pt-16 pb-24 md:pb-28">
+        <section id="capabilities" class="pt-12 md:pt-16 pb-16 md:pb-20">
             <div class="max-w-7xl mx-auto">
                 <div class="max-w-5xl pop-entry">
                     <div class="section-badge micro-glow mb-6">
@@ -2355,15 +2424,15 @@
             </div>
         </section>
 
-        <section id="control-center" class="pt-12 md:pt-16 pb-16 md:pb-24">
+        <section id="control-center" class="pt-12 md:pt-16 pb-16 md:pb-20">
             <div class="max-w-7xl mx-auto">
-                <div class="max-w-3xl pop-entry">
+                <div class="max-w-5xl pop-entry">
                     <div class="section-badge micro-glow mb-6">
                         <span class="section-badge-dot"></span>
                         <span x-text="config.command_badge || 'Command Center'"></span>
                     </div>
                     <h2 class="text-4xl md:text-[3.55rem] font-extrabold tracking-[-0.05em] leading-tight text-slate-900 md:whitespace-nowrap" x-text="config.command_title || 'The Executive Command Center'"></h2>
-                    <p class="mt-5 max-w-5xl text-lg md:text-xl font-medium leading-relaxed text-slate-600" x-text="config.command_intro"></p>
+                    <p class="mt-5 max-w-5xl text-lg md:text-xl font-medium leading-relaxed text-slate-600 lg:whitespace-nowrap" x-text="config.command_intro"></p>
                 </div>
 
                 <div class="command-grid mt-12">
@@ -2443,7 +2512,7 @@
             </div>
         </section>
 
-        <section id="live-demo-setup" class="py-16 md:py-24">
+        <section id="live-demo-setup" class="py-16 md:py-20">
             <div class="max-w-7xl mx-auto pop-entry" x-data="{ scraping: false, scraped: false, url: '', demoText: '',
                 runScraper() {
                     let finalUrl = this.url.trim();
@@ -2523,7 +2592,7 @@
             </div>
         </section>
 
-        <section id="product-demo" class="py-16 md:py-24">
+        <section id="product-demo" class="py-16 md:py-20">
             <div class="max-w-7xl mx-auto pop-entry">
                 <div class="glass-card hover-pop rounded-[2.4rem] p-8 md:p-10 overflow-hidden">
                     <div class="max-w-4xl">
@@ -2550,7 +2619,7 @@
             </div>
         </section>
 
-        <section id="pricing" class="pt-10 md:pt-14 pb-16 md:pb-24">
+        <section id="pricing" class="pt-10 md:pt-14 pb-16 md:pb-20">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center pop-entry">
                     <div class="inline-flex items-center gap-3 glass-card-soft micro-glow hover-pop rounded-full px-6 md:px-10 py-4 border border-[#ffdc32]/45">
@@ -2605,27 +2674,27 @@
                 </div>
                 <div class="grid gap-4 md:grid-cols-[1.25fr_1fr_auto] md:items-center">
                     <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Practical answers for better website conversations.</h2>
-                    <a href="/blog/" class="quiet-link inline-flex items-center gap-2 font-extrabold text-slate-900 whitespace-nowrap md:justify-self-end">Explore all blogs <span aria-hidden="true">&rarr;</span></a>
+                    <a href="/blog/" class="quiet-link inline-flex items-center gap-2 font-extrabold text-slate-900 whitespace-nowrap md:justify-self-end">Explore all blogs <span aria-hidden="true">→</span></a>
                 </div>
 
                 <!-- BLOG_REGISTRY:HOME_START -->
 <div class="mt-7 grid gap-5 md:grid-cols-2">
                     <a href="/blog/after-hours-lead-capture-chatbot/" class="blog-preview-card glass-card overflow-hidden rounded-[1.75rem] block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#ffdc32]/45">
-                        <img src="/blog/assets/featured-playbook-hero-concept-v3.png" alt="HeyNaj Flow chat conversation becoming a qualified lead alert" class="blog-preview-image w-full" loading="lazy">
+                        <img src="/blog/assets/generated/new-covers/after-hours-lead-capture-chatbot.png" alt="HeyNaj Flow chat conversation becoming a qualified lead alert" class="blog-preview-image w-full" loading="lazy">
                         <div class="p-5 md:p-6">
-                            <div class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-400"><span>Featured playbook</span><span aria-hidden="true">&bull;</span><span>8 min read</span></div>
+                            <div class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-400"><span>Featured playbook</span><span aria-hidden="true">&bull;</span><span>9 min read</span></div>
                             <h3 class="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">What Happens to Leads After Business Hours?</h3>
                             <p class="mt-2 text-sm md:text-base font-medium leading-relaxed text-slate-600">A practical guide to keeping website conversations moving when your team is offline.</p>
                             <span class="mt-4 inline-flex font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4">Read article <span aria-hidden="true" class="ml-2">&rarr;</span></span>
                         </div>
                     </a>
 
-                    <a href="/blog/advanced-chatbot-features-customer-loyalty/" class="blog-preview-card glass-card overflow-hidden rounded-[1.75rem] block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#ffdc32]/45">
-                        <img src="/blog/assets/individual-blog-hero-concept.png" alt="HeyNaj Flow assistant connected to a qualified lead summary card" class="blog-preview-image w-full" loading="lazy">
+                    <a href="/blog/how-advanced-chatbot-features-build-unshakeable-customer-loyalty/" class="blog-preview-card glass-card overflow-hidden rounded-[1.75rem] block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#ffdc32]/45">
+                        <img src="/blog/assets/generated/new-covers/how-advanced-chatbot-features-build-unshakeable-customer-loyalty.png" alt="HeyNaj Flow website assistant illustration for How Advanced Chatbot Features Build Unshakeable Customer Loyalty" class="blog-preview-image w-full" loading="lazy">
                         <div class="p-5 md:p-6">
-                            <div class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-400"><span>Cluster guide</span><span aria-hidden="true">&bull;</span><span>7 min read</span></div>
-                            <h3 class="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">Unlock Lasting Loyalty: Advanced Chatbot Features for Deeper Customer Engagement</h3>
-                            <p class="mt-2 text-sm md:text-base font-medium leading-relaxed text-slate-600">Discover how personalization, proactive support, and intelligent handoffs build stronger customer experiences.</p>
+                            <div class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-400"><span>Cluster article</span><span aria-hidden="true">&bull;</span><span>3 min read</span></div>
+                            <h3 class="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">How Advanced Chatbot Features Build Unshakeable Customer Loyalty</h3>
+                            <p class="mt-2 text-sm md:text-base font-medium leading-relaxed text-slate-600">Practical guidance for better website conversations with HeyNaj Flow.</p>
                             <span class="mt-4 inline-flex font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4">Read article <span aria-hidden="true" class="ml-2">&rarr;</span></span>
                         </div>
                     </a>
@@ -2635,38 +2704,58 @@
         </section>
     </main>
 
-    <footer class="pt-6 pb-12 px-6 md:px-8">
+            <footer class="pt-6 pb-12 px-6 md:px-8">
         <div class="max-w-7xl mx-auto glass-card rounded-[2rem] p-6 md:p-7 pop-entry">
             <div class="footer-grid slim">
                 <div>
                     <div class="flex items-center gap-3">
                         <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-10 h-10 rounded-2xl shadow-sm">
-                        <div class="font-extrabold tracking-tight text-lg text-slate-900">
-                            <span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span>
-                        </div>
+                        <div class="font-extrabold tracking-tight text-lg text-slate-900"><span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span></div>
                     </div>
                     <p class="mt-4 max-w-4xl text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="config.footer_tagline"></p>
                 </div>
-
                 <div class="flex flex-col md:items-end gap-3">
-                    <a :href="config.cta_link || '#'" target="_blank" class="cta-primary transition inline-flex items-center justify-center rounded-full px-6 py-3 text-sm md:text-base font-extrabold">
-                        <span x-text="config.cta_text || config.hero_primary_cta || 'Start Free Pilot'"></span>
-                    </a>
-                    <div class="text-right text-[0.7rem] uppercase tracking-[0.22em] font-extrabold text-slate-400">
-                        <div>&copy; 2026 <span x-text="config.brand_name || 'HeyNaj Flow'"></span>. All rights reserved.</div>
-                    </div>
+                    <a :href="config.cta_link || '#'" target="_blank" class="cta-primary transition inline-flex items-center justify-center rounded-full px-6 py-3 text-sm md:text-base font-extrabold"><span x-text="config.cta_text || config.hero_primary_cta || 'Start Free Pilot'"></span></a>
                 </div>
             </div>
         </div>
-        <div class="max-w-4xl mx-auto mt-6 px-3">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-center text-[0.7rem] uppercase tracking-[0.18em] font-extrabold text-slate-400">
+        <div class="max-w-7xl mx-auto mt-5 flex flex-col gap-3 px-3 text-xs uppercase tracking-[0.12em] font-extrabold text-slate-400 md:flex-row md:items-center md:justify-between">
+            <p>&copy; 2026 <span x-text="config.brand_name || 'HeyNaj Flow'"></span>. All rights reserved.</p>
+            <nav class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end" aria-label="Legal">
                 <a href="/terms-of-service.html" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">Terms of Service</a>
                 <a href="/privacy-policy.html" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">Privacy Policy</a>
                 <a href="/data-handling-policy.html" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">Data Handling Policy</a>
-            </div>
+                <a href="https://www.linkedin.com/company/heynajflow/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">LinkedIn</a>
+            </nav>
         </div>
     </footer>
 
     <div id="real-widget-container"></div>
+
+    <script>
+        (() => {
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const menu = document.querySelector('#home-mobile-menu');
+            if (!toggle || !menu) return;
+            const closeMenu = () => {
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('aria-label', 'Open navigation');
+                menu.classList.add('hidden');
+            };
+            toggle.addEventListener('click', () => {
+                const open = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!open));
+                toggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+                menu.classList.toggle('hidden', open);
+            });
+            menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+            document.addEventListener('click', (event) => {
+                if (!menu.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+            });
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1024) closeMenu();
+            });
+        })();
+    </script>
 </body>
 </html>

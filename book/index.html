@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Discovery Call | HeyNaj Flow</title>
 
-    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
-    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png">
+    <link rel="canonical" href="https://heynajflow.com/book/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://heynajflow.com/book/#service",
+      "name": "HeyNaj Flow AI Website Assistant",
+      "serviceType": "AI website assistant and lead capture",
+      "description": "An AI website assistant that chats by text or voice, captures and qualifies leads, sends alerts, and supports customer conversations.",
+      "provider": {"@id": "https://heynajflow.com/#organization"},
+      "areaServed": "Worldwide",
+      "url": "https://heynajflow.com/book/"
+    }
+    </script>
 
     <meta name="description" content="Book a 15-minute discovery call with HeyNaj Flow and see how an AI assistant can capture more leads from your website.">
     <meta property="og:title" content="Book a Discovery Call | HeyNaj Flow">
@@ -15,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --hn-bg: #f5f5f0;
@@ -33,7 +45,7 @@
 
         body {
             margin: 0;
-            font-family: "Inter", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             color: var(--hn-text);
             background:
                 radial-gradient(circle at top left, rgba(255, 220, 50, 0.14), transparent 22%),
@@ -85,6 +97,17 @@
             box-shadow: 0 20px 60px -35px rgba(15, 23, 42, 0.35);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+            gap: 1.25rem;
+            align-items: start;
+        }
+
+        .footer-grid.slim {
+            align-items: center;
         }
 
         .glass-card {
@@ -520,6 +543,7 @@
             .hero-grid,
             .booking-grid,
             .step-grid,
+            .footer-grid,
             .footer-cta {
                 grid-template-columns: 1fr;
             }
@@ -582,28 +606,47 @@
             }
 
         }
+    .mobile-menu-panel{position:absolute;top:calc(100% + .75rem);right:0;width:min(18rem,calc(100vw - 2rem));padding:.75rem;border:1px solid #e2e8f0;border-radius:1.25rem;background:#fff;box-shadow:0 22px 60px -40px rgba(15,23,42,.35)}.mobile-menu-panel a{display:block;padding:.75rem 1rem;border-radius:.75rem;font-weight:800;color:#475569}.mobile-menu-panel a:hover,.mobile-menu-panel a:focus{background:#f8fafc;color:#0f172a}.mobile-menu-toggle{align-items:center;justify-content:center}
     </style>
-</head>
+            <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260807">
+    <link rel="apple-touch-icon" href="/favicon.png?v=20260807">
+  </head>
 <body x-data="bookPage()" x-init="init()">
     <div class="bg-noise"></div>
     <div class="ambient-orb one"></div>
     <div class="ambient-orb two"></div>
 
-    <header class="px-5 md:px-8 pt-5 md:pt-7">
-        <div class="max-w-xl mx-auto nav-shell rounded-[2rem] px-6 md:px-8 py-4">
-            <div class="flex items-center justify-center">
-                <a href="https://heynajflow.com/" class="flex items-center gap-3 min-w-0">
-                    <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-10 h-10 rounded-2xl shadow-sm">
-                    <div class="font-extrabold tracking-tight text-xl text-slate-900 min-w-0">
-                        <span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span>
-                    </div>
-                </a>
-            </div>
+    <nav class="fixed top-3 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 px-3.5 md:px-4 py-2.5 flex items-center justify-between rounded-[1.35rem] nav-shell" aria-label="Primary">
+        <div class="flex items-center gap-3">
+            <a href="/" aria-label="HeyNaj Flow home" class="flex items-center gap-3">
+                <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-[34px] h-[34px] rounded-2xl shadow-sm">
+                <div class="font-extrabold tracking-tight text-[1.02rem] text-slate-900">
+                    <span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span>
+                </div>
+            </a>
         </div>
-    </header>
+
+        <div class="hidden lg:flex items-center gap-8 text-sm font-extrabold text-slate-500">
+            <a href="/#capabilities" class="quiet-link transition">Capabilities</a>
+            <a href="/#control-center" class="quiet-link transition">Command Center</a>
+            <a href="/#pricing" class="quiet-link transition">Pricing</a>
+            <a href="/blog/" class="quiet-link transition">Blog</a>
+        </div>
+
+        <a href="/book/" class="cta-primary transition px-5 md:px-6 py-3 rounded-full text-sm font-extrabold whitespace-nowrap">
+            Start Free Pilot
+        </a>
+    <button type="button" class="mobile-menu-toggle rounded-full border border-slate-200 px-3 py-2 text-slate-900 md:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+        <div id="mobile-menu" class="mobile-menu-panel hidden lg:hidden">
+            <a href="/#capabilities">Capabilities</a>
+            <a href="/#control-center">Command Center</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/blog/">Blog</a>
+        </div>
+    </nav>
 
     <main class="px-5 md:px-8 pb-16 md:pb-24">
-        <section class="pt-10 md:pt-14">
+        <section class="pt-28 md:pt-32">
             <div class="max-w-7xl mx-auto">
                 <div class="max-w-6xl">
                     <div class="section-badge micro-glow mb-6">
@@ -611,8 +654,8 @@
                         <span x-text="config.book_badge || '15-Minute Discovery Call'"></span>
                     </div>
 
-                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.book_title || `Let's Build Your Digital Employee.`"></h1>
-                    <p class="mt-5 text-lg md:text-xl font-medium leading-relaxed text-slate-600 max-w-5xl" x-text="config.book_desc || 'Pick a time below. We will look at your website and show you exactly how an AI assistant can capture leads for your specific business.'"></p>
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.book_title || `Let's Build Your Digital Employee.`">Let's Build Your Digital Employee.</h1>
+                    <p class="mt-5 text-lg md:text-xl font-medium leading-relaxed text-slate-600 max-w-5xl" x-text="config.book_desc || 'Pick a time below. We will look at your website and show you exactly how an AI assistant can capture leads for your specific business.'">Pick a time below. We will look at your website and show you exactly how an AI assistant can capture leads for your specific business.</p>
                 </div>
 
                 <div id="book-calendar" class="glass-card booking-shell hover-pop mt-16 md:mt-20">
@@ -625,7 +668,108 @@
                         <p class="mt-4 text-base md:text-lg font-medium leading-relaxed text-slate-600" x-text="config.book_section_desc || 'Select your timezone and pick an available slot below.'"></p>
                     </div>
 
-    …1865 tokens truncated…xt-[1.45rem] md:text-[1.62rem] leading-[1.08] font-extrabold tracking-tight text-slate-900" x-text="faq.q"></div>
+                    <div class="booking-iframe-wrap">
+                        <template x-if="getBookEmbedUrl()">
+                            <iframe
+                                :src="getBookEmbedUrl()"
+                                title="Google Calendar booking page"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                :style="`height:${getBookEmbedHeight()}px;`"></iframe>
+                        </template>
+
+                        <template x-if="!getBookEmbedUrl()">
+                            <div class="booking-placeholder">
+                                <div class="placeholder-inner">
+                                    <div class="w-14 h-14 rounded-[1.4rem] bg-[#ffdc32]/20 text-slate-900 inline-flex items-center justify-center text-2xl font-extrabold">G</div>
+                                    <h3 class="mt-6 text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Paste the Google Calendar inline booking page here.</h3>
+                                    <p class="mt-4 text-base md:text-lg font-medium leading-relaxed text-slate-600">Use Google Calendar's <strong>Inline booking page</strong> embed option. Paste the iframe URL into <code>book_embed_url</code> or the full iframe snippet into <code>book_embed_html</code>.</p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-12 md:pt-16">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-5xl">
+                    <div class="section-badge micro-glow mb-6">
+                        <span class="section-badge-dot"></span>
+                        <span x-text="config.book_checklist_badge || 'What to Expect'"></span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.book_checklist_heading || `What we'll cover on our call.`"></h2>
+                    <p class="mt-5 text-lg md:text-xl font-medium leading-relaxed text-slate-600 max-w-4xl" x-text="config.book_checklist_desc || `Three simple steps we'll walk through on our call.`"></p>
+                </div>
+
+                <div class="step-grid mt-12 md:mt-14">
+                    <template x-for="item in getBookChecklist()" :key="item.title">
+                        <article class="glass-card step-card hover-pop">
+                            <div class="step-number">&#10003;</div>
+                            <h3 class="mt-5 text-2xl font-extrabold tracking-tight text-slate-900" x-text="item.title"></h3>
+                            <p class="mt-3 text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="item.desc"></p>
+                        </article>
+                    </template>
+                </div>
+
+                <div class="conversion-note mt-10 w-full">
+                    <div class="conversion-note-title" x-text="config.book_note_title || 'No aggressive pitch. No awkward pressure.'"></div>
+                    <p class="conversion-note-copy mt-2" x-text="config.book_note_body || 'Just a fast strategy call to see if HeyNaj Flow can scale your business.'"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-12 md:pt-16">
+            <div class="max-w-7xl mx-auto">
+                <div class="glass-card rounded-[2rem] px-6 md:px-8 py-6 logo-band">
+                    <div class="text-center">
+                        <div class="infra-title" x-text="config.logos_heading || 'Built on Enterprise Infrastructure'"></div>
+                    </div>
+                    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-center">
+                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_openai">
+                            <img :src="config.logo_openai" alt="OpenAI" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
+                        </div>
+                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_google_cloud">
+                            <img :src="config.logo_google_cloud" alt="Google Cloud" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
+                        </div>
+                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_gemini">
+                            <img :src="config.logo_gemini" alt="Gemini" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
+                        </div>
+                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_workspace">
+                            <img :src="config.logo_workspace" alt="Google Workspace" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-faq" class="pt-24 md:pt-32">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-6xl">
+                    <div class="section-badge micro-glow mb-6">
+                        <span class="section-badge-dot"></span>
+                        <span x-text="config.book_faq_badge || 'Mini FAQ'"></span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900 xl:whitespace-nowrap" x-text="config.book_faq_title || 'A few quick answers before we chat.'"></h2>
+                    <p class="mt-5 text-lg md:text-xl font-medium leading-relaxed text-slate-600 max-w-4xl" x-text="config.book_faq_desc || 'Everything you need to know before we jump on our call.'"></p>
+                </div>
+
+                <div class="faq-grid-shell mt-12 md:mt-14" :class="activeFaq !== null ? 'faq-grid-active' : ''" @mouseleave="clearAllFaqs()">
+                    <div class="faq-bento-grid">
+                        <template x-for="(faq, index) in getBookFaqs()" :key="faq.q">
+                            <article class="glass-card faq-cap-card pop-entry"
+                                :class="activeFaq === index ? 'cap-active' : ''"
+                                @mouseenter="queueFaq(index)"
+                                @click="toggleFaq(index)"
+                                @keydown.enter.prevent="toggleFaq(index)"
+                                @keydown.space.prevent="toggleFaq(index)"
+                                tabindex="0"
+                                role="button">
+                                <div class="faq-card-summary">
+                                    <div class="space-y-2">
+                                        <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="faq.label"></div>
+                                        <div class="text-[1.45rem] md:text-[1.62rem] leading-[1.08] font-extrabold tracking-tight text-slate-900" x-text="faq.q"></div>
                                     </div>
                                 </div>
                             </article>
@@ -645,24 +789,39 @@
                     </template>
                 </div>
 
-                <div class="glass-card mt-10 rounded-[2rem] p-6 md:p-8">
-                    <div class="footer-cta">
-                        <div>
-                            <div class="text-[0.72rem] uppercase tracking-[0.22em] font-extrabold text-slate-400" x-text="config.book_footer_badge || 'Ready when you are'"></div>
-                            <h3 class="mt-4 text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900" x-text="config.book_footer_title || 'Ready to see it in action?'"></h3>
-                            <p class="mt-3 max-w-4xl text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="config.book_footer_body || 'Lock in your 14-day free pilot and waive your setup fee today.'"></p>
-                        </div>
-
-                        <div class="flex flex-col gap-3 items-stretch md:items-end">
-                            <a href="#book-calendar" class="cta-primary inline-flex items-center justify-center rounded-full px-6 py-4 text-base font-extrabold whitespace-nowrap">
-                                <span x-text="config.book_footer_cta || config.book_primary_cta || 'Book Your Call'"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <p class="mt-8 text-base md:text-lg font-semibold text-slate-700">
+                    Want to see it in action?
+                    <a href="#book-calendar" class="font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4 hover:text-slate-700 transition">Book your call.</a>
+                </p>
             </div>
         </section>
     </main>
+
+    <footer class="pt-6 pb-12 px-6 md:px-8">
+        <div class="max-w-7xl mx-auto glass-card rounded-[2rem] p-6 md:p-7 pop-entry">
+            <div class="footer-grid slim">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-10 h-10 rounded-2xl shadow-sm">
+                        <div class="font-extrabold tracking-tight text-lg text-slate-900"><span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span></div>
+                    </div>
+                    <p class="mt-4 max-w-4xl text-sm md:text-base font-medium leading-relaxed text-slate-600">The proactive AI chat widget that captures leads while you sleep.</p>
+                </div>
+                <div class="flex flex-col md:items-end gap-3">
+                    <a href="/book/" class="cta-primary transition inline-flex items-center justify-center rounded-full px-6 py-3 text-sm md:text-base font-extrabold">Start Free Pilot</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-5 flex flex-col gap-3 px-3 text-xs uppercase tracking-[0.12em] font-extrabold text-slate-400 md:flex-row md:items-center md:justify-between">
+            <p>&copy; 2026 HeyNaj Flow. All rights reserved.</p>
+            <nav class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end" aria-label="Legal">
+                <a href="/terms-of-service.html" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">Terms of Service</a>
+                <a href="/privacy-policy.html" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">Privacy Policy</a>
+                <a href="/data-handling-policy.html" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">Data Handling Policy</a>
+                <a href="https://www.linkedin.com/company/heynajflow/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-[5px] decoration-slate-300 decoration-[1.5px] hover:text-slate-600 hover:decoration-slate-500 transition">LinkedIn</a>
+            </nav>
+        </div>
+    </footer>
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
@@ -896,7 +1055,7 @@
                             desc: this.config.book_checklist_2_desc || "See how the AI handles your specific business questions.",
                         },
                         {
-                            title: this.config.book_checklist_3_title || "Fit Check",
+                            title: String(this.config.book_checklist_3_title || "Fit Check").replace(/\)+$/, ""),
                             desc: this.config.book_checklist_3_desc || "If we're a match, we'll get your AI built and launched. If not, no sweat!",
                         },
                     ];
@@ -997,6 +1156,6 @@
         }
     </script>
     <div id="real-widget-container"></div>
+<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.querySelector(".mobile-menu-toggle"),m=document.querySelector("#mobile-menu");b?.addEventListener("click",()=>{const open=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!open));b.setAttribute("aria-label",open?"Open navigation":"Close navigation");m?.classList.toggle("hidden",open);});});</script>
 </body>
 </html>
-
