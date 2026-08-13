@@ -1,7 +1,20 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-07T16:24:27.912Z",
+  "generated_at": "2026-08-13T13:38:33.555Z",
   "posts": [
+    {
+      "content_id": "research-20260731-150346-6",
+      "title": "Streamline Your Support: Integrating AI Chatbots with CRM and Helpdesk Systems",
+      "slug": "ai-chatbot-crm-helpdesk-integration-guide",
+      "excerpt": "Discover how integrating AI chatbots with CRM and helpdesk systems can transform your customer support, boost efficiency, and personalize every interaction. Learn the benefits and key steps for a seamless setup.",
+      "article_type": "blog_post",
+      "status": "published",
+      "source": "approved n8n workflow",
+      "published_at": "2026-08-13",
+      "hero_image_url": "https://res.cloudinary.com/dt5j91krt/image/upload/v1786622703/heynaj-flow/blog/ai-chatbot-crm-helpdesk-integration-guide-cover-r2-8292.jpg",
+      "hero_image_alt": "Streamline Your Support: Integrating AI Chatbots with CRM and Helpdesk Systems",
+      "read_time": 6
+    },
     {
       "content_id": "blog-20260729-101712",
       "title": "How Advanced Chatbot Features Build Unshakeable Customer Loyalty",
