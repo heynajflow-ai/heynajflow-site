@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   HEYNAJ BLOG ARTICLE CONTRACT
   THESIS: Show what happens to a website lead after business hours, and why lead capture should continue when the team is offline.
   OWN-WORLD: Warm ivory canvas, white reading surfaces, navy ink, signal yellow actions, rounded HeyNaj navigation.
@@ -51,7 +51,13 @@
             <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260807">
     <link rel="apple-touch-icon" href="/favicon.png?v=20260807">
   <style id="site-sticky-header-style">.site-sticky-header{position:sticky;top:.75rem;z-index:40}.site-sticky-header>nav{transition:box-shadow .2s ease,transform .2s ease}.site-sticky-header>nav:hover{box-shadow:0 24px 65px -38px rgba(15,23,42,.45)}@media(max-width:767px){.site-sticky-header{top:.5rem}.site-sticky-header>nav{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}}@media(prefers-reduced-motion:reduce){.site-sticky-header>nav{transition:none}}</style>
-  </head>
+    <style id="blog-article-navigation-standard">
+    .article-copy h3{margin:2.2rem 0 .7rem;font-size:clamp(1.25rem,1.8vw,1.4rem);line-height:1.3;color:var(--ink);letter-spacing:-.015em;font-weight:800}.article-copy h4{margin:1.55rem 0 .45rem;font-size:1rem;line-height:1.45;color:#475569;font-weight:800}
+    section[aria-labelledby="takeaways-heading"] ul{list-style:disc!important;padding-left:1.35rem!important}section[aria-labelledby="takeaways-heading"] li{padding-left:.2rem}section[aria-labelledby="takeaways-heading"] li::marker{color:var(--ink);font-size:.8em}
+    .article-copy h2[id],.article-copy h3[id],.article-copy h4[id]{scroll-margin-top:7rem}.toc nav{max-height:calc(100vh - 11rem);overflow-y:auto;padding-right:.25rem;scrollbar-width:thin}.toc a{display:block;padding:.45rem 0;font-size:.8rem;font-weight:750;line-height:1.4;color:#64748b}.toc .toc-topic{margin-left:.15rem;border-left:1px solid #e2e8f0;padding:.3rem 0 .3rem .7rem;font-size:.75rem;font-weight:650;line-height:1.35}.toc a:hover,.toc a:focus-visible{color:var(--ink)}
+    @media(max-width:900px){.toc nav{max-height:none;overflow:visible;padding-right:0}.toc .toc-topic{display:none}}
+  </style>
+</head>
 <body>
   <header class="site-sticky-header mx-auto max-w-7xl px-5 pt-4 md:px-8">
     <nav class="relative flex items-center justify-between rounded-[1.5rem] border border-slate-200 bg-white px-5 py-3 shadow-[0_22px_60px_-40px_rgba(15,23,42,.35)] md:px-7">
@@ -122,7 +128,6 @@
 </ul>
 <p>The third path is the opportunity. It does not require a business to promise an immediate human response. It requires a clear, grounded experience that sets expectations and keeps the lead from becoming invisible.</p>
 <blockquote>The goal is not to automate every decision. The goal is to prevent a genuine enquiry from becoming a dead end simply because it arrived at the wrong time.</blockquote>
-<figure class="product-shot"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1785941241/heynaj-flow/blog/featured-playbook/email-notification.jpg" alt="HeyNaj Flow lead alert notification on a mobile device" loading="lazy"><figcaption><strong>What happens next:</strong> a lead alert can reach the business while the team is away, so the enquiry is not lost before the next follow-up.</figcaption></figure>
 
 <h2 id="capture-intent">1. Capture intent before asking for everything</h2>
 <p>Good lead capture begins with the visitor's question. A person asking about pricing needs a different conversation from someone looking for urgent support or comparing service options.</p>
@@ -142,31 +147,26 @@
 <strong>Next step:</strong> Should the visitor read more, submit details, book a call, or wait for a human response?</li>
 </ul>
 <p>These questions can be grounded in the business's own Knowledge Vault. That keeps the assistant aligned with the services, policies, qualifying rules, and FAQs supplied during onboarding.</p>
-<figure class="product-shot"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1785941227/heynaj-flow/homepage/leads-dashboard.jpg" alt="HeyNaj Flow mobile Leads dashboard showing captured conversations" loading="lazy"><figcaption><strong>What the team receives:</strong> captured conversations are organized in the Leads dashboard so the team can review intent and choose the next action.</figcaption></figure>
 
 <h2 id="answer">3. Answer questions from the business Knowledge Vault</h2>
 <p>An AI assistant is only as useful as the information it is allowed to use. HeyNaj Flow uses a private business Knowledge Vault where the company's services, pricing policy, FAQs, operating hours, service area, dealbreakers, promotions, and handoff rules can be documented.</p>
 <p>This gives the assistant a reliable source for visitor questions instead of encouraging it to guess. When an answer is not in the approved knowledge, the safer response is to explain that a human team member will follow up.</p>
 <p>Business owners can update their documents when services, offers, or instructions change. That makes the website assistant easier to maintain than a system that requires a developer for every wording change.</p>
-<figure class="product-shot"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1785941180/heynaj-flow/homepage/ai-settings-dashboard.jpg" alt="HeyNaj Flow AI Settings screen showing bot instructions and booking link" loading="lazy"><figcaption><strong>What keeps answers grounded:</strong> the AI Settings screen holds the bot instructions, tone, booking link, fallback message, voice settings, and business knowledge connection.</figcaption></figure>
 
 <h2 id="summary">4. Turn the conversation into a useful lead summary</h2>
 <p>A captured lead should not arrive as a name and an empty notification. The more useful the context, the easier it is for the team to decide what to do next.</p>
 <p>HeyNaj's lead workflow can include the visitor's contact details, page or source context, conversation transcript, and a concise AI-generated summary. The summary is designed to help the business understand the lead without reading the entire conversation first.</p>
 <p>This is especially valuable after hours. By the time the team returns, the notification can show whether the visitor was exploring lead generation, asking about customer support automation, requesting a booking, or looking for a human response.</p>
-<figure class="product-shot"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1785941233/heynaj-flow/homepage/email-received.jpg" alt="HeyNaj Flow Smart Intent Alert email with lead snapshot and AI generated summary" loading="lazy"><figcaption><strong>What the alert looks like:</strong> the email includes a lead snapshot, contact details, page context, and an AI-generated summary before the team opens the conversation.</figcaption></figure>
 
 <h2 id="handoff">5. Make the human handoff feel continuous</h2>
 <p>Automation works best when it prepares the human conversation instead of hiding it. If the visitor asks for a person, reaches a sensitive question, or needs a decision outside the assistant's scope, the flow should route them clearly.</p>
 <p>A strong handoff carries context: the visitor's details, what they asked, what the assistant already explained, and why the conversation needs attention. This avoids the familiar experience of repeating the same story to a new person.</p>
 <p>When the visitor is ready to book, HeyNaj Flow can provide the business's existing booking link, such as Calendly, Acuity, or Google Calendar. When the visitor is not ready, the assistant can capture the enquiry and set a reasonable expectation for follow-up.</p>
-<figure class="product-shot"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1785941223/heynaj-flow/homepage/individual-leads-dashboard.jpg" alt="HeyNaj Flow individual lead dashboard showing contact details, summary, and chat transcript" loading="lazy"><figcaption><strong>Where context continues:</strong> an individual lead view keeps the summary and chat transcript together so the team can continue from the visitor's actual conversation.</figcaption></figure>
 
 <h2 id="abandonment">6. Recover value when the visitor leaves early</h2>
 <p>Not every visitor will complete a formal lead form. That does not mean the conversation has no value.</p>
 <p>HeyNaj Flow includes an abandonment alert path that can preserve the conversation and whatever information the visitor already provided. This gives the business a chance to understand where the visitor stopped and whether the experience needs a clearer prompt or a better answer.</p>
 <p>Abandonment data can also improve the website. Repeated unanswered questions may become a new FAQ, a service-page revision, or a future content opportunity.</p>
-<figure class="product-shot"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1785941244/heynaj-flow/blog/featured-playbook/abandoned-chat-dashboard.jpg" alt="HeyNaj Flow individual lead view showing an abandoned chat and follow-up context" loading="lazy"><figcaption><strong>When a visitor leaves early:</strong> the conversation can still reveal intent and show where the visitor stopped before completing the lead capture flow.</figcaption></figure>
 
 <h2 id="implementation">How to implement an after-hours lead flow</h2>
 <ol>
@@ -218,11 +218,7 @@
 
         <aside class="toc surface p-5" aria-label="Article navigation">
 <p class="text-xs font-extrabold uppercase tracking-[.16em] text-slate-500">On this page</p>
-<nav class="mt-4">
-<a href="#takeaways-heading">Key takeaways</a>
-<a href="#faq-heading">Common questions</a><a href="#sources-heading">Sources</a>
-
-</nav>
+<nav class="mt-4"><a href="#takeaways-heading">Key takeaways</a><a class="toc-topic" href="#short-answer" title="The short answer: keep the conversation moving">The short answer: keep the conversation…</a><a class="toc-topic" href="#after-hours-gap" title="What happens when a lead arrives after hours?">What happens when a lead arrives after…</a><a class="toc-topic" href="#capture-intent" title="1. Capture intent before asking for everything">1. Capture intent before asking for…</a><a class="toc-topic" href="#qualify" title="2. Qualify the lead with useful questions">2. Qualify the lead with useful…</a><a class="toc-topic" href="#answer" title="3. Answer questions from the business Knowledge Vault">3. Answer questions from the business…</a><a class="toc-topic" href="#summary" title="4. Turn the conversation into a useful lead summary">4. Turn the conversation into a useful…</a><a class="toc-topic" href="#handoff" title="5. Make the human handoff feel continuous">5. Make the human handoff feel…</a><a class="toc-topic" href="#abandonment" title="6. Recover value when the visitor leaves early">6. Recover value when the visitor leaves…</a><a class="toc-topic" href="#implementation" title="How to implement an after-hours lead flow">How to implement an after-hours lead…</a><a class="toc-topic" href="#cost" title="What does HeyNaj Flow cost?">What does HeyNaj Flow cost</a><a class="toc-topic" href="#conclusion" title="The practical answer for businesses">The practical answer for businesses</a><a href="#faq-heading">Common questions</a><a href="#sources">Sources</a></nav>
 </aside>
       </div>
       <section id="sources" class="references-section mt-12 p-6 md:p-8" aria-labelledby="sources-heading">

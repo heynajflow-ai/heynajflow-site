@@ -2,6 +2,30 @@
   publish = "."
 
 [[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy/"
+  to = "/privacy-policy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data-handling-policy"
+  to = "/data-handling-policy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data-handling-policy/"
+  to = "/data-handling-policy.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/book"
   to = "/book/index.html"
   status = 200

@@ -8,13 +8,20 @@ const registryPath = fs.existsSync(path.join(site, 'data', 'blog-registry.json')
   ? path.join(site, 'data', 'blog-registry.json')
   : path.join(site, 'data', 'blog-registry.seed.json');
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8').replace(/^\uFEFF/, ''));
+const genericExcerpt = 'Practical guidance for better website conversations with HeyNaj Flow.';
 const published = registry.posts
   .filter(post => post.status === 'published')
-  .map(post => ({
-    ...post,
-    published_at: post.published_at || new Date().toISOString().slice(0, 10),
-    excerpt: post.excerpt || 'Practical guidance for better website conversations with HeyNaj Flow.'
-  }))
+  .map(post => {
+    const excerpt = String(post.excerpt || '').trim();
+    if (!excerpt || excerpt === genericExcerpt) {
+      throw new Error(`Published post ${post.slug || post.content_id || '(unknown)'} needs a unique excerpt`);
+    }
+    return {
+      ...post,
+      published_at: post.published_at || new Date().toISOString().slice(0, 10),
+      excerpt,
+    };
+  })
   .sort((a, b) => b.published_at.localeCompare(a.published_at));
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({

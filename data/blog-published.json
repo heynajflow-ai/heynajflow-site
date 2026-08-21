@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T13:38:33.555Z",
+  "generated_at": "2026-08-20T09:24:13.855Z",
   "posts": [
     {
       "content_id": "research-20260731-150346-6",
@@ -19,14 +19,14 @@
       "content_id": "blog-20260729-101712",
       "title": "How Advanced Chatbot Features Build Unshakeable Customer Loyalty",
       "slug": "how-advanced-chatbot-features-build-unshakeable-customer-loyalty",
+      "excerpt": "See how personalization, proactive support, and AI-driven insights turn routine chatbot interactions into stronger customer loyalty.",
       "article_type": "cluster_article",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-08-05",
       "hero_image_url": "/blog/assets/generated/new-covers/how-advanced-chatbot-features-build-unshakeable-customer-loyalty.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for How Advanced Chatbot Features Build Unshakeable Customer Loyalty",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "featured-playbook-after-hours",
@@ -45,53 +45,53 @@
       "content_id": "blog-20260729-185805",
       "title": "How Chatbots Elevate the Customer Experience",
       "slug": "how-chatbots-elevate-customer-experience",
+      "excerpt": "Learn how faster answers, tailored guidance, and consistent support help chatbots create smoother customer journeys.",
       "article_type": "pillar_post",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-08-04",
       "hero_image_url": "/blog/assets/generated/new-covers/how-chatbots-elevate-customer-experience.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for How Chatbots Elevate the Customer Experience",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260729-194504",
       "title": "The Power of 24/7 Chatbot Support: Uninterrupted Service for a Connected World",
       "slug": "24-7-chatbot-support-uninterrupted-customer-service",
+      "excerpt": "Explore how always-on chatbot support delivers instant answers, reduces wait times, and keeps service moving around the clock.",
       "article_type": "pillar_post",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-08-03",
       "hero_image_url": "/blog/assets/generated/new-covers/24-7-chatbot-support-uninterrupted-customer-service.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for The Power of 24/7 Chatbot Support: Uninterrupted Service for a Connected World",
-      "read_time": 4,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 4
     },
     {
       "content_id": "blog-20260729-215150",
       "title": "How Chatbots Drive Significant Cost Savings in Customer Support",
       "slug": "chatbot-cost-savings-customer-support",
+      "excerpt": "Learn where chatbots reduce repetitive support costs while improving response speed and preserving quality customer experiences.",
       "article_type": "cluster_article",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-08-02",
       "hero_image_url": "/blog/assets/generated/new-covers/chatbot-cost-savings-customer-support.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for How Chatbots Drive Significant Cost Savings in Customer Support",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260730-083545",
       "title": "Beyond Basic Bots: Delivering Personalized Customer Experiences with AI Chatbots",
       "slug": "ai-chatbot-personalization-customer-experience",
+      "excerpt": "See how AI chatbots use customer context to personalize conversations, improve satisfaction, and encourage long-term loyalty.",
       "article_type": "cluster_article",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-08-01",
       "hero_image_url": "/blog/assets/generated/new-covers/ai-chatbot-personalization-customer-experience.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for Beyond Basic Bots: Delivering Personalized Customer Experiences with AI Chatbots",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260729-091906",
@@ -110,79 +110,79 @@
       "content_id": "blog-20260730-085302",
       "title": "The Ultimate Guide to 24/7 Chatbot Support: Meet Customer Expectations Around the Clock",
       "slug": "ultimate-guide-24-7-chatbot-support-customer-expectations",
+      "excerpt": "Understand how 24/7 chatbot support meets always-on customer expectations and gives service teams room to focus on complex work.",
       "article_type": "authority_guide",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-07-30",
       "hero_image_url": "/blog/assets/generated/new-covers/ultimate-guide-24-7-chatbot-support-customer-expectations.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for The Ultimate Guide to 24/7 Chatbot Support: Meet Customer Expectations Around the Clock",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260730-090456",
       "title": "Always There For You: The Top Benefits of Chatbots for Instant Customer Support",
       "slug": "always-there-for-you-chatbot-customer-support-benefits",
+      "excerpt": "Review the practical benefits of instant chatbot support, from round-the-clock answers to faster resolutions and lower customer effort.",
       "article_type": "cluster_article",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-07-28",
       "hero_image_url": "/blog/assets/generated/new-covers/always-there-for-you-chatbot-customer-support-benefits.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for Always There For You: The Top Benefits of Chatbots for Instant Customer Support",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260731-141723",
       "title": "The Definitive Guide to Calculating Chatbot ROI for Customer Service",
       "slug": "calculating-chatbot-roi-customer-service",
+      "excerpt": "Calculate chatbot ROI using support volume, resolution time, labor savings, customer satisfaction, and other measurable outcomes.",
       "article_type": "authority_guide",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-07-26",
       "hero_image_url": "/blog/assets/generated/new-covers/calculating-chatbot-roi-customer-service.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for The Definitive Guide to Calculating Chatbot ROI for Customer Service",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260731-152149",
       "title": "Unlock Stellar Service: 7 Key Benefits of AI Chatbots for Today's Customers",
       "slug": "ai-chatbot-benefits-for-customers",
+      "excerpt": "Explore seven customer-facing benefits of AI chatbots, including immediate answers, personalized help, and consistent 24/7 support.",
       "article_type": "blog_post",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-07-24",
       "hero_image_url": "/blog/assets/generated/new-covers/ai-chatbot-benefits-for-customers.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for Unlock Stellar Service: 7 Key Benefits of AI Chatbots for Today's Customers",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260731-154004",
       "title": "Beyond Basic: How HeyNaj's Conversational UX Improvement Boosts Chatbot Effectiveness",
       "slug": "heynaj-conversational-ux-chatbot-effectiveness",
+      "excerpt": "Learn how clearer prompts, natural conversation flows, and better handoffs make HeyNaj's chatbot experience more useful and effective.",
       "article_type": "cluster_article",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-07-22",
       "hero_image_url": "/blog/assets/generated/new-covers/heynaj-conversational-ux-chatbot-effectiveness.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for Beyond Basic: How HeyNaj's Conversational UX Improvement Boosts Chatbot Effectiveness",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     },
     {
       "content_id": "blog-20260803-142558",
       "title": "Choosing Your AI Assistant: HeyNaj vs. ChatBot.com - A Feature Comparison for Smart Businesses",
       "slug": "choosing-your-ai-assistant-heynaj-vs-chatbot-com-feature-comparison",
+      "excerpt": "Compare HeyNaj and ChatBot.com across setup, conversation quality, lead capture, integrations, and fit for growing businesses.",
       "article_type": "comparison_article",
       "status": "published",
       "source": "Blog Drafts workbook",
       "published_at": "2026-07-20",
       "hero_image_url": "/blog/assets/generated/new-covers/choosing-your-ai-assistant-heynaj-vs-chatbot-com-feature-comparison.png",
       "hero_image_alt": "HeyNaj Flow website assistant illustration for Choosing Your AI Assistant: HeyNaj vs. ChatBot.com - A Feature Comparison for Smart Businesses",
-      "read_time": 3,
-      "excerpt": "Practical guidance for better website conversations with HeyNaj Flow."
+      "read_time": 3
     }
   ]
 }
