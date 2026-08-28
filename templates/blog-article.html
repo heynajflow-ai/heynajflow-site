@@ -10,6 +10,7 @@ Required SEO fields: title, meta description, canonical URL, OG image, BlogPosti
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>{{TITLE}} | HeyNaj Flow</title>
   <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="heynaj-publish-marker" content="{{PUBLISH_MARKER}}">
   <link rel="canonical" href="https://heynajflow.com/blog/{{SLUG}}/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{{TITLE}}">
@@ -28,7 +29,7 @@ Required SEO fields: title, meta description, canonical URL, OG image, BlogPosti
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260807">
   <link rel="apple-touch-icon" href="/favicon.png?v=20260807">
-  <style>
+  <style id="blog-article-navigation-standard">
     :root{--yellow:#ffdc32;--ink:#0f172a;--slate:#475569;--ground:#fffdf5;--line:#e2e8f0}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ground);color:var(--ink);font-family:"Be Vietnam Pro",sans-serif}a{color:inherit}
     .site-sticky-header{position:sticky;top:.75rem;z-index:40}.site-sticky-header>nav{transition:box-shadow .2s cubic-bezier(.23,1,.32,1),transform .2s cubic-bezier(.23,1,.32,1)}
@@ -77,7 +78,7 @@ Required SEO fields: title, meta description, canonical URL, OG image, BlogPosti
 
       <div class="article-layout mt-12">
         <div>
-          <p class="max-w-[72ch] text-base font-bold leading-7 text-slate-900">{{EARLY_ANSWER}}</p>
+          <p id="introduction" class="max-w-[72ch] text-base font-bold leading-7 text-slate-900">{{EARLY_ANSWER}}</p>
           <section id="takeaways" class="takeaways mt-7 p-5 md:p-6" aria-labelledby="takeaways-heading">
             <span class="pill"><i></i>Key Takeaways</span>
             <h2 id="takeaways-heading" class="mt-4 text-2xl font-extrabold tracking-tight">What to remember</h2>
@@ -97,7 +98,7 @@ Required SEO fields: title, meta description, canonical URL, OG image, BlogPosti
         <h2 id="sources-heading" class="mt-3 text-2xl font-extrabold tracking-tight">References</h2>
         <ul class="source-list mt-4 space-y-3">{{SOURCE_ITEMS}}</ul>
       </section>
-      <p class="mt-10 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-600">Want to apply this to your site? <a class="font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4" href="https://heynajflow.com/book/">Start a free pilot conversation.</a></p>
+      <p id="approved-cta" class="mt-10 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-600">{{APPROVED_CTA}}</p>
     </article>
   </main>
 

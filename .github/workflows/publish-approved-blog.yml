@@ -24,6 +24,8 @@ jobs:
           CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
         run: node scripts/publish-approved-blog.mjs
       - name: Commit generated site
+        env:
+          BLOG_SLUG: ${{ github.event.client_payload.slug }}
         run: |
           git config user.name "HeyNaj Flow Blog Publisher"
           git config user.email "actions@users.noreply.github.com"
@@ -32,5 +34,5 @@ jobs:
             echo "No site changes to commit."
             exit 0
           fi
-          git commit -m "Publish blog: ${{ github.event.client_payload.slug }}"
+          git commit -m "Publish blog: $BLOG_SLUG"
           git push

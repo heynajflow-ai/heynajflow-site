@@ -1,17 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { normalizeApprovedBlog } from './approved-blog-contract.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const payload = JSON.parse(process.env.CLIENT_PAYLOAD || '{}');
-const required = ['topic_id', 'slug', 'title', 'meta_description', 'article_html', 'hero_image_url', 'published_at'];
-for (const field of required) {
-  if (!String(payload[field] || '').trim()) throw new Error(`Missing required publish field: ${field}`);
-}
-
-const slug = String(payload.slug).trim();
-if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new Error('Invalid blog slug');
-if (!/^https:\/\//i.test(String(payload.hero_image_url))) throw new Error('Hero image must use an HTTPS URL');
+const envelope = JSON.parse(process.env.CLIENT_PAYLOAD || '{}');
+if (envelope.editorial?.schema_version !== 2) throw new Error('Publisher v2 approved editorial payload required; no reconstructed content fallback');
+const payload = normalizeApprovedBlog({ ...envelope, ...envelope.editorial });
+payload.published_at = envelope.published_at;
+const slug = payload.slug;
+const publishMarker = `${payload.content_id}:r${payload.review_revision}:${payload.published_at}`;
 
 const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
@@ -26,11 +24,6 @@ const conciseText = (value, limit) => {
   if (text.length <= limit) return text;
   const clipped = text.slice(0, limit + 1).replace(/\s+\S*$/, '').replace(/[,:;\s]+$/, '');
   return `${clipped}.`;
-};
-const firstCompleteSentence = (value, limit = 220) => {
-  const text = stripTags(value);
-  const sentence = text.match(/^.*?[.!?](?=\s|$)/)?.[0] || text;
-  return conciseText(sentence, limit);
 };
 const compactTocLabel = (value, limit = 40) => {
   const text = stripTags(value).replace(/[?.!]+$/, '');
@@ -86,7 +79,7 @@ const sanitizeArticleHtml = (value, title) => {
     stripTags(heading).toLowerCase() === String(title).trim().toLowerCase() ? '' : match
   ));
 
-  const usedIds = new Set();
+  const usedIds = new Set(['takeaways', 'takeaways-heading', 'common-questions', 'faq-heading', 'sources', 'sources-heading', 'article-content', 'introduction']);
   html = html.replace(/<h([23])\b([^>]*)>([\s\S]*?)<\/h\1>/gi, (match, level, attributes, content) => {
     const existingId = attributes.match(/\bid\s*=\s*["']([^"']+)["']/i)?.[1];
     const base = existingId || slugifyHeading(content);
@@ -95,7 +88,7 @@ const sanitizeArticleHtml = (value, title) => {
     while (usedIds.has(id)) id = `${base}-${suffix++}`;
     usedIds.add(id);
     const cleanAttributes = attributes.replace(/\s+id\s*=\s*("[^"]*"|'[^']*')/i, '');
-    return `<h${level}${cleanAttributes} id="${id}">${content}</h${level}>`;
+    return `<h${level}${cleanAttributes} id="${escapeHtml(id)}">${content}</h${level}>`;
   });
   return html.trim();
 };
@@ -125,37 +118,10 @@ const typeLabel = ({
 const publishedDateLabel = new Intl.DateTimeFormat('en-US', {
   year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
 }).format(publishedAt);
-const sections = [...articleHtml.matchAll(/<h([23])\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/h\1>([\s\S]*?)(?=<h[23]\b|$)/gi)]
-  .map(([, , id, heading, body]) => ({
-    id,
-    heading: stripTags(heading),
-    answer: conciseText(body.match(/<p\b[^>]*>([\s\S]*?)<\/p>/i)?.[1] || body, 320),
-  }))
-  .filter(section => section.heading && section.answer);
-if (sections.length < 3) throw new Error('Approved article needs at least three substantive sections for takeaways and common questions');
-const faqQuestion = (heading) => {
-  const clean = heading.replace(/[?.!]+$/, '').trim();
-  const questionPhrase = value => value.toLowerCase()
-    .replace(/\bai\b/g, 'AI')
-    .replace(/\bcrm\b/g, 'CRM')
-    .replace(/\bapi\b/g, 'API')
-    .replace(/\bnlp\b/g, 'NLP');
-  const questionCase = value => {
-    const [, first = '', rest = ''] = value.match(/^(\S+)(?:\s+([\s\S]*))?$/) || [];
-    return `${first.charAt(0).toUpperCase()}${first.slice(1).toLowerCase()}${rest ? ` ${questionPhrase(rest)}` : ''}`;
-  };
-  const howStatement = clean.match(/^how (.+?) (elevate|improve|transform|build|drive|reduce|enhance|deliver|create) (.+)$/i);
-  if (howStatement) return `How do ${questionPhrase(howStatement[1])} ${howStatement[2].toLowerCase()} ${questionPhrase(howStatement[3])}?`;
-  if (/^(how|why|what|when|where|which|can|should|does|do|is|are)\b/i.test(clean)) return `${questionCase(clean)}?`;
-  const steps = clean.match(/^key steps for (.+)$/i);
-  if (steps) return `What are the key steps for ${questionPhrase(steps[1])}?`;
-  const challenge = clean.match(/^overcoming (.+)$/i);
-  if (challenge) return `How can businesses overcome ${questionPhrase(challenge[1])}?`;
-  return `What should businesses know about ${questionPhrase(clean)}?`;
-};
-const takeaways = sections.slice(0, 4).map(section => firstCompleteSentence(section.answer));
-const faqs = sections.slice(0, 4).map(section => ({ question: faqQuestion(section.heading), answer: section.answer }));
-const earlyAnswer = conciseText(sections[0].answer, 260);
+// Render the exact approved fields. Never infer replacement copy from body headings.
+const takeaways = payload.key_takeaways;
+const faqs = payload.faq;
+const earlyAnswer = payload.introduction;
 const takeawayItems = takeaways.map(item => `<li>${escapeHtml(item)}</li>`).join('');
 const faqItems = faqs.map(item => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join('');
 const visibleSupplement = [summary, earlyAnswer, ...takeaways, ...faqs.flatMap(item => [item.question, item.answer])].join(' ');
@@ -166,12 +132,8 @@ const tocLinks = [...articleHtml.matchAll(/<h([23])\b[^>]*\bid="([^"]+)"[^>]*>([
     return `<a class="toc-topic" href="#${escapeHtml(id)}" title="${escapeHtml(fullLabel)}">${escapeHtml(compactTocLabel(fullLabel))}</a>`;
   })
   .join('');
-const sourceLinks = [...articleHtml.matchAll(/<a\b[^>]*href=["'](https?:\/\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)]
-  .filter(([, url]) => !url.startsWith('https://heynajflow.com'));
-const uniqueSources = [...new Map(sourceLinks.map(([, url, label]) => [url, stripTags(label) || new URL(url).hostname])).entries()];
-const sourceItems = uniqueSources.length
-  ? uniqueSources.map(([url, label]) => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`).join('')
-  : '<li>References are linked in the article where they support a specific point.</li>';
+const sourceItems = payload.outbound_citations
+  .map(({url, anchor_text}) => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(anchor_text)}</a></li>`).join('');
 const blogPosting = {
   '@type': 'BlogPosting',
   headline: String(payload.title),
@@ -203,6 +165,8 @@ let document = fs.readFileSync(templatePath, 'utf8');
 document = document.replace(/^<!--[\s\S]*?-->\s*/, '');
 const replacements = {
   TITLE: escapeHtml(payload.title),
+  PUBLISH_MARKER: escapeHtml(publishMarker),
+  APPROVED_CTA: escapeHtml(payload.cta),
   TYPE_LABEL: escapeHtml(typeLabel),
   META_DESCRIPTION: escapeHtml(summary),
   SLUG: slug,
@@ -231,7 +195,7 @@ fs.writeFileSync(path.join(articleDir, 'index.html'), document);
 const registryPath = path.join(site, 'data', 'blog-registry.json');
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8').replace(/^\uFEFF/, ''));
 const entry = {
-  content_id: String(payload.topic_id),
+  content_id: payload.content_id,
   title: String(payload.title),
   slug,
   excerpt: summary,
