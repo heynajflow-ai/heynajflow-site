@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-20T09:24:13.845Z",
+  "generated_at": "2026-08-29T07:38:47.750Z",
   "notes": "Local migration seed. Production publishing is intentionally disabled until the n8n/GitHub/Netlify flow is tested.",
   "posts": [
     {
@@ -193,6 +193,19 @@
       "hero_image_url": "https://res.cloudinary.com/dt5j91krt/image/upload/v1786622703/heynaj-flow/blog/ai-chatbot-crm-helpdesk-integration-guide-cover-r2-8292.jpg",
       "hero_image_alt": "Streamline Your Support: Integrating AI Chatbots with CRM and Helpdesk Systems",
       "read_time": 6
+    },
+    {
+      "content_id": "blog-20260827-150014",
+      "title": "What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers",
+      "slug": "what-is-rag-how-heynaj-flow-uses-your-business-knowledge",
+      "excerpt": "See how retrieval-augmented generation (RAG) uses approved Google Drive business knowledge to support HeyNaj Flow website widget responses.",
+      "article_type": "blog_post",
+      "status": "published",
+      "source": "approved n8n workflow",
+      "published_at": "2026-08-29",
+      "hero_image_url": "https://res.cloudinary.com/dt5j91krt/image/upload/v1787827783/heynaj-flow/heynaj-flow/heynaj-flow/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge-cover.png",
+      "hero_image_alt": "What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers",
+      "read_time": 3
     }
   ]
 }

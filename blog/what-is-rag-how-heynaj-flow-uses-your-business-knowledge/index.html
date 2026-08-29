@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers | HeyNaj Flow</title>
+  <meta name="description" content="See how retrieval-augmented generation (RAG) uses approved Google Drive business knowledge to support HeyNaj Flow website widget responses.">
+  <meta name="heynaj-publish-marker" content="blog-20260827-150014:r5:2026-08-29T15:38:39.205+08:00">
+  <link rel="canonical" href="https://heynajflow.com/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers">
+  <meta property="og:description" content="See how retrieval-augmented generation (RAG) uses approved Google Drive business knowledge to support HeyNaj Flow website widget responses.">
+  <meta property="og:url" content="https://heynajflow.com/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge/">
+  <meta property="og:image" content="https://res.cloudinary.com/dt5j91krt/image/upload/v1787827783/heynaj-flow/heynaj-flow/heynaj-flow/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge-cover.png">
+  <meta property="og:image:alt" content="What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers">
+  <meta name="twitter:description" content="See how retrieval-augmented generation (RAG) uses approved Google Drive business knowledge to support HeyNaj Flow website widget responses.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dt5j91krt/image/upload/v1787827783/heynaj-flow/heynaj-flow/heynaj-flow/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge-cover.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers","description":"See how retrieval-augmented generation (RAG) uses approved Google Drive business knowledge to support HeyNaj Flow website widget responses.","image":["https://res.cloudinary.com/dt5j91krt/image/upload/v1787827783/heynaj-flow/heynaj-flow/heynaj-flow/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge-cover.png"],"datePublished":"2026-08-29T07:38:39.205Z","dateModified":"2026-08-29T07:38:39.205Z","mainEntityOfPage":"https://heynajflow.com/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge/","author":{"@type":"Organization","name":"HeyNaj Flow"},"publisher":{"@type":"Organization","name":"HeyNaj Flow"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does RAG stand for in artificial intelligence?","acceptedAnswer":{"@type":"Answer","text":"RAG stands for retrieval-augmented generation, which is a technique that connects generative language models to external data sources to help ground their responses."}},{"@type":"Question","name":"How does HeyNaj Flow use RAG for website widgets?","acceptedAnswer":{"@type":"Answer","text":"HeyNaj Flow retrieves approved business knowledge from Google Drive and uses that context to help generate relevant answers for the website widget."}},{"@type":"Question","name":"Can I use my own company documents with HeyNaj Flow?","acceptedAnswer":{"@type":"Answer","text":"Yes, teams can store approved business knowledge in Google Drive, which the system can then reference to help shape conversational responses."}}]}]}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260807">
+  <link rel="apple-touch-icon" href="/favicon.png?v=20260807">
+  <style id="blog-article-navigation-standard">
+    :root{--yellow:#ffdc32;--ink:#0f172a;--slate:#475569;--ground:#fffdf5;--line:#e2e8f0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ground);color:var(--ink);font-family:"Be Vietnam Pro",sans-serif}a{color:inherit}
+    .site-sticky-header{position:sticky;top:.75rem;z-index:40}.site-sticky-header>nav{transition:box-shadow .2s cubic-bezier(.23,1,.32,1),transform .2s cubic-bezier(.23,1,.32,1)}
+    .surface{border:1px solid var(--line);background:#fff;border-radius:1.5rem;box-shadow:0 24px 70px -48px rgba(15,23,42,.45)}
+    .pill{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .85rem;font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}.pill i{width:.55rem;height:.55rem;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px rgba(255,220,50,.18)}
+    .hero-media{min-height:330px;position:relative;overflow:hidden;border-radius:1.5rem;background:#0f172a}.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .article-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:2rem;align-items:start}.article-layout> :first-child{min-width:0}
+    .article-copy{max-width:72ch;font-size:1rem;line-height:1.78;color:#334155}.article-copy h2{margin:2.75rem 0 .85rem;font-size:clamp(1.5rem,2.3vw,1.875rem);line-height:1.2;color:var(--ink);letter-spacing:-.025em;font-weight:800}.article-copy h3{margin:2.2rem 0 .7rem;font-size:clamp(1.25rem,1.8vw,1.4rem);line-height:1.3;color:var(--ink);letter-spacing:-.015em;font-weight:800}.article-copy h4{margin:1.55rem 0 .45rem;font-size:1rem;line-height:1.45;color:#475569;font-weight:800}.article-copy p{margin:1rem 0}.article-copy ul{list-style:disc;margin:1.1rem 0;padding-left:1.35rem}.article-copy ol{list-style:decimal;margin:1.1rem 0;padding-left:1.35rem}.article-copy li{margin:.45rem 0}.article-copy a{font-weight:700;text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:3px;text-underline-offset:4px}.article-copy blockquote{margin:1.75rem 0;border-radius:1rem;background:#fff8d9;padding:1.1rem 1.25rem;font-weight:700;color:var(--ink)}
+    .takeaways{border:1px solid #f4c400;background:#fff8d9;border-radius:1rem}.takeaways ul{margin:1rem 0 0;padding-left:1.35rem;color:#334155;list-style:disc}.takeaways li{margin:.65rem 0;line-height:1.65;padding-left:.2rem}.takeaways li::marker{color:var(--ink);font-size:.8em}
+    .article-divider{height:9rem;margin:3.5rem 0;border-radius:1.25rem;background:linear-gradient(135deg,#0f172a 0 38%,#64748b 38% 62%,#ffdc32 62% 100%);box-shadow:0 20px 55px -40px rgba(15,23,42,.65);position:relative;overflow:hidden}.article-divider::after{content:'A practical answer, one step at a time';position:absolute;right:1.25rem;bottom:1rem;background:rgba(255,255,255,.94);border-radius:999px;padding:.55rem .8rem;color:var(--ink);font-size:.68rem;font-weight:800;letter-spacing:.06em}
+    .faq-section{border-radius:1.5rem}.faq-section .faq-copy{counter-reset:faq}.faq-section .faq-copy h3{margin:1.4rem 0 .55rem;font-size:1.1rem;font-weight:800;color:var(--ink)}.faq-section .faq-copy h3::before{counter-increment:faq;content:counter(faq) '. ';color:#64748b}.faq-section .faq-copy h3:first-child{margin-top:0}.faq-section .faq-copy p{margin:0 0 1rem;border:1px solid #f4c400;border-radius:1rem;background:#fff8d9;padding:1.1rem 1.25rem;line-height:1.7;color:var(--ink)}
+    #takeaways,#common-questions,#sources,.article-copy h2,.article-copy h3{scroll-margin-top:7rem}
+    .toc{position:sticky;top:6.5rem}.toc nav{max-height:calc(100vh - 11rem);overflow-y:auto;padding-right:.25rem;scrollbar-width:thin}.toc a{display:block;padding:.45rem 0;font-size:.8rem;font-weight:750;line-height:1.4;color:#64748b}.toc .toc-topic{margin-left:.15rem;border-left:1px solid #e2e8f0;padding:.3rem 0 .3rem .7rem;font-size:.75rem;font-weight:650;line-height:1.35}.toc a:hover,.toc a:focus-visible{color:var(--ink)}
+    .source-list{font-size:.82rem;line-height:1.6;color:#64748b}.source-list a{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--yellow);text-underline-offset:3px}
+    .footer-legal{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8}.footer-legal a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#cbd5e1}
+    @media(max-width:900px){.article-layout{grid-template-columns:1fr;gap:1.5rem}.toc{position:static}.toc nav{max-height:none;overflow:visible;padding-right:0}.toc .toc-topic{display:none}.hero-media{min-height:280px}}
+    @media(max-width:767px){.site-sticky-header{top:.5rem}.site-sticky-header>nav{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.hero-media{min-height:230px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-sticky-header>nav{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-sticky-header mx-auto max-w-7xl px-5 pt-4 md:px-8">
+    <nav class="relative flex items-center justify-between rounded-[1.5rem] border border-slate-200 bg-white px-5 py-3 shadow-[0_22px_60px_-40px_rgba(15,23,42,.35)] md:px-7" aria-label="Primary navigation">
+      <a href="https://heynajflow.com/" class="flex items-center gap-3"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="h-9 w-9 rounded-2xl"><span class="font-extrabold tracking-tight">HeyNaj Flow<span class="text-[#ffdc32]">&reg;</span></span></a>
+      <div class="hidden items-center gap-8 text-sm font-bold text-slate-600 md:flex"><a href="https://heynajflow.com/#capabilities">Capabilities</a><a href="https://heynajflow.com/#control-center">Command Center</a><a href="https://heynajflow.com/#pricing">Pricing</a><a href="/blog/" aria-current="page" class="text-slate-900">Blog</a></div>
+      <button type="button" class="mobile-menu-toggle flex min-h-11 min-w-11 items-center justify-center rounded-full border border-slate-200 text-slate-900 md:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+      <a href="https://heynajflow.com/book/" class="hidden rounded-full bg-[#ffdc32] px-6 py-3 text-center text-sm font-extrabold text-slate-900 sm:block">Start Free Pilot</a>
+    </nav>
+    <div id="mobile-menu" class="mt-3 hidden rounded-[1.35rem] border border-slate-200 bg-white p-4 shadow-sm md:hidden">
+      <nav class="flex flex-col gap-1 text-sm font-bold text-slate-700" aria-label="Mobile navigation"><a class="rounded-xl px-4 py-3" href="https://heynajflow.com/#capabilities">Capabilities</a><a class="rounded-xl px-4 py-3" href="https://heynajflow.com/#control-center">Command Center</a><a class="rounded-xl px-4 py-3" href="https://heynajflow.com/#pricing">Pricing</a><a class="rounded-xl px-4 py-3" href="/blog/" aria-current="page">Blog</a><a class="rounded-xl bg-[#ffdc32] px-4 py-3 text-center text-slate-900" href="https://heynajflow.com/book/">Start Free Pilot</a></nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-5 pb-20 pt-12 md:px-8 md:pt-20">
+    <a href="/blog/" class="text-sm font-bold text-slate-500 hover:text-slate-900">&larr; HeyNaj Flow Blog</a>
+    <article class="mt-7">
+      <section class="surface grid gap-8 p-6 md:p-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+        <div>
+          <span class="pill"><i></i>Blog post</span>
+          <p class="mt-6 text-sm font-bold italic text-slate-500"><time datetime="2026-08-29">August 29, 2026</time> &middot; 3 min read</p>
+          <h1 class="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-[-.04em] md:text-5xl">What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers</h1>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600">See how retrieval-augmented generation (RAG) uses approved Google Drive business knowledge to support HeyNaj Flow website widget responses.</p>
+        </div>
+        <figure class="hero-media"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1787827783/heynaj-flow/heynaj-flow/heynaj-flow/blog/what-is-rag-how-heynaj-flow-uses-your-business-knowledge-cover.png" alt="What Is RAG? How HeyNaj Flow Uses Your Business Knowledge to Give Better Answers" width="1200" height="675" loading="eager"></figure>
+      </section>
+
+      <div class="article-layout mt-12">
+        <div>
+          <p id="introduction" class="max-w-[72ch] text-base font-bold leading-7 text-slate-900">Building an effective customer support workflow often requires AI tools to reference internal business materials rather than relying solely on general training data. When exploring what is RAG in AI chatbots, website owners frequently look for ways to ground automated conversations in factual, organization-specific material. Retrieval-augmented generation offers a structured method for connecting large language models to external reference texts before drafting a response. For teams evaluating these methods, understanding the underlying framework helps clarify how conversational widgets retrieve relevant details to support users. This overview examines the mechanics of retrieval-augmented generation, how external data sources fit into the architecture, and how HeyNaj Flow applies these principles using Google Drive documents to help shape relevant answers for your website widget.</p>
+          <section id="takeaways" class="takeaways mt-7 p-5 md:p-6" aria-labelledby="takeaways-heading">
+            <span class="pill"><i></i>Key Takeaways</span>
+            <h2 id="takeaways-heading" class="mt-4 text-2xl font-extrabold tracking-tight">What to remember</h2>
+            <ul><li>Retrieval-augmented generation links AI models to external reference documents.</li><li>RAG architectures help ground conversational responses in authoritative company files.</li><li>HeyNaj Flow retrieves approved business knowledge from Google Drive for website widgets.</li><li>Connecting internal reference files helps support more relevant visitor interactions.</li></ul>
+          </section>
+          <div id="article-content" class="article-copy mt-10"><h2 id="understanding-the-core-concepts-of-retrieval-augmented-generation">Understanding the Core Concepts of Retrieval-Augmented Generation</h2><p>Standard language models rely heavily on the patterns learned during their initial training phase. While these models possess broad linguistic capabilities, they can sometimes generate generic statements or struggle with proprietary company policies. To address this limitation, developers turn to retrieval-augmented generation for chatbots.</p><p>As noted in the Google Cloud explanation of retrieval-augmented generation, this approach combines information retrieval with generative models to produce responses grounded in relevant external information. The system retrieves relevant passages and provides them as context before the model drafts a response.</p><h2 id="how-external-knowledge-bases-shape-ai-responses">How External Knowledge Bases Shape AI Responses</h2><p>In a typical setup, an external knowledge base serves as the reference library for the assistant. When a user submits an inquiry, the system scans this library for matching passages. According to the AWS guide to retrieval-augmented generation, this process allows a language model to reference an authoritative knowledge base before generating its response.</p><p>This workflow helps reduce unsupported assumptions by feeding specific text snippets directly into the generation pipeline. Teams often utilize an AI knowledge base to store service hours, pricing guidelines, FAQs, and internal documentation.</p><h2 id="the-retrieval-and-generation-workflow">The Retrieval and Generation Workflow</h2><p>The mechanics of a retrieval system generally follow a distinct sequence of steps to prepare and present data. As detailed in the Microsoft introduction to RAG concepts, a RAG system prepares and retrieves relevant information before using it to generate grounded answers.</p><ul><li><strong>Ingestion and Indexing:</strong> Documents are organized so the search mechanism can scan them efficiently.</li><li><strong>Query Matching:</strong> When a user asks a question, the system searches the index for matching content.</li><li><strong>Context Injection:</strong> Relevant paragraphs are added alongside the user prompt.</li><li><strong>Response Formulation:</strong> The model drafts a reply based on the retrieved context.</li></ul><h2 id="how-heynaj-flow-implements-knowledge-retrieval">How HeyNaj Flow Implements Knowledge Retrieval</h2><p>Applying these concepts to day-to-day operations requires a practical bridge between company files and customer-facing touchpoints. The current HeyNaj Flow implementation retrieves approved business knowledge from Google Drive and uses that context to help support relevant answers for the website widget.</p><p>HeyNaj Flow uses approved business documents from Google Drive as context for website widget responses. The available information depends on the documents the business has approved and maintained. This does not guarantee that every response will always be current or error-free.</p></div>
+          <div class="article-divider" role="img" aria-label="Brand visual separator between article and common questions"></div>
+          <section id="common-questions" class="faq-section surface p-6 md:p-8" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="text-2xl font-extrabold tracking-tight">Questions readers ask</h2>
+            <div class="faq-copy mt-4"><h3>What does RAG stand for in artificial intelligence?</h3><p>RAG stands for retrieval-augmented generation, which is a technique that connects generative language models to external data sources to help ground their responses.</p><h3>How does HeyNaj Flow use RAG for website widgets?</h3><p>HeyNaj Flow retrieves approved business knowledge from Google Drive and uses that context to help generate relevant answers for the website widget.</p><h3>Can I use my own company documents with HeyNaj Flow?</h3><p>Yes, teams can store approved business knowledge in Google Drive, which the system can then reference to help shape conversational responses.</p></div>
+          </section>
+        </div>
+        <aside class="toc surface p-5" aria-label="Article navigation"><p class="text-xs font-extrabold uppercase tracking-[.16em] text-slate-500">On this page</p><nav class="mt-4"><a href="#takeaways">Key takeaways</a><a class="toc-topic" href="#understanding-the-core-concepts-of-retrieval-augmented-generation" title="Understanding the Core Concepts of Retrieval-Augmented Generation">Understanding the Core Concepts of…</a><a class="toc-topic" href="#how-external-knowledge-bases-shape-ai-responses" title="How External Knowledge Bases Shape AI Responses">How External Knowledge Bases Shape AI…</a><a class="toc-topic" href="#the-retrieval-and-generation-workflow" title="The Retrieval and Generation Workflow">The Retrieval and Generation Workflow</a><a class="toc-topic" href="#how-heynaj-flow-implements-knowledge-retrieval" title="How HeyNaj Flow Implements Knowledge Retrieval">How HeyNaj Flow Implements Knowledge…</a><a href="#common-questions">Common questions</a><a href="#sources">Sources</a></nav></aside>
+      </div>
+      <section id="sources" class="mt-12 rounded-[1.25rem] border-t border-slate-200 bg-slate-50 p-6 md:p-8" aria-labelledby="sources-heading">
+        <p class="text-xs font-extrabold uppercase tracking-[.16em] text-slate-500">Sources</p>
+        <h2 id="sources-heading" class="mt-3 text-2xl font-extrabold tracking-tight">References</h2>
+        <ul class="source-list mt-4 space-y-3"><li><a href="https://cloud.google.com/use-cases/retrieval-augmented-generation" target="_blank" rel="noopener noreferrer">Google Cloud explanation of retrieval-augmented generation</a></li><li><a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" target="_blank" rel="noopener noreferrer">AWS guide to retrieval-augmented generation</a></li><li><a href="https://learn.microsoft.com/en-us/training/modules/rag-fundamentals/" target="_blank" rel="noopener noreferrer">Microsoft introduction to RAG concepts</a></li></ul>
+      </section>
+      <p id="approved-cta" class="mt-10 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-600">Ready to explore how grounded AI answers can support your website visitors? Discover how HeyNaj Flow uses your business knowledge to power helpful conversational widgets.</p>
+    </article>
+  </main>
+
+  <footer class="px-5 pb-10 md:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_22px_60px_-40px_rgba(15,23,42,.35)] md:flex-row md:items-center md:p-8">
+      <div><a href="https://heynajflow.com/" class="flex items-center gap-3"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="h-9 w-9 rounded-2xl"><span class="font-extrabold tracking-tight">HeyNaj Flow<span class="text-[#ffdc32]">&reg;</span></span></a><p class="mt-4 text-sm font-medium text-slate-600">The proactive AI chat widget that captures leads while you sleep.</p></div>
+      <a href="https://heynajflow.com/book/" class="rounded-full bg-[#ffdc32] px-6 py-3 text-center text-sm font-extrabold text-slate-900">Start Free Pilot</a>
+    </div>
+    <div class="mx-auto mt-5 flex max-w-7xl flex-col gap-3 px-2 text-xs font-extrabold uppercase tracking-[.12em] text-slate-400 md:flex-row md:items-center md:justify-between"><p>&copy; 2026 HeyNaj Flow. All rights reserved.</p><nav class="footer-legal" aria-label="Legal"><a href="/terms-of-service.html">Terms of Service</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/data-handling-policy.html">Data Handling Policy</a><a href="https://www.linkedin.com/company/heynajflow/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav></div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    menuToggle?.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      menuToggle.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+      mobileMenu?.classList.toggle('hidden', expanded);
+    });
+  </script>
+</body>
+</html>
