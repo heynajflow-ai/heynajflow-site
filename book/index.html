@@ -825,15 +825,6 @@
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
-        window.HN_WIDGET_EMBED_STORAGE_KEY = "hn_widget_embed_cache";
-        window.HN_WIDGET_EMBED_FALLBACK = (() => {
-            try {
-                return window.localStorage.getItem(window.HN_WIDGET_EMBED_STORAGE_KEY) || "";
-            } catch (error) {
-                return "";
-            }
-        })();
-
         window.BOOK_CONFIG = {
             brand_name: "HeyNaj Flow",
             book_meta_title: "Book a Discovery Call | HeyNaj Flow",
@@ -861,7 +852,6 @@
             book_embed_html: "",
             book_booking_link: "",
             book_embed_height: "600",
-            widget_embed: window.HN_WIDGET_EMBED_FALLBACK,
             logos_heading: "Built on Enterprise Infrastructure",
             book_faq_badge: "Mini FAQ",
             book_faq_title: "A few quick answers before we chat.",
@@ -963,12 +953,6 @@
                     return fetch(this.SCRIPT_URL + "?type=get_site_data")
                         .then((res) => res.json())
                         .then((data) => {
-                            const remoteWidgetEmbed = data && (data.widget_embed || data.WIDGET_EMBED);
-                            if (remoteWidgetEmbed) {
-                                try {
-                                    window.localStorage.setItem(window.HN_WIDGET_EMBED_STORAGE_KEY, remoteWidgetEmbed);
-                                } catch (error) {}
-                            }
                             this.config = this.normalizeConfig(data);
                         })
                         .catch((error) => {
@@ -1016,33 +1000,7 @@
                     return Number.isFinite(height) && height > 0 ? height : 940;
                 },
 
-                injectWidget() {
-                    let embedCode = this.config.widget_embed || this.config.WIDGET_EMBED || window.HN_WIDGET_EMBED_FALLBACK;
-                    if (!embedCode || embedCode === "MOCK_WIDGET") return;
-
-                    const existingBubble = document.getElementById("hn-chat-bubble");
-                    if (existingBubble || this.widgetMounted) return;
-
-                    embedCode = embedCode
-                        .split("[AI_NAME]").join(this.getDisplayAiName())
-                        .split("[bot_name]").join(this.getDisplayAiName())
-                        .split("[ai_name]").join(this.getDisplayAiName())
-                        .replace(/[\u201C\u201D]/g, "\"")
-                        .replace(/[\u2018\u2019]/g, "'");
-
-                    const container = document.getElementById("real-widget-container");
-                    if (!container) return;
-
-                    container.innerHTML = embedCode;
-                    const scripts = container.querySelectorAll("script");
-                    scripts.forEach((oldScript) => {
-                        const newScript = document.createElement("script");
-                        Array.from(oldScript.attributes).forEach((attr) => newScript.setAttribute(attr.name, attr.value));
-                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-                        oldScript.parentNode.replaceChild(newScript, oldScript);
-                    });
-                    this.widgetMounted = true;
-                },
+                injectWidget() {},
 
                 getBookChecklist() {
                     return [
@@ -1155,7 +1113,7 @@
             };
         }
     </script>
-    <div id="real-widget-container"></div>
 <script>document.addEventListener("DOMContentLoaded",()=>{const b=document.querySelector(".mobile-menu-toggle"),m=document.querySelector("#mobile-menu");b?.addEventListener("click",()=>{const open=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!open));b.setAttribute("aria-label",open?"Open navigation":"Close navigation");m?.classList.toggle("hidden",open);});});</script>
+  <script async src="https://heynaj-flow-4df05174-63b.revaultdigitallibrary.workers.dev/loader.js"></script>
 </body>
 </html>

