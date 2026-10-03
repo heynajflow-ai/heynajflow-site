@@ -91,13 +91,6 @@
             background: rgba(255, 255, 255, 0.62);
         }
 
-        .nav-shell {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.72);
-            box-shadow: 0 20px 60px -35px rgba(15, 23, 42, 0.35);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
 
         .footer-grid {
             display: grid;
@@ -606,44 +599,45 @@
             }
 
         }
-    .mobile-menu-panel{position:absolute;top:calc(100% + .75rem);right:0;width:min(18rem,calc(100vw - 2rem));padding:.75rem;border:1px solid #e2e8f0;border-radius:1.25rem;background:#fff;box-shadow:0 22px 60px -40px rgba(15,23,42,.35)}.mobile-menu-panel a{display:block;padding:.75rem 1rem;border-radius:.75rem;font-weight:800;color:#475569}.mobile-menu-panel a:hover,.mobile-menu-panel a:focus{background:#f8fafc;color:#0f172a}.mobile-menu-toggle{align-items:center;justify-content:center}
     </style>
             <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260807">
     <link rel="apple-touch-icon" href="/favicon.png?v=20260807">
-  </head>
+      <link rel="stylesheet" href="/assets/site-navigation.css">
+    <script defer src="/assets/site-navigation.js"></script>
+</head>
 <body x-data="bookPage()" x-init="init()">
     <div class="bg-noise"></div>
     <div class="ambient-orb one"></div>
     <div class="ambient-orb two"></div>
 
-    <nav class="fixed top-3 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 px-3.5 md:px-4 py-2.5 flex items-center justify-between rounded-[1.35rem] nav-shell" aria-label="Primary">
-        <div class="flex items-center gap-3">
-            <a href="/" aria-label="HeyNaj Flow home" class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-[34px] h-[34px] rounded-2xl shadow-sm">
-                <div class="font-extrabold tracking-tight text-[1.02rem] text-slate-900">
-                    <span x-text="config.brand_name || 'HeyNaj Flow'"></span><span class="text-[#ffdc32]">&reg;</span>
-                </div>
-            </a>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-8 text-sm font-extrabold text-slate-500">
-            <a href="/#capabilities" class="quiet-link transition">Capabilities</a>
-            <a href="/#control-center" class="quiet-link transition">Command Center</a>
-            <a href="/#pricing" class="quiet-link transition">Pricing</a>
-            <a href="/blog/" class="quiet-link transition">Blog</a>
-        </div>
-
-        <a href="/book/" class="cta-primary transition px-5 md:px-6 py-3 rounded-full text-sm font-extrabold whitespace-nowrap">
-            Start Free Pilot
+    <header class="site-sticky-header site-legacy-spacing">
+    <nav class="site-navigation" aria-label="Main navigation">
+        <a href="https://heynajflow.com/" class="site-brand" aria-label="HeyNaj Flow home">
+            <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" width="36" height="36">
+            <span>HeyNaj Flow</span>
         </a>
-    <button type="button" class="mobile-menu-toggle rounded-full border border-slate-200 px-3 py-2 text-slate-900 md:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
-        <div id="mobile-menu" class="mobile-menu-panel hidden lg:hidden">
-            <a href="/#capabilities">Capabilities</a>
-            <a href="/#control-center">Command Center</a>
-            <a href="/#pricing">Pricing</a>
-            <a href="/blog/">Blog</a>
+        <div class="site-navigation-links">
+            <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+            <a href="https://heynajflow.com/#features">Features</a>
+            <a href="https://heynajflow.com/blog/">Blog</a>
         </div>
+        <div class="site-navigation-actions">
+            <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+            <a class="site-navigation-button site-get-started" href="https://heynaj-flow-control.heynajflow.workers.dev/">Get Started</a>
+        </div>
+        <button type="button" class="site-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-mobile-menu">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+        </button>
     </nav>
+    <div id="site-mobile-menu" class="site-mobile-menu" hidden>
+        <nav aria-label="Mobile navigation">
+            <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+            <a href="https://heynajflow.com/#features">Features</a>
+            <a href="https://heynajflow.com/blog/">Blog</a>
+            <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+        </nav>
+    </div>
+</header>
 
     <main class="px-5 md:px-8 pb-16 md:pb-24">
         <section class="pt-28 md:pt-32">
@@ -1156,6 +1150,5 @@
         }
     </script>
     <div id="real-widget-container"></div>
-<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.querySelector(".mobile-menu-toggle"),m=document.querySelector("#mobile-menu");b?.addEventListener("click",()=>{const open=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!open));b.setAttribute("aria-label",open?"Open navigation":"Close navigation");m?.classList.toggle("hidden",open);});});</script>
 </body>
 </html>
