@@ -581,50 +581,6 @@
             transform-origin: center center;
         }
 
-        .hero-widget-lane {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 124px;
-            height: 590px;
-            pointer-events: none;
-            opacity: 0;
-            transform: translateY(-50%) translateX(12px);
-            transition: opacity 0.42s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .hero-widget-lane::before {
-            display: none;
-        }
-
-        .hero-widget-lane::after {
-            display: none;
-        }
-
-        .hero-grid.widget-lane-active {
-            grid-template-columns: minmax(0, 0.96fr) minmax(340px, 500px);
-            gap: 3.2rem;
-        }
-
-        .hero-grid.widget-lane-active .hero-copy {
-            max-width: 590px;
-        }
-
-        .hero-grid.widget-lane-active .hero-visual-shell {
-            justify-content: center;
-            padding-right: 124px;
-        }
-
-        .hero-grid.widget-lane-active .phone-frame {
-            margin: 0;
-            transform: translateX(0);
-        }
-
-        .hero-grid.widget-lane-active .hero-widget-lane {
-            opacity: 0;
-            transform: translateY(-50%) translateX(0);
-        }
-
         .mock-app-header {
             background: rgba(255, 255, 255, 0.96);
         }
@@ -1191,19 +1147,6 @@
                 padding-right: 0;
             }
 
-            .hero-widget-lane {
-                display: none;
-            }
-
-            .hero-grid.widget-lane-active .hero-visual-shell {
-                justify-content: center;
-                padding-right: 0;
-            }
-
-            .hero-grid.widget-lane-active .phone-frame {
-                margin: 0 auto;
-                transform: none;
-            }
         }
 
         @media (max-width: 1024px) {
@@ -1562,8 +1505,6 @@
                 loading: true,
                 liveBotName: "",
                 widgetTriggered: false,
-                widgetOpen: false,
-                wideDesktop: false,
                 activeCapability: null,
                 capabilityHoverTimer: null,
                 capabilityOverlayTimer: null,
@@ -1577,11 +1518,6 @@
 
                 refreshViewportFlags() {
                     this.touchLayout = window.innerWidth <= 1024 || window.matchMedia("(hover: none)").matches;
-                    this.wideDesktop = window.innerWidth > 1100;
-                },
-
-                heroWidgetLaneActive() {
-                    return this.widgetOpen && this.wideDesktop && !this.touchLayout;
                 },
 
                 getDisplayAiName() {
@@ -2010,10 +1946,6 @@
 
                 injectAndOpen() {
                     this.widgetTriggered = true;
-                    const widgetFrame = document.querySelector(
-                        'iframe[src="https://heynaj-flow-4df05174-63b.revaultdigitallibrary.workers.dev/widget"]'
-                    );
-                    if (widgetFrame) widgetFrame.focus();
                 }
             };
         }
@@ -2067,7 +1999,7 @@
 
     <main class="px-6 md:px-8">
         <section class="pt-28 md:pt-32 pb-12">
-            <div class="max-w-7xl mx-auto hero-grid" :class="{ 'widget-lane-active': heroWidgetLaneActive() }">
+            <div class="max-w-7xl mx-auto hero-grid">
                 <div class="hero-copy pop-entry">
                     <div class="section-badge micro-glow mb-5">
                         <span class="section-badge-dot"></span>
@@ -2098,7 +2030,6 @@
                 </div>
 
                 <div class="pop-entry hero-visual-shell flex items-center justify-center">
-                    <div class="hero-widget-lane" aria-hidden="true"></div>
                     <div class="phone-frame">
                         <div class="phone-notch"></div>
                         <div class="phone-screen">
@@ -2544,7 +2475,7 @@
         </div>
     </footer>
 
-    <script async src="https://heynaj-flow-4df05174-63b.revaultdigitallibrary.workers.dev/loader.js"></script>
+    <script async src="https://heynaj-flow-a08bd193-938.renz-heynajflow-64f.workers.dev/loader.js"></script>
 
 </body>
 </html>
