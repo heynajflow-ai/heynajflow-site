@@ -1549,6 +1549,360 @@
                 filter: drop-shadow(0 18px 28px rgba(26, 26, 26, 0.10));
             }
         }
+        .flow-how-it-works {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 6rem 0;
+            color: #1A1A1A;
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+
+        .flow-how-it-works .how-it-works-header {
+            max-width: 49rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .flow-how-it-works .how-it-works-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid rgba(26, 26, 26, 0.07);
+            border-radius: 999px;
+            background: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 0.09em;
+        }
+
+        .flow-how-it-works .how-it-works-eyebrow::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: #FFDC32;
+            box-shadow: 0 0 0 5px rgba(255, 220, 50, 0.16);
+        }
+
+        .flow-how-it-works .how-it-works-heading {
+            margin: 1.5rem 0 0;
+            font-size: clamp(2rem, 3.2vw, 2.875rem);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.045em;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+        }
+
+        .flow-how-it-works .how-it-works-description {
+            max-width: 39rem;
+            margin: 1.25rem auto 0;
+            color: #555d68;
+            font-size: 1.025rem;
+            line-height: 1.8;
+        }
+
+        .flow-how-it-works .how-it-works-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            align-items: center;
+            gap: clamp(2rem, 4vw, 3.5rem);
+            margin-top: 3.5rem;
+        }
+
+        .flow-how-it-works .how-it-works-figure {
+            min-width: 0;
+            margin: 0;
+        }
+
+        .flow-how-it-works .how-it-works-visual {
+            display: block;
+            width: 100%;
+            height: auto;
+            transform: translateY(0) scale(1);
+            filter: drop-shadow(0 18px 28px rgba(26, 26, 26, 0.09))
+                drop-shadow(0 0 0 rgba(255, 220, 50, 0));
+            transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1), filter 380ms ease;
+        }
+
+        .flow-how-it-works .how-it-works-steps {
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .flow-how-it-works .how-it-works-step {
+            position: relative;
+            display: grid;
+            grid-template-columns: 2.5rem minmax(0, 1fr);
+            gap: 1.25rem;
+            padding-bottom: 2rem;
+        }
+
+        .flow-how-it-works .how-it-works-step:last-child {
+            padding-bottom: 0;
+        }
+
+        .flow-how-it-works .how-it-works-step:not(:last-child)::before {
+            content: "";
+            position: absolute;
+            top: 2.875rem;
+            bottom: 0.375rem;
+            left: calc(1.25rem - 0.5px);
+            width: 1px;
+            background: rgba(26, 26, 26, 0.12);
+        }
+
+        .flow-how-it-works .how-it-works-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: #FFDC32;
+            color: #1A1A1A;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .flow-how-it-works .how-it-works-step h3 {
+            margin: 0.3rem 0 0;
+            font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+            font-weight: 700;
+            line-height: 1.45;
+            letter-spacing: -0.025em;
+        }
+
+        .flow-how-it-works .how-it-works-step p {
+            margin: 0.65rem 0 0;
+            color: #555d68;
+            font-size: 0.9375rem;
+            line-height: 1.8;
+        }
+
+        .flow-how-it-works .how-it-works-closing {
+            display: grid;
+            grid-template-columns: minmax(0, 0.35fr) minmax(0, 1.5fr) minmax(0, 1fr);
+            align-items: center;
+            gap: clamp(1.5rem, 2.5vw, 2rem);
+            margin-top: 4rem;
+            padding: 2.375rem clamp(2.5rem, 4vw, 3.5rem);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 2rem;
+            background:
+                radial-gradient(ellipse at 94% 55%, rgba(255, 220, 50, 0.07), transparent 48%),
+                linear-gradient(125deg, rgba(255, 255, 255, 0.035), transparent 48%, rgba(0, 0, 0, 0.12)),
+                #1A1A1A;
+            box-shadow: 0 20px 40px -28px rgba(26, 26, 26, 0.45);
+            color: #fff;
+            text-align: left;
+        }
+
+        .flow-how-it-works .closing-flow-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            min-width: 0;
+            padding-right: 1.25rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .flow-how-it-works .closing-flow-logo {
+            display: block;
+            width: 6.875rem;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .flow-how-it-works .closing-flow-message {
+            min-width: 0;
+        }
+
+        .flow-how-it-works .how-it-works-statement {
+            margin: 0;
+            font-size: clamp(1.625rem, 2vw, 1.875rem);
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.025em;
+            text-wrap: balance;
+        }
+
+        .flow-how-it-works .how-it-works-statement span,
+        .flow-how-it-works .how-it-works-statement strong {
+            display: block;
+        }
+
+        .flow-how-it-works .how-it-works-statement strong {
+            margin-top: 0.375rem;
+            color: #FFDC32;
+            font-weight: 700;
+        }
+
+        .flow-how-it-works .how-it-works-closing-copy {
+            max-width: 34rem;
+            margin: 1rem 0 0;
+            color: #C7C7C7;
+            font-size: 0.875rem;
+            line-height: 1.7;
+        }
+
+        .flow-how-it-works .closing-flow-visual {
+            display: block;
+            justify-self: center;
+            width: 100%;
+            max-width: 16.5rem;
+            height: auto;
+            transform: translateY(0) scale(1);
+            filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.2))
+                drop-shadow(0 8px 20px rgba(255, 220, 50, 0.1));
+            transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1), filter 380ms ease;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .flow-how-it-works .closing-flow-visual:hover {
+                transform: translateY(-4px) scale(1.01);
+                filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.22))
+                    drop-shadow(0 10px 22px rgba(255, 220, 50, 0.14));
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .flow-how-it-works .how-it-works-closing {
+                grid-template-columns: 6.875rem minmax(0, 1fr);
+                row-gap: 1.5rem;
+            }
+
+            .flow-how-it-works .closing-flow-brand {
+                align-self: start;
+            }
+
+            .flow-how-it-works .closing-flow-visual {
+                grid-column: 2;
+                justify-self: start;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .flow-how-it-works .how-it-works-closing {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 1.75rem;
+                padding: 2.5rem 1.5rem;
+                text-align: center;
+            }
+
+            .flow-how-it-works .closing-flow-brand {
+                padding: 0;
+                border: 0;
+            }
+
+            .flow-how-it-works .closing-flow-logo {
+                width: 6.25rem;
+            }
+
+            .flow-how-it-works .how-it-works-statement {
+                font-size: clamp(1.375rem, 5.6vw, 1.625rem);
+                line-height: 1.35;
+            }
+
+            .flow-how-it-works .how-it-works-closing-copy {
+                margin: 1rem auto 0;
+            }
+
+            .flow-how-it-works .closing-flow-visual {
+                grid-column: 1;
+                justify-self: center;
+                max-width: 19rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .flow-how-it-works .closing-flow-visual,
+            .flow-how-it-works .closing-flow-visual:hover {
+                transform: none;
+                transition: none;
+                filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.2));
+            }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .flow-how-it-works .how-it-works-visual:hover {
+                transform: translateY(-6px) scale(1.012);
+                filter: drop-shadow(0 24px 34px rgba(26, 26, 26, 0.12))
+                    drop-shadow(0 14px 26px rgba(255, 220, 50, 0.28));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .flow-how-it-works {
+                padding: 4.5rem 0;
+            }
+
+            .flow-how-it-works .how-it-works-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 2.5rem;
+                margin-top: 3rem;
+            }
+
+            .flow-how-it-works .how-it-works-figure {
+                width: 100%;
+                max-width: 42rem;
+                justify-self: center;
+            }
+
+            .flow-how-it-works .how-it-works-steps {
+                width: 100%;
+                max-width: 36rem;
+                justify-self: center;
+            }
+
+            .flow-how-it-works .how-it-works-closing {
+                margin-top: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flow-how-it-works {
+                padding: 3.5rem 0;
+            }
+
+            .flow-how-it-works .how-it-works-heading {
+                font-size: clamp(1.75rem, 7.2vw, 2rem);
+            }
+
+            .flow-how-it-works .how-it-works-description {
+                font-size: 0.95rem;
+            }
+
+            .flow-how-it-works .how-it-works-grid {
+                margin-top: 2.5rem;
+                gap: 2rem;
+            }
+
+            .flow-how-it-works .how-it-works-step {
+                gap: 0.875rem;
+            }
+
+            .flow-how-it-works .how-it-works-closing {
+                padding: 2.25rem 1.25rem;
+                border-radius: 1.75rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .flow-how-it-works .how-it-works-visual,
+            .flow-how-it-works .how-it-works-visual:hover {
+                transform: none;
+                transition: none;
+                filter: drop-shadow(0 18px 28px rgba(26, 26, 26, 0.09));
+            }
+        }
     </style>
 
     <script>
@@ -2308,24 +2662,49 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-12">
-            <div class="max-w-7xl mx-auto pop-entry">
-                <div class="glass-card-soft hover-pop rounded-[1.7rem] p-6 md:p-7 hero-pilot">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-[#ffdc32]/20 flex items-center justify-center shadow-inner">
-                            <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
+        <section id="how-it-works" class="flow-how-it-works" aria-labelledby="how-it-works-title">
+            <header class="how-it-works-header">
+                <div class="how-it-works-eyebrow">HOW IT WORKS</div>
+                <h2 id="how-it-works-title" class="how-it-works-heading">Your website shouldn’t go silent when someone has a question.</h2>
+                <p class="how-it-works-description">From the first question to a follow-up-ready Inquiry, HeyNaj Flow keeps the conversation and context moving.</p>
+            </header>
+            <div class="how-it-works-grid">
+                <figure class="how-it-works-figure">
+                    <img class="how-it-works-visual" src="/assets/heynaj-flow-how-it-works.png" alt="HeyNaj Flow website conversation, Soft Capture contact request, and Inquiry detail" width="1448" height="1086" loading="lazy" decoding="async">
+                </figure>
+                <ol class="how-it-works-steps" aria-label="How HeyNaj Flow works">
+                    <li class="how-it-works-step">
+                        <span class="how-it-works-number" aria-hidden="true">01</span>
                         <div>
-                            <div class="text-lg md:text-xl font-extrabold text-slate-900" x-text="config.hero_strip_title"></div>
-                            <div class="text-sm md:text-base font-medium text-slate-500 mt-1" x-text="config.hero_strip_body"></div>
+                            <h3>A visitor asks</h3>
+                            <p>Visitors can start naturally through text or an enabled voice experience. HeyNaj can answer using your approved business Knowledge when relevant.</p>
                         </div>
-                    </div>
-                    <a :href="config.cta_link || '#'" target="_blank" class="cta-primary transition inline-flex items-center justify-center rounded-full px-7 py-4 text-base font-extrabold whitespace-nowrap">
-                        <span x-text="config.cta_text || config.hero_primary_cta || 'Start Free Pilot'"></span>
-                    </a>
+                    </li>
+                    <li class="how-it-works-step">
+                        <span class="how-it-works-number" aria-hidden="true">02</span>
+                        <div>
+                            <h3>Contact capture when it makes sense</h3>
+                            <p>With Soft Capture enabled, HeyNaj can request contact details once interest is clear — without blocking the conversation.</p>
+                        </div>
+                    </li>
+                    <li class="how-it-works-step">
+                        <span class="how-it-works-number" aria-hidden="true">03</span>
+                        <div>
+                            <h3>The conversation becomes an Inquiry</h3>
+                            <p>The conversation and available context are organized inside your workspace so your business can review and follow up.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="how-it-works-closing">
+                <div class="closing-flow-brand">
+                    <img class="closing-flow-logo" src="/assets/heynaj-flow-white-logo.png" alt="HeyNaj Flow" width="2000" height="2000" loading="lazy" decoding="async">
                 </div>
+                <div class="closing-flow-message">
+                    <p class="how-it-works-statement"><span>HeyNaj handles the website conversation.</span> <strong>Your business owns the follow-up.</strong></p>
+                    <p class="how-it-works-closing-copy">The conversation and useful context stay available so you know what the visitor was asking when it’s time to respond.</p>
+                </div>
+                <img class="closing-flow-visual" src="/assets/heynaj-conversation-to-inquiry.png" alt="Conversation saved and organized as a HeyNaj Flow Inquiry" width="1448" height="1086" loading="lazy" decoding="async">
             </div>
         </section>
 
@@ -2405,7 +2784,7 @@
         </section>
 
         <section id="control-center" class="pt-12 md:pt-16 pb-16 md:pb-20">
-            <div id="how-it-works" class="max-w-7xl mx-auto">
+            <div id="legacy-how-it-works" class="max-w-7xl mx-auto">
                 <div class="max-w-5xl pop-entry">
                     <div class="section-badge micro-glow mb-6">
                         <span class="section-badge-dot"></span>
