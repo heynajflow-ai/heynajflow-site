@@ -1905,6 +1905,8 @@
         }
     </style>
     <link rel="stylesheet" href="/assets/text-voice.css">
+    <link rel="stylesheet" href="/assets/knowledge.css">
+    <script defer src="/assets/knowledge.js"></script>
 
     <script>
         window.MOCK_CONFIG = {
@@ -2764,6 +2766,122 @@
                 <p class="experience-clarification-title">Multilingual understanding, with English-first voice support.</p>
                 <p class="experience-clarification-copy">Voice availability can depend on the browser, device, provider, account eligibility, region, available credits, and provider limits.</p>
             </aside>
+        </section>
+
+        <section id="knowledge" class="flow-knowledge" aria-labelledby="knowledge-heading">
+            <header class="knowledge-intro">
+                <span class="knowledge-eyebrow">KNOWLEDGE + RAG</span>
+                <h2 id="knowledge-heading">Give HeyNaj the business context it needs to answer.</h2>
+                <p>Add your approved business Knowledge, test how answers behave, and turn unanswered questions into reviewable gaps.</p>
+            </header>
+
+            <div class="knowledge-layout">
+                <div class="knowledge-preview" aria-label="Interactive Knowledge product preview">
+                    <header class="knowledge-preview-header">
+                        <div class="knowledge-product-heading">
+                            <span class="knowledge-icon" aria-hidden="true"><img src="/assets/icons/knowledge.svg" width="24" height="24" alt=""></span>
+                            <div><h3>Knowledge</h3><p>Approved business context</p></div>
+                        </div>
+                        <button class="knowledge-test-button" type="button" aria-expanded="false" aria-controls="knowledge-test-preview"><span aria-hidden="true">▷</span> Test assistant</button>
+                    </header>
+                    <p class="knowledge-demo-label">Interactive preview · sample content · no data is saved</p>
+
+                    <aside id="knowledge-test-preview" class="knowledge-test-preview" aria-label="Static Test Assistant example" hidden>
+                        <span class="knowledge-example-label">Static preview — not a live AI response</span>
+                        <dl>
+                            <div><dt>Visitor question</dt><dd>Do you offer website support after launch?</dd></div>
+                            <div><dt>HeyNaj</dt><dd>Yes. Based on the approved business Knowledge, ongoing support options are available after launch.</dd></div>
+                        </dl>
+                    </aside>
+
+                    <div class="knowledge-tabs" role="tablist" aria-label="Knowledge preview sections">
+                        <button id="knowledge-tab-sources" type="button" role="tab" aria-selected="true" aria-controls="knowledge-panel-sources" tabindex="0">Knowledge Sources</button>
+                        <button id="knowledge-tab-review" type="button" role="tab" aria-selected="false" aria-controls="knowledge-panel-review" tabindex="-1">Question Review</button>
+                        <button id="knowledge-tab-profile" type="button" role="tab" aria-selected="false" aria-controls="knowledge-panel-profile" tabindex="-1">Business Profile</button>
+                    </div>
+
+                    <div id="knowledge-panel-sources" class="knowledge-panel" role="tabpanel" aria-labelledby="knowledge-tab-sources" tabindex="0">
+                        <article class="knowledge-card">
+                            <div class="knowledge-card-heading">
+                                <span class="knowledge-icon" aria-hidden="true"><img src="/assets/icons/document.svg" width="22" height="22" alt=""></span>
+                                <div><h4>Add Knowledge Note</h4><p>Add facts, services, pricing, policies, FAQs, or other approved business information.</p></div>
+                            </div>
+                            <dl class="knowledge-fields knowledge-note-fields">
+                                <div><dt>Title</dt><dd class="knowledge-field">Pricing and services</dd></div>
+                                <div><dt>Information</dt><dd class="knowledge-field knowledge-field-multiline knowledge-placeholder">Service details, policies, FAQs, and visitor-facing information...</dd></div>
+                            </dl>
+                        </article>
+                        <article class="knowledge-card">
+                            <div class="knowledge-card-heading">
+                                <span class="knowledge-icon" aria-hidden="true"><img src="/assets/icons/upload.svg" width="22" height="22" alt=""></span>
+                                <div><h4>Business Documents</h4><p>Approved sources for relevant answers.</p></div>
+                            </div>
+                            <div class="knowledge-upload" aria-disabled="true">
+                                <strong>Add business knowledge</strong>
+                                <span>TXT · MD · DOCX · PDF</span>
+                            </div>
+                            <ul class="knowledge-documents" aria-label="Example business documents">
+                                <li><img src="/assets/icons/knowledge-list.svg" width="20" height="20" alt=""><div><strong>business-knowledge.md</strong><span>Indexed for answers</span></div></li>
+                            </ul>
+                            <p class="knowledge-help">PDF search uses extractable text.</p>
+                        </article>
+                    </div>
+
+                    <div id="knowledge-panel-review" class="knowledge-panel" role="tabpanel" aria-labelledby="knowledge-tab-review" tabindex="0" hidden>
+                        <div class="knowledge-card-heading knowledge-review-heading">
+                            <span class="knowledge-icon" aria-hidden="true"><img src="/assets/icons/unresolved-question.svg" width="22" height="22" alt=""></span>
+                            <div><h4>Question Review</h4><p>When HeyNaj cannot confidently answer, review the gap and add approved Knowledge.</p></div>
+                        </div>
+                        <article class="knowledge-card">
+                            <div class="knowledge-question-meta"><span>Visitor</span><span class="knowledge-status">Needs review</span></div>
+                            <h5>Do you offer weekend appointments?</h5>
+                            <dl class="knowledge-fields"><div><dt>Approved answer</dt><dd class="knowledge-field knowledge-field-multiline knowledge-placeholder">Write an approved answer...</dd></div></dl>
+                            <span class="knowledge-save" aria-disabled="true">Save to Knowledge</span>
+                            <p class="knowledge-help">An approved answer can become reusable Knowledge. Demo only — nothing is saved.</p>
+                        </article>
+                        <article class="knowledge-card">
+                            <div class="knowledge-question-meta"><span>Visitor</span><span class="knowledge-status knowledge-status-resolved">Resolved</span></div>
+                            <h5>How far in advance should I book?</h5>
+                            <dl class="knowledge-approved-answer"><dt>Approved answer</dt><dd>We recommend booking ahead when possible. Short-notice requests can still be considered when availability allows.</dd></dl>
+                        </article>
+                    </div>
+
+                    <div id="knowledge-panel-profile" class="knowledge-panel" role="tabpanel" aria-labelledby="knowledge-tab-profile" tabindex="0" hidden>
+                        <article class="knowledge-card">
+                            <div class="knowledge-card-heading">
+                                <span class="knowledge-icon" aria-hidden="true"><img src="/assets/icons/knowledge-person.svg" width="22" height="22" alt=""></span>
+                                <div><h4>Business Profile</h4><p>The basics that identify your business.</p></div>
+                            </div>
+                            <dl class="knowledge-fields knowledge-profile-fields">
+                                <div><dt>Business name</dt><dd class="knowledge-field">Demo Business</dd></div>
+                                <div><dt>Primary website</dt><dd class="knowledge-field">example.com</dd></div>
+                                <div><dt>Admin time zone</dt><dd class="knowledge-field">Asia/Manila</dd></div>
+                            </dl>
+                            <p class="knowledge-profile-note">Keep business identity separate from detailed visitor-facing Knowledge.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="knowledge-support">
+                    <p class="knowledge-support-eyebrow">ADD. TEST. REVIEW. IMPROVE.</p>
+                    <div class="knowledge-explanation">
+                        <span class="knowledge-support-icon" aria-hidden="true"><img src="/assets/icons/knowledge.svg" width="24" height="24" alt=""></span>
+                        <div><h3>Business Knowledge</h3><p>Add approved information HeyNaj can retrieve when responding to relevant visitor questions.</p><span class="knowledge-formats">TXT · MD · DOCX · PDF</span></div>
+                    </div>
+                    <div class="knowledge-explanation">
+                        <span class="knowledge-support-icon knowledge-assistant-icon" aria-hidden="true">▷</span>
+                        <div><h3>Test before visitors do</h3><p>Use Test Assistant to check how HeyNaj responds against your Knowledge before relying on it on your website.</p></div>
+                    </div>
+                    <div class="knowledge-explanation">
+                        <span class="knowledge-support-icon" aria-hidden="true"><img src="/assets/icons/unresolved-question.svg" width="24" height="24" alt=""></span>
+                        <div><h3>Question Review</h3><p>See questions HeyNaj could not answer, add an approved response, and turn useful answers into reusable Knowledge.</p></div>
+                    </div>
+                    <aside class="knowledge-rag-callout">
+                        <h3>Retrieval-augmented answers from your approved Knowledge.</h3>
+                        <p>HeyNaj retrieves relevant stored business information when it can help answer a visitor’s question.</p>
+                    </aside>
+                </div>
+            </div>
         </section>
 
         <section id="infrastructure" class="pt-12 md:pt-16 pb-16 md:pb-20">
