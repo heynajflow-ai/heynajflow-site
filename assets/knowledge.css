@@ -1,0 +1,267 @@
+.flow-knowledge {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 6.5rem 0;
+    background: #f7f7f4;
+    color: #1A1A1A;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.flow-knowledge .knowledge-intro {
+    max-width: 49rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flow-knowledge .knowledge-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.85rem;
+    border: 1px solid rgba(26, 26, 26, 0.07);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.09em;
+}
+
+.flow-knowledge .knowledge-eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FFDC32;
+    box-shadow: 0 0 0 5px rgba(255, 220, 50, 0.16);
+}
+
+.flow-knowledge .knowledge-intro h2 {
+    margin: 1.5rem 0 0;
+    font-size: clamp(2rem, 3.2vw, 2.875rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+
+.flow-knowledge .knowledge-intro p {
+    max-width: 40rem;
+    margin: 1.25rem auto 0;
+    color: #555d68;
+    font-size: 1.025rem;
+    line-height: 1.8;
+    text-wrap: pretty;
+}
+
+.flow-knowledge .knowledge-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2rem, 4vw, 3.5rem);
+    margin-top: 2.25rem;
+}
+
+.flow-knowledge .knowledge-preview {
+    --kn-bg: #fafbfc;
+    --kn-surface: #ffffff;
+    --kn-subtle: #f6f8fa;
+    --kn-primary: #111827;
+    --kn-secondary: #667085;
+    --kn-muted: #697586;
+    --kn-border: #e4e8ee;
+    --kn-soft-border: #edf0f3;
+    --kn-yellow: #f7d303;
+    --kn-yellow-soft: #fff9dd;
+    --kn-yellow-border: #f2e3a4;
+    --kn-success: #09834b;
+    --kn-radius: 16px;
+    --kn-duration: 160ms;
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--kn-border);
+    border-radius: var(--kn-radius);
+    background: var(--kn-bg);
+    color: var(--kn-primary);
+    box-shadow: 0 20px 48px -28px rgba(17, 24, 39, 0.25);
+    transition: transform var(--kn-duration) ease;
+}
+
+.flow-knowledge [hidden] { display: none !important; }
+.flow-knowledge dl, .flow-knowledge dd { margin: 0; }
+.flow-knowledge img { display: block; flex-shrink: 0; }
+
+.flow-knowledge .knowledge-preview-header,
+.flow-knowledge .knowledge-product-heading,
+.flow-knowledge .knowledge-card-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
+.flow-knowledge .knowledge-preview-header { align-items: center; justify-content: space-between; }
+.flow-knowledge .knowledge-product-heading { align-items: center; }
+.flow-knowledge .knowledge-product-heading h3 { margin: 0; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.035em; line-height: 1.25; }
+.flow-knowledge .knowledge-product-heading p { margin: 0.3rem 0 0; color: var(--kn-secondary); font-size: 0.75rem; line-height: 1.5; }
+
+.flow-knowledge .knowledge-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    background: var(--kn-yellow-soft);
+}
+
+.flow-knowledge .knowledge-product-heading .knowledge-icon { width: 46px; height: 46px; border-radius: 50%; }
+
+.flow-knowledge .knowledge-test-button {
+    min-height: 44px;
+    flex-shrink: 0;
+    padding: 0 0.9rem;
+    border: 0;
+    border-radius: 8px;
+    background: var(--kn-primary);
+    color: var(--kn-surface);
+    font: 600 0.75rem "Be Vietnam Pro", sans-serif;
+    cursor: pointer;
+    transition: background var(--kn-duration) ease;
+}
+
+.flow-knowledge .knowledge-test-button:hover { background: #293347; }
+.flow-knowledge .knowledge-demo-label { margin: 1rem 0 0.5rem; color: var(--kn-muted); font-size: 0.6875rem; line-height: 1.6; }
+
+.flow-knowledge .knowledge-tabs {
+    display: flex;
+    gap: 4px;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--kn-border);
+}
+
+.flow-knowledge .knowledge-tabs button {
+    height: 48px;
+    flex: 0 0 auto;
+    padding: 0 0.8rem;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: var(--kn-secondary);
+    font: 500 0.8125rem "Be Vietnam Pro", sans-serif;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color var(--kn-duration) ease, border-color var(--kn-duration) ease;
+}
+
+.flow-knowledge .knowledge-tabs button[aria-selected="true"] { border-bottom-color: var(--kn-yellow); color: var(--kn-primary); font-weight: 700; }
+.flow-knowledge .knowledge-tabs button:hover { color: var(--kn-primary); }
+.flow-knowledge button:focus-visible, .flow-knowledge [role="tabpanel"]:focus-visible { outline: 2px solid #1A1A1A; outline-offset: 3px; }
+.flow-knowledge .knowledge-tabs button:focus-visible { outline-offset: -5px; border-radius: 5px 5px 0 0; }
+
+.flow-knowledge .knowledge-card {
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--kn-border);
+    border-radius: 12px;
+    background: var(--kn-surface);
+}
+
+.flow-knowledge .knowledge-card:last-child { margin-bottom: 0; }
+.flow-knowledge .knowledge-card-heading { margin-bottom: 1rem; }
+.flow-knowledge .knowledge-card-heading h4 { margin: 1px 0 5px; font-size: 1.0625rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.015em; }
+.flow-knowledge .knowledge-card-heading p { margin: 0; color: var(--kn-secondary); font-size: 0.8125rem; line-height: 1.6; }
+.flow-knowledge .knowledge-fields { display: grid; gap: 1rem; min-width: 0; }
+.flow-knowledge .knowledge-note-fields { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+.flow-knowledge .knowledge-fields > div { min-width: 0; }
+.flow-knowledge dt { margin-bottom: 7px; font-size: 0.75rem; font-weight: 500; line-height: 1.5; }
+
+.flow-knowledge .knowledge-field {
+    min-height: 40px;
+    padding: 9px 12px;
+    border: 1px solid var(--kn-border);
+    border-radius: 7px;
+    background: var(--kn-surface);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.flow-knowledge .knowledge-field-multiline { min-height: 80px; }
+.flow-knowledge .knowledge-placeholder { color: var(--kn-muted); }
+.flow-knowledge .knowledge-upload { display: grid; gap: 5px; padding: 1rem; border: 1px dashed var(--kn-yellow-border); border-radius: 9px; background: #fffdf3; text-align: center; }
+.flow-knowledge .knowledge-upload strong { font-size: 0.8125rem; font-weight: 600; }
+.flow-knowledge .knowledge-upload span { color: var(--kn-muted); font-size: 0.6875rem; }
+.flow-knowledge .knowledge-documents { display: grid; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.flow-knowledge .knowledge-documents li { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--kn-soft-border); border-radius: 9px; background: var(--kn-subtle); }
+.flow-knowledge .knowledge-documents li > div { min-width: 0; }
+.flow-knowledge .knowledge-documents strong { display: block; font-size: 0.75rem; font-weight: 500; overflow-wrap: anywhere; }
+.flow-knowledge .knowledge-documents span { display: block; margin-top: 3px; color: var(--kn-success); font-size: 0.6875rem; }
+.flow-knowledge .knowledge-help { margin: 10px 0 0; color: var(--kn-muted); font-size: 0.6875rem; line-height: 1.6; }
+.flow-knowledge .knowledge-question-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--kn-secondary); font-size: 0.6875rem; }
+.flow-knowledge .knowledge-status { padding: 4px 8px; border: 1px solid var(--kn-yellow-border); border-radius: 5px; background: var(--kn-yellow-soft); color: #806000; font-weight: 600; }
+.flow-knowledge .knowledge-status-resolved { border-color: #ccebdc; background: #ecfdf3; color: var(--kn-success); }
+.flow-knowledge .knowledge-card h5 { margin: 12px 0 16px; font-size: 0.875rem; font-weight: 600; line-height: 1.6; }
+.flow-knowledge .knowledge-save { display: inline-block; margin-top: 12px; padding: 8px 12px; border: 1px solid var(--kn-yellow-border); border-radius: 7px; background: var(--kn-yellow); font-size: 0.75rem; font-weight: 600; }
+.flow-knowledge .knowledge-approved-answer dd { padding: 12px; border-radius: 8px; background: var(--kn-subtle); color: var(--kn-secondary); font-size: 0.8125rem; line-height: 1.7; }
+.flow-knowledge .knowledge-profile-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.flow-knowledge .knowledge-profile-fields > div:last-child { grid-column: 1 / -1; }
+.flow-knowledge .knowledge-profile-note { margin: 20px 0 0; padding: 12px; border: 1px solid var(--kn-yellow-border); border-radius: 8px; background: var(--kn-yellow-soft); color: #806000; font-size: 0.8125rem; line-height: 1.7; }
+.flow-knowledge .knowledge-test-preview { margin: 16px 0; padding: 16px; border: 1px solid var(--kn-yellow-border); border-radius: 12px; background: var(--kn-yellow-soft); }
+.flow-knowledge .knowledge-example-label { display: block; margin-bottom: 14px; color: #806000; font-size: 0.6875rem; font-weight: 600; }
+.flow-knowledge .knowledge-test-preview dl { display: grid; gap: 16px; }
+.flow-knowledge .knowledge-test-preview dd { color: var(--kn-secondary); font-size: 0.8125rem; line-height: 1.7; }
+
+.flow-knowledge .knowledge-support { min-width: 0; padding-top: 1rem; }
+.flow-knowledge .knowledge-support-eyebrow { margin: 0 0 1.75rem; color: #697586; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.09em; line-height: 1.7; }
+.flow-knowledge .knowledge-explanation { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem 0; border-bottom: 1px solid #e4e8ee; }
+.flow-knowledge .knowledge-explanation:first-of-type { padding-top: 0; }
+.flow-knowledge .knowledge-support-icon { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px; background: #fff9dd; border: 1px solid rgba(255, 220, 50, 0.45); }
+.flow-knowledge .knowledge-assistant-icon { background: #111827; border-color: #111827; color: #FFDC32; font-size: 1.5rem; }
+.flow-knowledge .knowledge-explanation h3 { margin: 0 0 0.6rem; font-size: 1.125rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.4; }
+.flow-knowledge .knowledge-explanation p { margin: 0; color: #555d68; font-size: 0.875rem; line-height: 1.8; }
+.flow-knowledge .knowledge-formats { display: block; margin-top: 0.85rem; color: #697586; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.035em; }
+.flow-knowledge .knowledge-rag-callout { margin-top: 2.75rem; padding-left: 1rem; border-left: 3px solid #FFDC32; }
+.flow-knowledge .knowledge-rag-callout h3 { margin: 0; font-size: 0.875rem; font-weight: 600; line-height: 1.7; }
+.flow-knowledge .knowledge-rag-callout p { margin: 0.6rem 0 0; color: #697586; font-size: 0.8125rem; line-height: 1.8; }
+
+@media (hover: hover) and (min-width: 960px) {
+    .flow-knowledge .knowledge-preview:hover { transform: translateY(-3px); }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) and (min-height: 900px) {
+    .flow-knowledge .knowledge-support { position: sticky; top: 120px; align-self: start; }
+}
+
+@media (max-width: 959px) {
+    .flow-knowledge .knowledge-layout { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+    .flow-knowledge .knowledge-support { padding-top: 0; }
+}
+
+@media (max-width: 599px) {
+    .flow-knowledge { padding: 4.5rem 0; }
+    .flow-knowledge .knowledge-intro p { font-size: 0.9375rem; }
+    .flow-knowledge .knowledge-layout { margin-top: 1.5rem; }
+    .flow-knowledge .knowledge-preview { padding: 1rem; }
+    .flow-knowledge .knowledge-preview-header { flex-wrap: wrap; gap: 1rem; }
+    .flow-knowledge .knowledge-test-button { width: 100%; }
+    .flow-knowledge .knowledge-tabs button { padding: 0 0.7rem; }
+    .flow-knowledge .knowledge-card { padding: 1rem; }
+    .flow-knowledge .knowledge-card-heading { gap: 0.65rem; }
+    .flow-knowledge .knowledge-card-heading .knowledge-icon { width: 34px; height: 34px; }
+    .flow-knowledge .knowledge-card-heading h4 { font-size: 0.9375rem; }
+    .flow-knowledge .knowledge-note-fields, .flow-knowledge .knowledge-profile-fields { grid-template-columns: minmax(0, 1fr); }
+    .flow-knowledge .knowledge-explanation { gap: 0.85rem; }
+    .flow-knowledge .knowledge-rag-callout { margin-top: 2.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flow-knowledge .knowledge-preview,
+    .flow-knowledge .knowledge-tabs button,
+    .flow-knowledge .knowledge-test-button { transition: none; }
+    .flow-knowledge .knowledge-preview:hover { transform: none; }
+}
