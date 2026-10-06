@@ -1265,6 +1265,290 @@
                 height: 164px;
             }
         }
+        .flow-hero {
+            --flow-hero-top: 4.5rem;
+            padding: 4.5rem 0;
+            font-family: "Be Vietnam Pro", sans-serif;
+            color: #1A1A1A;
+        }
+
+        .site-legacy-spacing + main > .flow-hero:first-child {
+            padding-top: var(--flow-hero-top);
+        }
+
+        .flow-hero .flow-hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+            align-items: center;
+            gap: clamp(2rem, 4vw, 4rem);
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        .flow-hero .flow-hero-copy {
+            min-width: 0;
+        }
+
+        .flow-hero .flow-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid rgba(26, 26, 26, 0.07);
+            border-radius: 999px;
+            background: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 0.09em;
+        }
+
+        .flow-hero .flow-hero-badge::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: #FFDC32;
+            box-shadow: 0 0 0 5px rgba(255, 220, 50, 0.16);
+        }
+
+        .flow-hero .flow-hero-heading {
+            margin: 1.6rem 0 0;
+            font-size: clamp(2.5rem, 4.2vw, 3.75rem);
+            font-weight: 800;
+            line-height: 1.14;
+            letter-spacing: -0.055em;
+            overflow-wrap: break-word;
+            text-wrap: balance;
+        }
+
+        .flow-hero .flow-hero-heading mark {
+            padding: 0 0.04em;
+            border-radius: 0.08em;
+            color: #1A1A1A;
+            background: #FFDC32;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+
+        .flow-hero .flow-hero-description {
+            max-width: 33rem;
+            margin: 1.5rem 0 0;
+            color: #555d68;
+            font-size: 1.025rem;
+            line-height: 1.8;
+        }
+
+        .flow-hero .flow-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .flow-hero .flow-hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 3.25rem;
+            padding: 0.9rem 1.35rem;
+            border: 1px solid #deded8;
+            border-radius: 999px;
+            background: #fff;
+            color: #1A1A1A;
+            font-size: 0.875rem;
+            font-weight: 700;
+            line-height: 1.5;
+            text-decoration: none;
+            transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+        }
+
+        .flow-hero .flow-hero-button-primary {
+            border-color: #FFDC32;
+            background: #FFDC32;
+            box-shadow: 0 8px 20px -12px rgba(26, 26, 26, 0.3);
+        }
+
+        .flow-hero .flow-hero-button:focus-visible {
+            outline: 3px solid #1A1A1A;
+            outline-offset: 4px;
+        }
+
+        .flow-hero .flow-hero-button:active {
+            transform: translateY(0);
+        }
+
+        .flow-hero .flow-hero-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .flow-hero .flow-hero-benefits li {
+            padding: 0.5rem 0.7rem;
+            border: 1px solid rgba(26, 26, 26, 0.07);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #555d68;
+            font-size: 0.7rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .flow-hero .flow-hero-visual {
+            position: relative;
+            isolation: isolate;
+            min-width: 0;
+            width: 100%;
+            margin: 0;
+        }
+
+        .flow-hero .flow-hero-brand-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: fit-content;
+            max-width: 100%;
+            margin: calc(20px - 10.8%) auto 0;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid rgba(26, 26, 26, 0.07);
+            border-radius: 999px;
+            background: #fff;
+            color: #1A1A1A;
+            box-shadow: 0 8px 20px -12px rgba(26, 26, 26, 0.16);
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .flow-hero .flow-hero-brand-badge svg {
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+            color: #FFDC32;
+        }
+
+        @media (min-width: 961px) {
+            .flow-hero .flow-hero-visual {
+                transform: translateY(-16px);
+            }
+
+            .flow-hero .flow-hero-brand-badge {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .flow-hero .flow-hero-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transform: translateY(0) scale(1);
+            filter:
+                drop-shadow(0 18px 28px rgba(26, 26, 26, 0.10))
+                drop-shadow(0 0 0 rgba(255, 220, 50, 0));
+            transition:
+                transform 360ms cubic-bezier(0.16, 1, 0.3, 1),
+                filter 360ms ease;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .flow-hero .flow-hero-button:hover {
+                transform: translateY(-2px);
+                background: #fafaf7;
+                box-shadow: 0 12px 24px -16px rgba(26, 26, 26, 0.3);
+            }
+
+            .flow-hero .flow-hero-button-primary:hover {
+                background: #ffe35b;
+            }
+
+            .flow-hero .flow-hero-visual:hover .flow-hero-image {
+                transform: translateY(-8px) scale(1.018);
+                filter:
+                    drop-shadow(0 26px 34px rgba(26, 26, 26, 0.13))
+                    drop-shadow(0 16px 28px rgba(255, 220, 50, 0.38));
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .flow-hero .flow-hero-grid {
+                grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.25fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .flow-hero {
+                --flow-hero-top: 3.75rem;
+                padding-bottom: 3.75rem;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .flow-hero .flow-hero-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 2.25rem;
+            }
+
+            .flow-hero .flow-hero-copy {
+                max-width: 40rem;
+            }
+
+            .flow-hero .flow-hero-heading {
+                font-size: clamp(2.5rem, 6vw, 3.75rem);
+            }
+
+            .flow-hero .flow-hero-visual {
+                max-width: 46rem;
+                justify-self: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flow-hero {
+                --flow-hero-top: 2.5rem;
+                padding-top: 2.5rem;
+                padding-bottom: 3.5rem;
+            }
+
+            .flow-hero .flow-hero-heading {
+                font-size: clamp(2rem, 8.5vw, 2.55rem);
+            }
+
+            .flow-hero .flow-hero-description {
+                font-size: 0.95rem;
+            }
+
+            .flow-hero .flow-hero-actions {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .flow-hero .flow-hero-button,
+            .flow-hero .flow-hero-image {
+                transition: none;
+            }
+
+            .flow-hero .flow-hero-button:hover,
+            .flow-hero .flow-hero-visual:hover .flow-hero-image {
+                transform: none;
+            }
+
+            .flow-hero .flow-hero-visual:hover .flow-hero-image {
+                filter: drop-shadow(0 18px 28px rgba(26, 26, 26, 0.10));
+            }
+        }
     </style>
 
     <script>
@@ -1998,79 +2282,30 @@
 </header>
 
     <main class="px-6 md:px-8">
-        <section class="pt-28 md:pt-32 pb-12">
-            <div class="max-w-7xl mx-auto hero-grid">
-                <div class="hero-copy pop-entry">
-                    <div class="section-badge micro-glow mb-5">
-                        <span class="section-badge-dot"></span>
-                        <span x-text="config.hero_badge || '24/7 Always-On Lead Capture'"></span>
+        <section class="flow-hero" aria-labelledby="flow-hero-title">
+            <div class="flow-hero-grid">
+                <div class="flow-hero-copy">
+                    <div class="flow-hero-badge">FREE AI WEBSITE ASSISTANT</div>
+                    <h1 id="flow-hero-title" class="flow-hero-heading">Turn website conversations into follow-up-ready <mark>Inquiries.</mark></h1>
+                    <p class="flow-hero-description">HeyNaj Flow is a free AI website assistant that answers from your business Knowledge, talks with visitors by text or voice, captures contact details when needed, and keeps every conversation organized for follow-up.</p>
+                    <div class="flow-hero-actions">
+                        <a class="flow-hero-button flow-hero-button-primary" href="https://heynajflow.com/get-started/">Get Started — Free →</a>
+                        <a class="flow-hero-button" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                     </div>
-
-                    <h1 class="hero-heading font-extrabold text-slate-900">
-                        <span class="block whitespace-pre-line" x-text="config.hero_title || `Your Business Doesn't Sleep.`">Your Business Doesn't Sleep.</span>
-                        <span class="block text-slate-400 mt-4 whitespace-pre-line" x-text="config.hero_sub || 'Meet Your Newest Employee.'">Meet Your Newest Employee.</span>
-                    </h1>
-
-                    <p class="hero-body mt-6 font-medium text-slate-600" x-text="config.hero_desc">HeyNaj Flow gives you a smart AI website helper that chats by text or voice, captures leads, sends instant alerts, and matches your brand.</p>
-
-                    <div class="hero-note mt-7">
-                        <div class="hero-chip micro-glow" x-text="config.hero_chip_1 || 'Text + voice support'"></div>
-                        <div class="hero-chip micro-glow" x-text="config.hero_chip_2 || 'Instant lead alerts'"></div>
-                        <div class="hero-chip micro-glow" x-text="config.hero_chip_3 || 'Brand-matched widget'"></div>
-                    </div>
-
-                    <div class="mt-9 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-                        <button @click="startInterview()" x-show="step === 0" class="cta-primary transition px-8 py-5 rounded-full text-lg font-extrabold text-center" :class="step === 0 ? 'cta-breathe' : ''">
-                            <span x-text="config.hero_interview_cta || 'Interview AI'"></span>
-                        </button>
-                        <a :href="config.link_demo || '#'" target="_blank" class="transition px-8 py-5 rounded-full text-lg font-extrabold text-center border shadow-sm" :class="widgetTriggered ? 'cta-primary cta-breathe border-transparent' : 'cta-secondary border-slate-300 bg-white/72'">
-                            <span x-text="config.hero_demo_cta || 'See what you get'"></span>
-                        </a>
-                    </div>
+                    <ul class="flow-hero-benefits" aria-label="HeyNaj Flow benefits">
+                        <li>Free to use</li>
+                        <li>Text + Voice</li>
+                        <li>Customer-owned Cloudflare</li>
+                    </ul>
                 </div>
-
-                <div class="pop-entry hero-visual-shell flex items-center justify-center">
-                    <div class="phone-frame">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <div class="mock-app-header px-5 pt-11 pb-4 border-b flex items-center gap-3">
-                                <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="w-8 h-8 rounded-xl">
-                                <div>
-                                    <p class="text-[11px] font-bold text-black" x-text="getDisplayAiName()"></p>
-                                    <p class="text-[9px] text-green-500 font-bold uppercase tracking-wider">Online</p>
-                                </div>
-                            </div>
-
-                            <div class="flex-1 p-4 space-y-3 flex flex-col relative h-full overflow-hidden bg-white">
-                                <div x-show="step >= 1" x-transition class="bg-slate-100 text-[11px] p-3 rounded-2xl rounded-bl-none self-start max-w-[84%]">
-                            <span x-text="resolveTemplateText(config.hero_mock_intro || `Hi! I'm [bot_name].`)"></span>
-                                </div>
-                                <div x-show="step >= 2" x-transition class="bg-black text-white text-[11px] p-3 rounded-2xl rounded-br-none self-end max-w-[82%]">
-                                    <span x-text="config.hero_mock_question || 'What are your hours?'"></span>
-                                </div>
-                                <div x-show="typing" class="bg-slate-50 p-3 rounded-2xl inline-flex items-center gap-1 typing-dots w-fit shadow-sm">
-                                    <span></span><span></span><span></span>
-                                </div>
-                                <div x-show="step >= 3" x-transition class="bg-slate-100 text-[11px] p-3 rounded-2xl rounded-bl-none self-start max-w-[84%]">
-                                    <span x-text="config.hero_mock_answer || 'I work 24/7/365. I never sleep.'"></span>
-                                </div>
-
-                                <div class="absolute bottom-32 left-0 w-full px-4" x-show="step >= 3 && !widgetTriggered" x-transition>
-                                    <button @click="injectAndOpen()" class="w-full cta-primary cta-breathe transition text-[11px] font-extrabold py-4 rounded-xl shadow-lg">
-                                        <span x-text="config.hero_mock_cta || 'Test the system'"></span>
-                                    </button>
-                                </div>
-
-                                <img src="/blog/assets/featured-playbook-assets/heynaj-widget.png"
-                                     alt="HeyNaj Flow website chat widget preview"
-                                     class="absolute bottom-0 left-0 w-full transform translate-y-full transition-transform duration-500"
-                                     :class="step >= 2 && step < 3 ? 'translate-y-0' : ''">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <figure class="flow-hero-visual">
+                    <img class="flow-hero-image" src="/assets/heynaj_flow_dashboard_and_chat_widget.png" alt="HeyNaj Flow workspace dashboard and website widget" width="1448" height="1086" fetchpriority="high" decoding="async">
+                    <figcaption class="flow-hero-brand-badge">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+                        <span>Powered by HeyNaj Flow</span>
+                    </figcaption>
+                </figure>
             </div>
-
         </section>
 
         <section class="py-10 md:py-12">
