@@ -2921,6 +2921,16 @@
               <span class="sr-only">Search inquiries</span>
               <input id="inquirySearch" type="search" placeholder="Search inquiries..." autocomplete="off" />
             </label>
+            <label class="sr-only" for="inquiryTypeFilter">Filter by inquiry type</label>
+            <select id="inquiryTypeFilter" class="full-list-filter">
+              <option value="all">All types</option>
+              <option value="Interested">Interested</option>
+              <option value="Exploring">Exploring</option>
+            </select>
+            <label class="sr-only" for="inquiryChannelFilter">Filter by inquiry channel</label>
+            <select id="inquiryChannelFilter" class="full-list-filter">
+              <option value="all">All channels</option>
+            </select>
             <label class="sr-only" for="inquiryFilter">Filter inquiries</label>
             <select id="inquiryFilter">
               <option value="all">All inquiries</option>
@@ -2931,6 +2941,9 @@
           </div>
 
           <p class="list-helper">Select an Inquiry to view its context and follow-up details.</p>
+          <div class="inquiry-list-columns" aria-hidden="true">
+            <span>★</span><span>Name</span><span>Type</span><span>Conversation Preview</span><span>Started</span>
+          </div>
           <div id="inquiryList" class="inquiry-list" role="list" aria-label="Sample inquiries"></div>
           <p id="inquiryEmpty" class="inquiry-empty" hidden>No matching sample inquiries.</p>
         </aside>
