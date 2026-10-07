@@ -1907,6 +1907,8 @@
     <link rel="stylesheet" href="/assets/text-voice.css">
     <link rel="stylesheet" href="/assets/knowledge.css">
     <script defer src="/assets/knowledge.js"></script>
+    <link rel="stylesheet" href="/assets/inquiries-demo.css">
+    <script defer src="/assets/inquiries-demo.js"></script>
 
     <script>
         window.MOCK_CONFIG = {
@@ -2881,6 +2883,69 @@
                         <p>HeyNaj retrieves relevant stored business information when it can help answer a visitor’s question.</p>
                     </aside>
                 </div>
+            </div>
+        </section>
+
+        <section id="inquiries" class="flow-inquiries" aria-labelledby="inquiries-heading">
+            <div class="inquiries-intro">
+                <span class="inquiries-eyebrow">INQUIRIES</span>
+                <h2 id="inquiries-heading">Know who reached out — and what they were asking.</h2>
+                <p>HeyNaj Flow keeps conversations, available contact details, and useful context together so your team can review and follow up without starting from zero.</p>
+            </div>
+            <div class="marketing-demo" aria-labelledby="inquiries-preview-title">
+      <header class="inquiry-page-head">
+        <div>
+          <p class="eyebrow">Workspace preview</p>
+          <h3 id="inquiries-preview-title">Inquiries</h3>
+          <p>Review and follow up on conversations captured by HeyNaj Flow.</p>
+        </div>
+        <p class="demo-note">Interactive preview · sample content · no data is saved</p>
+      </header>
+
+      <section class="inquiries-shell" id="inquiriesShell" aria-label="Inquiries preview">
+        <aside class="inquiries-list" aria-label="Inquiry list">
+          <div class="list-heading">
+            <div>
+              <h2>Inquiries</h2>
+              <p id="inquiryListCount">3 sample inquiries</p>
+            </div>
+            <span class="list-caption">Latest activity first</span>
+          </div>
+
+          <div class="inquiry-tools">
+            <label class="inquiry-search">
+              <span class="canonical-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+  <circle cx="10" cy="10" r="7"/>
+  <path d="m15 15 6 6"/>
+</svg></span>
+              <span class="sr-only">Search inquiries</span>
+              <input id="inquirySearch" type="search" placeholder="Search inquiries..." autocomplete="off" />
+            </label>
+            <label class="sr-only" for="inquiryFilter">Filter inquiries</label>
+            <select id="inquiryFilter">
+              <option value="all">All inquiries</option>
+              <option value="important">Important</option>
+              <option value="voice">Voice</option>
+              <option value="text">Text</option>
+            </select>
+          </div>
+
+          <p class="list-helper">Select an Inquiry to view its context and follow-up details.</p>
+          <div id="inquiryList" class="inquiry-list" role="list" aria-label="Sample inquiries"></div>
+          <p id="inquiryEmpty" class="inquiry-empty" hidden>No matching sample inquiries.</p>
+        </aside>
+
+        <article class="inquiry-detail" id="inquiryDetail" aria-live="polite" tabindex="-1">
+          <div class="detail-placeholder">
+            <span class="canonical-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <rect x="3" y="4" width="18" height="16" rx="2"/>
+  <circle cx="9" cy="10" r="2"/>
+  <path d="M5.5 17c.7-2 2-3 3.5-3s2.8 1 3.5 3M14 9h4m-4 4h4"/>
+</svg></span>
+            <p>Select an Inquiry to view the conversation.</p>
+          </div>
+        </article>
+      </section>
             </div>
         </section>
 
