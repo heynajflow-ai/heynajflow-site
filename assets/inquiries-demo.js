@@ -82,7 +82,7 @@
     }
   ];
 
-  var state = { selectedId: "demo-mika-santos", mode: window.matchMedia("(max-width: 767px)").matches ? "list" : "detail", query: "", filter: "all", type: "all", channel: "all" };
+  var state = { selectedId: null, mode: "list", query: "", filter: "all", type: "all", channel: "all" };
   var shell = document.getElementById("inquiriesShell");
   var list = document.getElementById("inquiryList");
   var detail = document.getElementById("inquiryDetail");
@@ -223,7 +223,7 @@
 
   function setMode(mode) {
     state.mode = mode;
-    shell.classList.toggle("is-full-list", mode === "list");
+    shell.classList.toggle("is-compact-list", mode === "list");
     shell.classList.toggle("is-detail-open", mode === "detail");
     detail.hidden = mode === "list";
   }
@@ -257,5 +257,4 @@
 
   setMode(state.mode);
   renderList();
-  renderDetail(inquiries[0]);
 })();

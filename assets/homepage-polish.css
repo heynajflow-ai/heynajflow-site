@@ -1,0 +1,125 @@
+@media (hover: hover) and (pointer: fine) {
+  :is(.flow-how-it-works .how-it-works-eyebrow,
+      .flow-experiences .experience-eyebrow,
+      .flow-knowledge .knowledge-eyebrow,
+      .flow-inquiries .inquiries-eyebrow,
+      .flow-workspace .workspace-device-strip,
+      .flow-workspace .workspace-step,
+      .flow-controls .option-card,
+      .flow-experiences .experience-card,
+      .flow-knowledge .knowledge-card,
+      .flow-inquiries .inquiry-row,
+      .flow-hero .flow-hero-button,
+      .flow-knowledge .knowledge-test-button,
+      .flow-inquiries .contact-action:not(:disabled)) {
+    transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease, background-color 320ms ease;
+  }
+
+  :is(.flow-workspace .workspace-step,
+      .flow-controls .option-card,
+      .flow-experiences .experience-card,
+      .flow-knowledge .knowledge-card,
+      .flow-inquiries .inquiry-row,
+      .flow-hero .flow-hero-button,
+      .flow-knowledge .knowledge-test-button,
+      .flow-inquiries .contact-action:not(:disabled)):hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 220, 50, .65);
+    box-shadow: 0 8px 24px -16px rgba(26, 26, 26, .18), 0 0 20px -8px rgba(255, 220, 50, .25);
+  }
+
+  .flow-controls .option-card.is-selected:hover { border-color: var(--brand-yellow); }
+  .flow-inquiries .inquiry-row.selected:hover {
+    box-shadow: inset 3px 0 var(--brand-yellow), 0 0 20px -8px rgba(255, 220, 50, .25);
+  }
+
+  :is(.flow-how-it-works .how-it-works-eyebrow,
+      .flow-experiences .experience-eyebrow,
+      .flow-knowledge .knowledge-eyebrow,
+      .flow-inquiries .inquiries-eyebrow,
+      .flow-workspace .workspace-device-strip):hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 220, 50, .45);
+    box-shadow: 0 5px 16px -10px rgba(26, 26, 26, .15), 0 0 18px -7px rgba(255, 220, 50, .25);
+  }
+
+  :is(.flow-how-it-works .how-it-works-eyebrow,
+      .flow-experiences .experience-eyebrow,
+      .flow-knowledge .knowledge-eyebrow,
+      .flow-inquiries .inquiries-eyebrow)::before { transition: box-shadow 320ms ease; }
+
+  :is(.flow-how-it-works .how-it-works-eyebrow,
+      .flow-experiences .experience-eyebrow,
+      .flow-knowledge .knowledge-eyebrow,
+      .flow-inquiries .inquiries-eyebrow):hover::before { box-shadow: 0 0 0 6px rgba(255, 220, 50, .23); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(.flow-hero .flow-hero-badge,
+      .flow-how-it-works .how-it-works-closing,
+      .flow-inquiries .marketing-demo,
+      .flow-controls .controls-card,
+      .flow-controls .option-card[data-option],
+      .flow-controls select) {
+    transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .flow-hero .flow-hero-badge:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 220, 50, .45);
+    box-shadow: 0 5px 16px -10px rgba(26, 26, 26, .15), 0 0 18px -7px rgba(255, 220, 50, .25);
+  }
+  .flow-hero .flow-hero-badge::before { transition: box-shadow 300ms ease; }
+  .flow-hero .flow-hero-badge:hover::before { box-shadow: 0 0 0 6px rgba(255, 220, 50, .23); }
+
+  .flow-how-it-works .how-it-works-closing:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 220, 50, .25);
+    box-shadow: 0 22px 42px -28px rgba(26, 26, 26, .45), 0 0 24px -10px rgba(255, 220, 50, .18);
+  }
+  .flow-inquiries .marketing-demo:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 220, 50, .35);
+    box-shadow: 0 8px 24px -20px rgba(26, 26, 26, .12), 0 0 24px -10px rgba(255, 220, 50, .16);
+  }
+  .flow-controls .controls-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 220, 50, .35);
+    box-shadow: 0 12px 34px rgba(17, 24, 39, .05), 0 0 24px -10px rgba(255, 220, 50, .16);
+  }
+  .flow-controls select:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 220, 50, .65);
+    box-shadow: 0 5px 16px -12px rgba(26, 26, 26, .12), 0 0 18px -8px rgba(255, 220, 50, .2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.flow-how-it-works .how-it-works-eyebrow,
+      .flow-hero .flow-hero-badge,
+      .flow-how-it-works .how-it-works-closing,
+      .flow-inquiries .marketing-demo,
+      .flow-controls .controls-card,
+      .flow-controls select,
+      .flow-experiences .experience-eyebrow,
+      .flow-knowledge .knowledge-eyebrow,
+      .flow-inquiries .inquiries-eyebrow,
+      .flow-workspace .workspace-device-strip,
+      .flow-workspace .workspace-step,
+      .flow-controls .option-card,
+      .flow-experiences .experience-card,
+      .flow-knowledge .knowledge-card,
+      .flow-knowledge .knowledge-preview,
+      .flow-inquiries .inquiry-row,
+      .flow-hero .flow-hero-button,
+      .flow-knowledge .knowledge-test-button,
+      .flow-inquiries .contact-action) {
+    transform: none !important;
+    transition: none !important;
+  }
+  :is(.flow-how-it-works .how-it-works-eyebrow,
+      .flow-hero .flow-hero-badge,
+      .flow-experiences .experience-eyebrow,
+      .flow-knowledge .knowledge-eyebrow,
+      .flow-inquiries .inquiries-eyebrow)::before { transition: none !important; }
+}
