@@ -82,7 +82,7 @@
     }
   ];
 
-  var state = { selectedId: "demo-mika-santos", query: "", filter: "all" };
+  var state = { selectedId: "demo-mika-santos", mode: window.matchMedia("(max-width: 767px)").matches ? "list" : "detail", query: "", filter: "all", type: "all", channel: "all" };
   var shell = document.getElementById("inquiriesShell");
   var list = document.getElementById("inquiryList");
   var detail = document.getElementById("inquiryDetail");
@@ -90,6 +90,8 @@
   var listCount = document.getElementById("inquiryListCount");
   var search = document.getElementById("inquirySearch");
   var filter = document.getElementById("inquiryFilter");
+  var typeFilter = document.getElementById("inquiryTypeFilter");
+  var channelFilter = document.getElementById("inquiryChannelFilter");
 
   function escapeHtml(value) {
     return String(value)
@@ -104,6 +106,10 @@
     return inquiry.channel.toLowerCase().includes("voice");
   }
 
+  function inquiryType(inquiry) {
+    return inquiry.id === "demo-alex-rivera" ? "Exploring" : "Interested";
+  }
+
   function filteredInquiries() {
     var query = state.query.toLowerCase();
     return inquiries.filter(function (inquiry) {
@@ -113,7 +119,9 @@
         (state.filter === "important" && inquiry.important) ||
         (state.filter === "voice" && isVoice(inquiry)) ||
         (state.filter === "text" && !isVoice(inquiry));
-      return matchesQuery && matchesFilter;
+      var matchesType = state.type === "all" || inquiryType(inquiry) === state.type;
+      var matchesChannel = state.channel === "all" || inquiry.channel === state.channel;
+      return matchesQuery && matchesFilter && matchesType && matchesChannel;
     });
   }
 
@@ -128,19 +136,23 @@
     empty.hidden = visible.length > 0;
 
     visible.forEach(function (inquiry) {
+      var item = document.createElement("div");
+      item.setAttribute("role", "listitem");
+      var preview = state.mode === "list" ? inquiry.summary.split(". ")[0] + "." : inquiry.summary;
       var row = document.createElement("button");
       row.type = "button";
       row.className = "inquiry-row" + (inquiry.id === state.selectedId ? " selected" : "") + (!inquiry.read ? " unread" : "");
       row.setAttribute("aria-current", inquiry.id === state.selectedId ? "true" : "false");
-      row.setAttribute("aria-label", "View Inquiry from " + inquiry.name);
+      row.setAttribute("aria-label", "View Inquiry from " + inquiry.name + ". Type: " + inquiryType(inquiry) + ". Channel: " + inquiry.channel + ". Started: " + inquiry.started + ". " + (inquiry.important ? "Important. " : "Not important. ") + preview);
       row.innerHTML =
-        '<span class="row-copy"><strong>' + escapeHtml(inquiry.name) + '</strong><span class="row-email">' + escapeHtml(inquiry.email) + '</span><span class="row-summary">' + escapeHtml(inquiry.summary) + '</span></span>' +
-        '<span class="row-side"><span class="inquiry-badge">' + escapeHtml(inquiry.channel) + '</span><span class="row-time">' + escapeHtml(inquiry.started) + '</span></span>' +
+        '<span class="row-copy"><strong>' + escapeHtml(inquiry.name) + '</strong><span class="row-email">' + escapeHtml(inquiry.email) + '</span><span class="row-summary">' + escapeHtml(preview) + '</span></span>' +
+        '<span class="row-side"><span class="inquiry-badge row-type"><span class="sr-only">Type: </span>' + inquiryType(inquiry) + '</span><span class="inquiry-badge row-channel">' + escapeHtml(inquiry.channel) + '</span><span class="row-time"><span class="sr-only">Started: </span>' + escapeHtml(inquiry.started) + '</span></span>' +
         '<span class="row-priority" aria-label="' + (inquiry.important ? "Important" : "Not important") + '">' + (inquiry.important ? "★" : "☆") + '</span>';
       row.addEventListener("click", function () {
         selectInquiry(inquiry.id, true);
       });
-      list.append(row);
+      item.append(row);
+      list.append(item);
     });
   }
 
@@ -185,8 +197,9 @@
       '<p class="demo-action-note" id="demoActionNote" role="status">Contact actions are demo controls and do not initiate calls, messages, or email.</p>';
 
     document.getElementById("detailBack").addEventListener("click", function () {
-      shell.classList.remove("is-detail-open");
-      document.querySelector(".inquiry-row.selected")?.focus();
+      setMode("list");
+      renderList();
+      (list.querySelector(".inquiry-row.selected") || list.querySelector(".inquiry-row") || search).focus({ preventScroll: true });
     });
 
     detail.querySelectorAll("[data-demo-action]").forEach(function (button) {
@@ -200,12 +213,19 @@
     var inquiry = inquiries.find(function (item) { return item.id === id; });
     if (!inquiry) return;
     state.selectedId = id;
+    if (revealDetail) setMode("detail");
     renderList();
     renderDetail(inquiry);
     if (revealDetail) {
-      shell.classList.add("is-detail-open");
       detail.focus({ preventScroll: true });
     }
+  }
+
+  function setMode(mode) {
+    state.mode = mode;
+    shell.classList.toggle("is-full-list", mode === "list");
+    shell.classList.toggle("is-detail-open", mode === "detail");
+    detail.hidden = mode === "list";
   }
 
   search.addEventListener("input", function (event) {
@@ -218,6 +238,24 @@
     renderList();
   });
 
+  typeFilter.addEventListener("change", function (event) {
+    state.type = event.target.value;
+    renderList();
+  });
+
+  inquiries.forEach(function (inquiry) {
+    var option = document.createElement("option");
+    option.value = inquiry.channel;
+    option.textContent = inquiry.channel;
+    channelFilter.append(option);
+  });
+
+  channelFilter.addEventListener("change", function (event) {
+    state.channel = event.target.value;
+    renderList();
+  });
+
+  setMode(state.mode);
   renderList();
   renderDetail(inquiries[0]);
 })();
