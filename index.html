@@ -1909,6 +1909,10 @@
     <script defer src="/assets/knowledge.js"></script>
     <link rel="stylesheet" href="/assets/inquiries-demo.css">
     <script defer src="/assets/inquiries-demo.js"></script>
+    <link rel="stylesheet" href="/assets/controls/controls.css">
+    <link rel="stylesheet" href="/assets/workspace.css">
+    <link rel="stylesheet" href="/assets/homepage-polish.css">
+    <script defer src="/assets/controls/controls.js"></script>
 
     <script>
         window.MOCK_CONFIG = {
@@ -2902,7 +2906,7 @@
         <p class="demo-note">Interactive preview · sample content · no data is saved</p>
       </header>
 
-      <section class="inquiries-shell" id="inquiriesShell" aria-label="Inquiries preview">
+      <section class="inquiries-shell is-compact-list" id="inquiriesShell" aria-label="Inquiries preview">
         <aside class="inquiries-list" aria-label="Inquiry list">
           <div class="list-heading">
             <div>
@@ -2948,7 +2952,7 @@
           <p id="inquiryEmpty" class="inquiry-empty" hidden>No matching sample inquiries.</p>
         </aside>
 
-        <article class="inquiry-detail" id="inquiryDetail" aria-live="polite" tabindex="-1">
+        <article class="inquiry-detail" id="inquiryDetail" aria-live="polite" tabindex="-1" hidden>
           <div class="detail-placeholder">
             <span class="canonical-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
   <rect x="3" y="4" width="18" height="16" rx="2"/>
@@ -2962,322 +2966,153 @@
             </div>
         </section>
 
-        <section id="infrastructure" class="pt-12 md:pt-16 pb-16 md:pb-20">
-            <div class="max-w-7xl mx-auto pop-entry">
-                <div class="glass-card rounded-[2rem] px-6 md:px-8 py-6 logo-band">
-                    <div class="text-center">
-                        <div class="infra-title" x-text="config.logos_heading || 'Built on Enterprise Infrastructure'"></div>
-                    </div>
-                    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-center">
-                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_openai">
-                            <img :src="config.logo_openai" alt="OpenAI" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
-                        </div>
-                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_google_cloud">
-                            <img :src="config.logo_google_cloud" alt="Google Cloud" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
-                        </div>
-                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_gemini">
-                            <img :src="config.logo_gemini" alt="Gemini" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
-                        </div>
-                        <div class="logo-pill bg-white/75 border border-white flex items-center justify-center shadow-sm" x-show="config.logo_workspace">
-                            <img :src="config.logo_workspace" alt="Google Workspace" class="logo-mark" :style="'height:' + Math.max(parseInt(config.logo_trust_height || '52', 10), 52) + 'px;width:auto;'">
-                        </div>
-                    </div>
-                </div>
+        <section id="controls" class="flow-controls" aria-labelledby="controls-heading">
+            <div class="controls-intro flow-how-it-works">
+                <span class="how-it-works-eyebrow">CONTROL THE EXPERIENCE</span>
+                <h2 id="controls-heading">Choose how HeyNaj captures interest — and when your team gets notified.</h2>
+                <p>Control when contact details are requested, which Inquiries trigger notifications, and how the widget gets a visitor’s attention.</p>
+            </div>
+      <div class="controls-card" aria-label="Interactive controls preview">
+        <div class="tabs-wrap">
+          <div class="tabs" role="tablist" aria-label="Controls categories">
+            <button class="tab is-active" id="controls-tab-capture" type="button" role="tab" aria-selected="true" aria-controls="controls-panel-capture" tabindex="0" data-tab="capture">Capture</button>
+            <button class="tab" id="controls-tab-notifications" type="button" role="tab" aria-selected="false" aria-controls="controls-panel-notifications" tabindex="-1" data-tab="notifications">Notifications</button>
+            <button class="tab" id="controls-tab-widget" type="button" role="tab" aria-selected="false" aria-controls="controls-panel-widget" tabindex="-1" data-tab="widget">Widget</button>
+          </div>
+        </div>
+
+        <div class="panel" id="controls-panel-capture" role="tabpanel" tabindex="0" aria-labelledby="controls-tab-capture" data-panel="capture">
+          <div class="panel-heading">
+            <div>
+              <h3>Contact Capture</h3>
+              <p>Choose how visitors share their details.</p>
+            </div>
+            <img class="heading-icon" src="/assets/controls/icons/contact-soft.svg" alt="" aria-hidden="true" />
+          </div>
+
+          <fieldset class="option-grid" aria-describedby="controls-capture-help">
+            <legend class="sr-only">Contact capture mode</legend>
+            <label class="option-card" data-option="capture">
+              <input type="radio" name="controls-capture-mode" value="off" />
+              <img src="/assets/controls/icons/contact-off.svg" alt="" aria-hidden="true" />
+              <span class="option-copy"><strong>Off</strong><small>Visitors can chat immediately. No contact form.</small></span>
+            </label>
+            <label class="option-card is-selected" data-option="capture">
+              <input type="radio" name="controls-capture-mode" value="soft" checked />
+              <span class="recommended">Recommended</span>
+              <img src="/assets/controls/icons/contact-soft.svg" alt="" aria-hidden="true" />
+              <span class="option-copy"><strong>Soft Capture</strong><small>Visitors can skip the form. An optional request may appear later.</small></span>
+            </label>
+            <label class="option-card" data-option="capture">
+              <input type="radio" name="controls-capture-mode" value="required" />
+              <img src="/assets/controls/icons/contact-required.svg" alt="" aria-hidden="true" />
+              <span class="option-copy"><strong>Required</strong><small>Visitors submit the form before they can chat.</small></span>
+            </label>
+          </fieldset>
+          <p class="helper" id="controls-capture-help">Local preview only. No contact details are collected.</p>
+        </div>
+
+        <div class="panel" id="controls-panel-notifications" role="tabpanel" tabindex="0" aria-labelledby="controls-tab-notifications" data-panel="notifications" hidden>
+          <div class="panel-heading">
+            <div>
+              <h3>Inquiry Notifications</h3>
+              <p>Decide what deserves your attention.</p>
+            </div>
+            <img class="heading-icon" src="/assets/controls/icons/notification.svg" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Notify me about</span>
+              <select id="controls-notification-scope">
+                <option value="all">All inquiries</option>
+                <option value="important">Important only</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Delivery</span>
+              <select id="controls-notification-delivery">
+                <option value="email">Email only</option>
+                <option value="push">Push only</option>
+                <option value="both" selected>Email + Push</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="notification-summary" aria-live="polite">
+            <span class="summary-dot" aria-hidden="true"></span>
+            <div><strong id="controls-notification-summary-title">All inquiries · Email + Push</strong><p>Local preview only. No notifications are sent.</p></div>
+          </div>
+          <p class="helper">Push can alert you while the dashboard is closed. Actual delivery depends on device and notification settings.</p>
+        </div>
+
+        <div class="panel" id="controls-panel-widget" role="tabpanel" tabindex="0" aria-labelledby="controls-tab-widget" data-panel="widget" hidden>
+          <div class="panel-heading">
+            <div>
+              <h3>Widget Attention</h3>
+              <p>Give the right message a moment to land.</p>
+            </div>
+            <img class="heading-icon" src="/assets/controls/icons/widget.svg" alt="" aria-hidden="true" />
+          </div>
+
+          <fieldset class="option-grid attention-grid" aria-describedby="controls-attention-help">
+            <legend class="sr-only">Widget attention mode</legend>
+            <label class="option-card" data-option="attention">
+              <input type="radio" name="controls-attention-mode" value="none" />
+              <img src="/assets/controls/icons/contact-off.svg" alt="" aria-hidden="true" />
+              <span class="option-copy"><strong>Off</strong><small>No automatic attention message.</small></span>
+            </label>
+            <label class="option-card is-selected" data-option="attention">
+              <input type="radio" name="controls-attention-mode" value="callout" checked />
+              <img src="/assets/controls/icons/message.svg" alt="" aria-hidden="true" />
+              <span class="option-copy"><strong>Callout</strong><small>Show a small message above the widget.</small></span>
+            </label>
+            <label class="option-card" data-option="attention">
+              <input type="radio" name="controls-attention-mode" value="promotion" />
+              <img src="/assets/controls/icons/promotion.svg" alt="" aria-hidden="true" />
+              <span class="option-copy"><strong>Promotion Spotlight</strong><small>Spotlight a promotion during scheduled dates.</small></span>
+            </label>
+          </fieldset>
+          <p class="helper" id="controls-attention-help">Local preview only. Your live widget stays unchanged.</p>
+
+        </div>
+      </div>
+        </section>
+
+
+        <section id="workspace" class="flow-workspace" aria-labelledby="workspace-heading">
+            <div class="workspace-intro flow-how-it-works">
+                <span class="how-it-works-eyebrow">YOUR WORKSPACE</span>
+                <h2 id="workspace-heading">Built around a Cloudflare workspace you control.</h2>
+                <p>HeyNaj Flow helps configure the website assistant inside your own Cloudflare workspace, while keeping setup and deployment status easy to understand.</p>
+            </div>
+            <ol class="workspace-steps" aria-label="Workspace setup steps">
+                <li class="workspace-step">
+                    <span class="workspace-number" aria-hidden="true">01</span>
+                    <img class="workspace-step-icon" src="https://res.cloudinary.com/dt5j91krt/image/upload/v1791362569/cloudflare_logo_icon_170372_ksseol.svg" alt="" width="32" height="32" loading="lazy" decoding="async">
+                    <h3>Connect your Cloudflare workspace</h3>
+                    <p>Use a customer-owned Cloudflare workspace configured through HeyNaj Flow.</p>
+                </li>
+                <li class="workspace-step">
+                    <span class="workspace-number" aria-hidden="true">02</span>
+                    <img class="workspace-step-icon" src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="" width="32" height="32" loading="lazy" decoding="async">
+                    <h3>Configure HeyNaj Flow</h3>
+                    <p>Manage your Knowledge, AI behavior, widget experience, and notifications from the workspace.</p>
+                </li>
+                <li class="workspace-step">
+                    <span class="workspace-number" aria-hidden="true">03</span>
+                    <svg class="workspace-step-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="26" height="22" rx="3"/><path d="M3 11h26M7 8h1m3 0h1m4 15V15m-4 4 4-4 4 4"/></svg>
+                    <h3>Publish to your website</h3>
+                    <p>Use Installation to follow setup progress and deployment health as you bring the assistant to your site.</p>
+                </li>
+            </ol>
+            <p class="workspace-technical">Built on Cloudflare Workers + D1.</p>
+            <div class="workspace-access">
+                <p class="workspace-device-strip">Browser-first · Mobile · Tablet · Desktop · Optional PWA</p>
+                <p class="workspace-access-copy">Open the workspace in a modern browser, with optional PWA installation for app-like access.</p>
             </div>
         </section>
 
-        <section id="capabilities" class="pt-12 md:pt-16 pb-16 md:pb-20">
-            <div id="legacy-features" class="max-w-7xl mx-auto">
-                <div class="max-w-5xl pop-entry">
-                    <div class="section-badge micro-glow mb-6">
-                        <span class="section-badge-dot"></span>
-                        <span x-text="config.capabilities_badge || 'Capabilities'"></span>
-                    </div>
-                    <h2 class="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.capabilities_title"></h2>
-                    <p class="mt-5 text-lg md:text-xl font-medium leading-relaxed text-slate-600" x-text="config.capabilities_subtitle"></p>
-                </div>
-
-                <div class="cap-grid-shell mt-12" :class="activeCapability !== null ? 'cap-grid-active' : ''" @mouseleave="clearAllCapabilities()">
-                    <div class="bento-grid">
-                        <template x-for="(cap, index) in (config.capabilities || [])" :key="cap.id">
-                            <article class="glass-card cap-card pop-entry"
-                                :class="activeCapability === index ? 'cap-active' : ''"
-                                @mouseenter="queueCapability(index)"
-                                @click="toggleCapability(index)"
-                                @keydown.enter.prevent="toggleCapability(index)"
-                                @keydown.space.prevent="toggleCapability(index)"
-                                tabindex="0"
-                                role="button">
-                                <div class="cap-summary relative z-10">
-                                    <div class="space-y-2">
-                                        <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="cap.label"></div>
-                                        <div class="text-[1.75rem] leading-tight font-extrabold tracking-tight text-slate-900" x-text="cap.title"></div>
-                                        <p class="cap-mobile-desc text-sm leading-relaxed font-medium text-slate-600" x-text="cap.desc"></p>
-                                    </div>
-                                </div>
-                            </article>
-                        </template>
-                    </div>
-
-                    <template x-if="getActiveCapability()">
-                        <div class="cap-overlay" x-transition.opacity.duration.220ms>
-                            <div class="glass-card cap-overlay-card" :class="getCapabilityOverlayAnimationClass()">
-                                <div class="cap-overlay-summary">
-                                    <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="getActiveCapability().label"></div>
-                                    <div class="text-[2rem] md:text-[2.35rem] leading-tight font-extrabold tracking-tight text-slate-900" x-text="getActiveCapability().title"></div>
-                                    <p class="cap-overlay-copy" x-text="getActiveCapability().desc"></p>
-                                </div>
-                                <div class="cap-overlay-details">
-                                    <div x-html="getCapabilityDemoHtml(getActiveCapability())"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-            </div>
-        </section>
-
-        <section id="control-center" class="pt-12 md:pt-16 pb-16 md:pb-20">
-            <div id="legacy-how-it-works" class="max-w-7xl mx-auto">
-                <div class="max-w-5xl pop-entry">
-                    <div class="section-badge micro-glow mb-6">
-                        <span class="section-badge-dot"></span>
-                        <span x-text="config.command_badge || 'Command Center'"></span>
-                    </div>
-                    <h2 class="text-4xl md:text-[3.55rem] font-extrabold tracking-[-0.05em] leading-tight text-slate-900 md:whitespace-nowrap" x-text="config.command_title || 'The Executive Command Center'"></h2>
-                    <p class="mt-5 max-w-5xl text-lg md:text-xl font-medium leading-relaxed text-slate-600 lg:whitespace-nowrap" x-text="config.command_intro"></p>
-                </div>
-
-                <div class="command-grid mt-12">
-                    <article class="glass-card command-panel hover-pop pop-entry">
-                        <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="config.command_panel_1_eyebrow || 'Alert Email'"></div>
-                        <h3 class="mt-3 text-2xl font-extrabold tracking-tight text-slate-900" x-text="config.command_panel_1_title || 'Instant Lead Alerts'"></h3>
-                        <p class="mt-3 text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="config.command_panel_1_desc || 'Get the exact context you need the moment a lead is ready to buy.'"></p>
-                        <div class="command-ui equalized mt-6 space-y-3">
-                            <div>
-                                <div class="text-[0.62rem] uppercase tracking-[0.18em] font-extrabold text-slate-400 mb-2" x-text="config.command_panel_1_label_1 || 'Notification received'"></div>
-                                <a class="shot-click-link" :href="config.shot_email_notification" target="_blank" rel="noreferrer">
-                                    <div class="real-shot-frame fixed-notice">
-                                        <img :src="config.shot_email_notification" alt="Email notification preview" class="real-shot-image" style="object-position:center top;">
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <div class="text-[0.62rem] uppercase tracking-[0.18em] font-extrabold text-slate-400 mb-2" x-text="config.command_panel_1_label_2 || 'Email received view'"></div>
-                                <a class="shot-click-link" :href="config.shot_email_received_full" target="_blank" rel="noreferrer">
-                                    <div class="shot-pan-shell email-received">
-                                        <div class="shot-pan-track" :style="`background-image:url('${config.shot_email_received_full}')`"></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="glass-card command-panel hover-pop pop-entry">
-                        <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="config.command_panel_2_eyebrow || 'Knowledge Vault'"></div>
-                        <h3 class="mt-3 text-2xl font-extrabold tracking-tight text-slate-900" x-text="config.command_panel_2_title || 'The Knowledge Fortress'"></h3>
-                        <p class="mt-3 text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="config.command_panel_2_desc || 'Your AI answers from your business material so the conversations stay useful and grounded.'"></p>
-                        <div class="command-ui equalized mt-6 space-y-3">
-                            <div class="text-[0.62rem] uppercase tracking-[0.18em] font-extrabold text-slate-400" x-text="config.command_panel_2_label_1 || 'Secured drive vault'"></div>
-                            <a class="shot-click-link" :href="config.shot_drive_vault" target="_blank" rel="noreferrer">
-                                <div class="real-shot-frame fixed-vault">
-                                    <img :src="config.shot_drive_vault" alt="Google Drive vault preview" class="real-shot-image" style="object-position:center top;">
-                                </div>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="glass-card command-panel hover-pop pop-entry">
-                        <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold text-slate-400" x-text="config.command_panel_3_eyebrow || 'App Remote'"></div>
-                        <h3 class="mt-3 text-2xl font-extrabold tracking-tight text-slate-900" x-text="config.command_panel_3_title || 'Live Remote Control'"></h3>
-                        <p class="mt-3 text-sm md:text-base font-medium leading-relaxed text-slate-600" x-text="config.command_panel_3_desc || 'Update the assistant from a private dashboard without touching code.'"></p>
-                        <div class="command-ui equalized mt-6 space-y-4">
-                            <div class="command-kicker" x-text="config.command_panel_3_label_1 || 'Dashboard view'"></div>
-                            <div class="remote-stack">
-                                <div class="remote-mini">
-                                    <a class="remote-mini-link" :href="config.shot_leads_dashboard" target="_blank" rel="noreferrer">
-                                        <div class="remote-mini-label whitespace-pre-line" x-text="config.command_panel_3_mini_1_label || 'Leads Dashboard'"></div>
-                                        <div class="real-shot-frame remote-thumb">
-                                            <img :src="config.shot_leads_dashboard" alt="Leads dashboard preview" class="real-shot-image remote-thumb-image">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="remote-mini">
-                                    <a class="remote-mini-link" :href="config.shot_ai_settings" target="_blank" rel="noreferrer">
-                                        <div class="remote-mini-label whitespace-pre-line" x-text="config.command_panel_3_mini_2_label || 'AI Settings'"></div>
-                                        <div class="real-shot-frame remote-thumb">
-                                            <img :src="config.shot_ai_settings" alt="AI settings preview" class="real-shot-image remote-thumb-image">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="remote-mini">
-                                    <a class="remote-mini-link" :href="config.shot_widget_settings" target="_blank" rel="noreferrer">
-                                        <div class="remote-mini-label whitespace-pre-line" x-text="config.command_panel_3_mini_3_label || 'Widget Settings'"></div>
-                                        <div class="real-shot-frame remote-thumb">
-                                            <img :src="config.shot_widget_settings" alt="Widget settings preview" class="real-shot-image remote-thumb-image">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="live-demo-setup" class="py-16 md:py-20">
-            <div class="max-w-7xl mx-auto pop-entry" x-data="{ scraping: false, scraped: false, url: '', demoText: '',
-                runScraper() {
-                    let finalUrl = this.url.trim();
-                    if (!finalUrl) return;
-                    if (!finalUrl.startsWith('http://') && !finalUrl.startsWith('https://')) finalUrl = 'https://' + finalUrl;
-                    this.scraping = true;
-                    this.scraped = false;
-                    fetch('https://script.google.com/macros/s/AKfycbybNgIc64SnrZQTv4a-c5rTplxrqRPrbxg5oKNLgExdpdt0kr0a2OXco9-inYkdZUg6yg/exec', {
-                        method: 'POST',
-                        mode: 'cors',
-                        credentials: 'omit',
-                        redirect: 'follow',
-                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                        body: JSON.stringify({ type: 'scrape_demo', targetUrl: finalUrl })
-                    })
-                    .then(async res => {
-                        const raw = await res.text();
-                        try { return JSON.parse(raw); } catch (e) { throw new Error('Response error.'); }
-                    })
-                    .then(data => {
-                        this.scraping = false;
-                        this.scraped = true;
-                        if (data.error) {
-                            this.demoText = 'Warning: ' + data.error;
-                        } else {
-                            window.hnScrapedContext = data.extractedText || '';
-                            const cleanDisplay = (data.extractedText || '').replace(/\\*\\*/g, '').replace(/#/g, '');
-                            this.demoText = 'Analyzing: ' + finalUrl + '\\n\\n' + cleanDisplay + '\\n\\nSystem ready. Chat with your custom AI below.';
-                        }
-                    })
-                    .catch(() => {
-                        this.scraping = false;
-                        this.scraped = true;
-                        this.demoText = 'Warning: Connection failed. Please try again.';
-                    });
-                }
-            }">
-                <div class="glass-card hover-pop rounded-[2.2rem] p-8 md:p-10">
-                    <div class="section-badge mb-6">
-                        <span class="section-badge-dot"></span>
-                        <span x-text="config.scrape_badge || 'Live Demo Setup'"></span>
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.scrape_title"></h2>
-                    <p class="mt-5 max-w-5xl text-lg font-medium leading-relaxed text-slate-600" x-text="config.scrape_desc"></p>
-
-                    <template x-if="!scraped && !scraping">
-                        <div class="mt-8">
-                            <form @submit.prevent="runScraper()" class="flex flex-col md:flex-row gap-4">
-                                <input type="text" x-model="url" required placeholder="yourwebsite.com"
-                                       class="flex-1 px-6 py-5 rounded-[1.4rem] border border-slate-300 shadow-inner focus:outline-none focus:border-[#ffdc32] focus:ring-4 focus:ring-[#ffdc32]/20 text-slate-800 bg-white placeholder-slate-400 font-semibold transition-all">
-                                <button type="submit" class="cta-primary transition px-8 py-5 rounded-[1.4rem] font-extrabold whitespace-nowrap" x-text="config.scrape_button || 'Extract Knowledge'"></button>
-                            </form>
-                        </div>
-                    </template>
-
-                    <div x-show="scraping" x-transition.opacity class="py-10 text-center">
-                        <div class="w-14 h-14 mx-auto border-4 border-slate-200 border-t-[#ffdc32] rounded-full animate-spin shadow-[0_0_50px_rgba(255,220,50,0.35)]"></div>
-                        <div class="mt-5 text-lg font-extrabold text-slate-700">Extracting business context...</div>
-                    </div>
-
-                    <div x-show="scraped" x-transition.opacity x-cloak class="mt-8">
-                        <div class="flex items-center gap-2 mb-4">
-                            <div class="w-3 h-3 rounded-full bg-slate-300"></div>
-                            <div class="w-3 h-3 rounded-full bg-slate-300"></div>
-                            <div class="w-3 h-3 rounded-full bg-slate-300"></div>
-                            <span class="text-xs font-extrabold text-slate-500 uppercase tracking-[0.22em] ml-2">Extraction Complete</span>
-                        </div>
-                        <div class="bg-slate-50 rounded-[1.6rem] p-6 text-sm md:text-base text-slate-700 leading-relaxed shadow-inner max-h-96 overflow-y-auto border border-slate-200 font-medium">
-                            <pre x-text="demoText" class="whitespace-pre-wrap font-sans"></pre>
-                        </div>
-                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                            <button @click="injectAndOpen()" class="cta-primary transition px-8 py-5 rounded-full font-extrabold text-base text-center flex-1" x-text="config.scrape_ready_cta || 'Chat With Your Custom AI Now'"></button>
-                            <button @click="scraped = false; url = ''" class="cta-secondary transition px-8 py-5 rounded-full font-extrabold text-base border border-slate-300 bg-white/70 flex-1">Try Another Website</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="product-demo" class="py-16 md:py-20">
-            <div class="max-w-7xl mx-auto pop-entry">
-                <div class="glass-card hover-pop rounded-[2.4rem] p-8 md:p-10 overflow-hidden">
-                    <div class="max-w-4xl">
-                        <div class="section-badge mb-6">
-                            <span class="section-badge-dot"></span>
-                            <span x-text="config.video_badge || 'Product Demo'"></span>
-                        </div>
-                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.video_title"></h2>
-                        <p class="mt-4 max-w-5xl text-lg font-medium leading-relaxed text-slate-600" x-html="config.video_desc_html"></p>
-                    </div>
-
-                    <div class="mt-10 relative max-w-5xl mx-auto aspect-video rounded-[2rem] overflow-hidden shadow-[0_35px_80px_-45px_rgba(17,24,39,0.7)] border border-slate-200 bg-black">
-                        <video controls preload="metadata"
-                               poster="https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776513358/HeyNaj_Demo_Thumbnail_yaonad.png"
-                               src="https://res.cloudinary.com/dt5j91krt/video/upload/v1776495383/HeyNaj_Flow_-_Demo_1080p_c8ojgj.mp4"
-                               :poster="config.video_poster_url || 'https://res.cloudinary.com/dt5j91krt/image/upload/q_auto/f_auto/v1776513358/HeyNaj_Demo_Thumbnail_yaonad.png'"
-                               :src="config.video_src || 'https://res.cloudinary.com/dt5j91krt/video/upload/v1776495383/HeyNaj_Flow_-_Demo_1080p_c8ojgj.mp4'"
-                               x-effect="if (config.video_src || config.video_poster_url) { $el.load(); }"
-                               class="w-full h-full object-contain bg-black">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing" class="pt-10 md:pt-14 pb-16 md:pb-20">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center pop-entry">
-                    <div class="inline-flex items-center gap-3 glass-card-soft micro-glow hover-pop rounded-full px-6 md:px-10 py-4 border border-[#ffdc32]/45">
-                        <span class="w-3 h-3 rounded-full bg-[#ffdc32] shadow-[0_0_20px_rgba(255,220,50,0.8)]"></span>
-                        <span class="text-sm md:text-base uppercase tracking-[0.22em] font-extrabold text-slate-900" x-text="config.price_banner || config.price_pilot_banner"></span>
-                    </div>
-                    <h2 class="mt-8 text-4xl md:text-6xl font-extrabold tracking-[-0.05em] leading-tight text-slate-900" x-text="config.price_title"></h2>
-                    <p class="mt-5 max-w-5xl mx-auto text-lg md:text-xl font-medium leading-relaxed text-slate-600" x-html="config.price_intro_html"></p>
-                </div>
-
-                <div class="pricing-grid mt-14">
-                    <template x-for="plan in (config.plans || [])" :key="plan.name">
-                        <article class="price-card hover-pop pop-entry h-full" :class="plan.featured ? 'featured' : 'glass-card'">
-                            <div class="plan-title-wrap">
-                                <div class="text-[0.7rem] uppercase tracking-[0.24em] font-extrabold" :class="plan.featured ? 'text-white/60' : 'text-slate-400'" x-text="plan.eyebrow"></div>
-                                <h3 x-show="plan.name" class="mt-3 text-[1.7rem] md:text-[1.8rem] leading-tight font-extrabold tracking-tight whitespace-nowrap" x-text="plan.name"></h3>
-                                <div x-show="plan.featured" class="mt-3">
-                                    <span class="plan-feature-pill" x-text="config.price_featured_pill || 'Most Popular'"></span>
-                                </div>
-                            </div>
-
-                            <div class="plan-price-wrap mt-6 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight" x-html="plan.price"></div>
-                            <p class="plan-subtitle-wrap mt-4 text-sm md:text-base font-medium leading-relaxed" :class="plan.featured ? 'text-white/70' : 'text-slate-500'" x-html="plan.subtitle"></p>
-
-                            <div class="plan-pilot-wrap mt-5 rounded-[1.2rem] px-4 py-3 font-extrabold text-sm" :class="plan.featured ? 'bg-white/8 text-[#ffdc32] border border-white/10' : 'bg-[#ffdc32]/18 text-slate-900 border border-[#ffdc32]/30'">
-                                <span x-text="plan.pilot"></span>
-                            </div>
-
-                            <div class="mt-8 space-y-4 flex-1">
-                                <template x-for="feature in plan.features" :key="feature">
-                                    <div class="feature-line">
-                                        <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-extrabold flex-shrink-0" :class="plan.featured ? 'bg-white/10 text-[#ffdc32]' : 'bg-[#ffdc32]/22 text-slate-900'">&#10003;</span>
-                                        <span class="text-sm md:text-base font-medium leading-relaxed" :class="plan.featured ? 'text-white/78' : 'text-slate-600'" x-html="feature"></span>
-                                    </div>
-                                </template>
-                            </div>
-
-                            <a :href="config.cta_link || '#'" target="_blank" class="mt-10 text-center rounded-full px-6 py-4 text-base font-extrabold transition w-full" :class="plan.featured ? 'cta-primary' : 'cta-secondary bg-white/70 border border-slate-300'">
-                                <span x-text="plan.cta"></span>
-                            </a>
-                        </article>
-                    </template>
-                </div>
-            </div>
-        </section>
 
         <section id="blog" class="py-12 md:py-16">
             <div class="max-w-7xl mx-auto">
