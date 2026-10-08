@@ -47,7 +47,11 @@ function homeCard(post) {
 }
 
 function archiveCard(post) {
-  return `<article data-post data-date="${esc(post.published_at)}" data-read-time="${esc(post.read_time)}" class="post-card overflow-hidden rounded-[1.25rem] border border-slate-200 bg-white"><a href="${esc(articleUrl(post))}" class="block focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#ffdc32]/60"><img class="h-56 w-full object-cover" src="${esc(post.hero_image_url)}" alt="${esc(post.hero_image_alt)}" loading="lazy"><div class="p-6"><h4 class="text-xl font-extrabold leading-tight">${esc(post.title)}</h4><p class="mt-3 text-sm leading-6 text-slate-600">${esc(post.excerpt)}</p><div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm"><span class="font-extrabold text-slate-900 underline decoration-[#ffdc32] decoration-4 underline-offset-4">Read blog &rarr;</span><span class="italic text-slate-500">${esc(dateLabel(post.published_at))}</span><span class="text-slate-500">${esc(post.read_time)} min read</span></div></div></a></article>`;
+  return `<article data-post data-date="${esc(post.published_at)}" data-read-time="${esc(post.read_time)}" class="blog-archive-card"><a href="${esc(articleUrl(post))}" class="blog-archive-card-link"><img class="blog-archive-card-image" src="${esc(post.hero_image_url)}" alt="${esc(post.hero_image_alt)}" loading="lazy"><div class="blog-archive-card-content"><div class="blog-card-meta"><span>${esc(typeLabel(post))}</span><span aria-hidden="true">&bull;</span><span>${esc(post.read_time)} min read</span></div><h3>${esc(post.title)}</h3><p>${esc(post.excerpt)}</p><footer><span class="blog-card-read">Read article <span aria-hidden="true">&rarr;</span></span><span class="blog-card-date">${esc(dateLabel(post.published_at))}</span></footer></div></a></article>`;
+}
+
+function featuredCard(post) {
+  return `<a href="${esc(articleUrl(post))}" class="blog-featured-card"><div class="blog-featured-media"><img src="${esc(post.hero_image_url)}" alt="${esc(post.hero_image_alt)}" loading="eager"></div><div class="blog-featured-content"><div class="blog-card-meta"><span>${esc(typeLabel(post))}</span><span aria-hidden="true">&bull;</span><span>${esc(post.read_time)} min read</span></div><h2>${esc(post.title)}</h2><p>${esc(post.excerpt)}</p><span class="blog-card-read">Read article <span aria-hidden="true">&rarr;</span></span></div></a>`;
 }
 
 function renderArchive() {
@@ -57,7 +61,7 @@ function renderArchive() {
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(post);
   }
-  return [...groups].map(([month, posts]) => `<section><div class="month-rule"><h3 class="text-2xl font-extrabold">${esc(monthLabel(month))}</h3></div><div class="mt-6 grid gap-6 md:grid-cols-2">${posts.map(archiveCard).join('')}</div></section>`).join('\n      ');
+  return [...groups].map(([month, posts]) => `<section class="blog-month" data-month="${esc(month)}"><div class="blog-month-heading"><h3>${esc(monthLabel(month))}</h3></div><div class="blog-archive-grid">${posts.map(archiveCard).join('')}</div></section>`).join('\n      ');
 }
 
 function replaceBetween(html, start, end, replacement) {
@@ -74,6 +78,7 @@ let blog = fs.readFileSync(blogPath, 'utf8');
 const featured = published.find(post => post.article_type === 'featured_playbook') || published[0];
 const secondary = published.find(post => post.content_id !== featured?.content_id) || featured;
 home = replaceBetween(home, '<!-- BLOG_REGISTRY:HOME_START -->', '<!-- BLOG_REGISTRY:HOME_END -->', `<div class="mt-7 grid gap-5 md:grid-cols-2">\n                    ${homeCard(featured)}\n\n                    ${homeCard(secondary)}\n                </div>`);
+blog = replaceBetween(blog, '<!-- BLOG_REGISTRY:FEATURED_START -->', '<!-- BLOG_REGISTRY:FEATURED_END -->', featuredCard(featured));
 blog = replaceBetween(blog, '<!-- BLOG_REGISTRY:ARCHIVE_START -->', '<!-- BLOG_REGISTRY:ARCHIVE_END -->', `<div class="mt-10 space-y-14">\n      ${renderArchive()}\n    </div>`);
 fs.writeFileSync(homePath, home);
 fs.writeFileSync(blogPath, blog);
