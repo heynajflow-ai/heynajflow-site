@@ -12,6 +12,35 @@ const registry = JSON.parse(read('data/blog-registry.json'));
 const published = registry.posts.filter(post => post.status === 'published');
 const genericExcerpt = 'Practical guidance for better website conversations with HeyNaj Flow.';
 const sitemap = read('sitemap.xml');
+const shellTargets = [
+  'index.html',
+  'blog/index.html',
+  'get-started/index.html',
+  'book/index.html',
+  'terms-of-service.html',
+  'privacy-policy.html',
+  'data-handling-policy.html',
+  'templates/blog-article.html',
+  ...published.map(post => `blog/${post.slug}/index.html`),
+];
+const shellRegion = (html, name) => html.match(new RegExp(`<!-- ${name}:START -->[\\s\\S]*?<!-- ${name}:END -->`))?.[0] || '';
+
+for (const relative of shellTargets) {
+  check(fs.existsSync(path.join(site, relative)), `${relative}: public shell target is missing`);
+  if (!fs.existsSync(path.join(site, relative))) continue;
+  const html = read(relative);
+  const navigation = shellRegion(html, 'SITE_NAVIGATION');
+  const footer = shellRegion(html, 'SITE_FOOTER');
+  const styles = shellRegion(html, 'SITE_SHELL_STYLES');
+  const ids = [...html.matchAll(/\bid=["']([^"']+)["']/gi)].map(match => match[1]);
+  check(navigation.length > 0 && (html.match(/<!-- SITE_NAVIGATION:START -->/g) || []).length === 1 && (html.match(/<!-- SITE_NAVIGATION:END -->/g) || []).length === 1, `${relative}: canonical Navigation markers are missing or duplicated`);
+  check(footer.length > 0 && (html.match(/<!-- SITE_FOOTER:START -->/g) || []).length === 1 && (html.match(/<!-- SITE_FOOTER:END -->/g) || []).length === 1, `${relative}: canonical Footer markers are missing or duplicated`);
+  check(styles.includes('/assets/site-navigation.css') && styles.includes('/assets/site-footer.css'), `${relative}: shared shell styles are missing`);
+  check(navigation.includes('How It Works') && navigation.includes('Features') && navigation.includes('>Blog<') && navigation.includes('Star on GitHub') && navigation.includes('>Get Started<'), `${relative}: canonical Navigation labels are incomplete`);
+  check(!/Capabilities|Command Center|Pricing|Start Free Pilot|Free Pilot/i.test(`${navigation}\n${footer}`), `${relative}: legacy public-site chrome label remains`);
+  check(footer.includes('Website conversations don&rsquo;t have to stop when you sleep.') && footer.includes('>Get Started<') && footer.includes('Terms of Service') && footer.includes('Privacy Policy') && footer.includes('Data Handling Policy') && footer.includes('LinkedIn'), `${relative}: canonical Footer content is incomplete`);
+  check(new Set(ids).size === ids.length, `${relative}: duplicate IDs are present`);
+}
 
 for (const post of published) {
   const relative = `blog/${post.slug}/index.html`;

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normalizeApprovedBlog } from './approved-blog-contract.mjs';
+import { renderSiteShellDocument } from './render-site-shell.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const envelope = JSON.parse(process.env.CLIENT_PAYLOAD || '{}');
@@ -187,6 +188,7 @@ const replacements = {
 for (const [key, value] of Object.entries(replacements)) document = document.replaceAll(`{{${key}}}`, value);
 document = document.replace(/\s*<meta name="robots" content="noindex,nofollow,noarchive">\s*/i, '\n  <meta name="robots" content="index,follow">\n  ');
 if (/{{[A-Z0-9_]+}}/.test(document)) throw new Error('Article template still contains unresolved placeholders');
+document = renderSiteShellDocument(document, `blog/${slug}/index.html`);
 
 const articleDir = path.join(site, 'blog', slug);
 fs.mkdirSync(articleDir, { recursive: true });

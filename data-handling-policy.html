@@ -38,142 +38,147 @@
         .footer-note { display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:center; color:#64748b; font-size:.88rem; }
         @media (max-width:720px) { .nav-shell { flex-direction:column; align-items:flex-start; } .content-card { padding:22px; } }
     </style>
+    <link rel="stylesheet" href="/assets/legal-pages.css">
+<!-- SITE_SHELL_STYLES:START -->
+<link rel="stylesheet" href="/assets/site-navigation.css?v=20261008-shell2">
+  <link rel="stylesheet" href="/assets/site-footer.css?v=20261008-shell2">
+  <script defer src="/assets/site-navigation.js"></script>
+<!-- SITE_SHELL_STYLES:END -->
 </head>
-<body>
+<body class="legal-page">
+<!-- SITE_NAVIGATION:START -->
+<header class="site-sticky-header">
+  <nav class="site-navigation" aria-label="Main navigation">
+    <a href="https://heynajflow.com/" class="site-brand" aria-label="HeyNaj Flow home">
+      <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" width="36" height="36">
+      <span>HeyNaj Flow</span>
+    </a>
+    <div class="site-navigation-links">
+      <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+      <a href="https://heynajflow.com/#features">Features</a>
+      <a href="https://heynajflow.com/blog/">Blog</a>
+    </div>
+    <div class="site-navigation-actions">
+      <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+      <a class="site-navigation-button site-get-started" href="https://heynajflow.com/get-started/">Get Started</a>
+    </div>
+    <button type="button" class="site-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-mobile-menu"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+  </nav>
+  <div id="site-mobile-menu" class="site-mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+      <a href="https://heynajflow.com/#features">Features</a>
+      <a href="https://heynajflow.com/blog/">Blog</a>
+      <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+    </nav>
+  </div>
+</header>
+<!-- SITE_NAVIGATION:END -->
     <div class="shell">
-        <div class="nav-shell">
-            <a class="brand" href="/">
-                <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo">
-                <span>HeyNaj Flow</span>
-            </a>
-            <a class="back-link" href="/">Back to Home</a>
-        </div>
-
-        <section class="hero">
+<section class="hero">
             <div class="eyebrow">Legal</div>
             <h1>Data Handling Policy</h1>
             <p>This page explains how HeyNaj Flow handles customer data when operating as a service provider for client deployments.</p>
         </section>
 
         <main class="glass-card content-card">
-            <p class="meta"><strong>Last Updated:</strong> July 11, 2026</p>
+            <p class="meta legal-document-meta"><span><strong>HeyNaj Flow</strong></span><span><strong>Last updated:</strong> October 8, 2026</span><span><strong>Effective date:</strong> October 8, 2026</span></p>
+            <p>This Data Handling Policy describes how HeyNaj Flow processes, stores, transmits, secures and supports the handling of customer-controlled data in the Service. Where a customer uses HeyNaj Flow to process information about website visitors, this policy also states the general processing commitments and division of responsibility between the customer and HeyNaj Flow. Read it with our <a href="/terms-of-service.html">Terms of Service</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <h2>1. Parties and Status</h2>
+            <p><strong>HeyNaj Flow</strong> is an independently operated software platform maintained by <strong>Renzhu Rhy Tayko</strong> (the “Operator”) under that name in the Philippines. This does not assert that the platform is separately incorporated or holds a particular business registration. Contact: <a href="mailto:heynajflow@gmail.com">heynajflow@gmail.com</a>.</p>
+            <p>The <strong>Customer</strong> is the business, professional, agency or other website operator using HeyNaj Flow with authority over its website, business data and visitor relationships. A visitor is a person interacting with the Customer's website or assistant. A separate written and signed data-processing agreement, if any, may contain additional or controlling terms in accordance with that agreement.</p>
+            <h2>2. Controller and Processor Responsibilities</h2>
+            <p>The Customer generally determines the purposes and essential means for processing visitor inquiries, customer Knowledge and contact details and ordinarily acts as the personal information controller (PIC) or equivalent under applicable law. HeyNaj Flow generally supplies technical processing functions for that purpose and may act as personal information processor (PIP) to that extent. HeyNaj Flow may act as an independent controller for its own accounts, support, installation management, security, legal obligations and community recognition.</p>
+            <p>Actual legal roles depend on facts and law—not labels alone. The Customer must establish a lawful basis, supply notices, obtain legally required permissions, respond to visitors' rights, maintain accurate business and consent practices, and decide how to follow up. HeyNaj Flow must fulfill the applicable duties of a processor/controller for functions it actually performs. <strong>Neither party may transfer criminal or statutory responsibility for its own unlawful conduct to the other merely through these terms.</strong></p>
+            <h2>3. Subject Matter, Purpose, Duration, and People</h2>
+            <p><strong>Subject matter:</strong> provision of an AI-assisted customer website widget, saved inquiry and business Knowledge workspace, voice/text interaction, recaps, optional contact capture, source Page URL, customer-configured messaging, installation and support functions.</p>
+            <p><strong>Purposes:</strong> deliver and secure the Service on the Customer's documented settings; respond with approved Knowledge; capture and manage inquiries; provide notifications and customer review; diagnose faults; operate authorized integrations; satisfy legal obligations and protect the Service against abuse.</p>
+            <p><strong>Duration:</strong> while the Customer's active installation and relevant records are maintained, followed by permitted deletion/retention necessary for lawful instructions, operations, security, legal holds and statutory requirements. No universal fixed retention period is established by this document.</p>
+            <p><strong>People:</strong> Customer owners/admins and representatives; visitors to the Customer's widget; persons whose information the Customer submits in approved Knowledge, instructions or communications; and selected recipients of enabled notifications.</p>
+            <p><strong>Types of personal data:</strong> name and contact details where supplied; conversation and transcript content; voice-derived text; follow-up preferences; Page URL; timestamps; inquiry/session identifiers; summaries and categorizations; Internal Notes; business profile data; support material; and relevant technical/security and delivery information. Customers must not introduce sensitive categories without appropriate legal basis and safeguards.</p>
+            <h2>4. Deployment and Data Location</h2>
+            <p>Normal self-service installations use a <strong>customer-specific Cloudflare Worker and D1 database</strong> in a Cloudflare account controlled by the Customer. This is the primary customer-workspace processing and storage location for inquiries, Knowledge and associated settings/operational records.</p>
+            <p>A separate <strong>HeyNaj Flow Control service</strong> manages platform authentication, account/installation records, workspace pairing, setup, authorized configuration access, OAuth or other integration coordination and platform administration. Customer ownership of infrastructure does not mean Control or third parties never handle data. AI, voice, email, browser speech, Web Push, infrastructure and payment providers may process information required by the specific enabled function. Geographic processing can extend outside the Philippines.</p>
+            <p>Customer deployments may be on different software versions, and a Control update does not necessarily update every customer Worker. Product behavior described as current reflects the accepted universal target, subject to the actual installed version and customer configuration.</p>
+            <h2>5. Processing Only for Authorized Purposes</h2>
+            <p>When operating as a processor, HeyNaj Flow will process Customer Data according to documented lawful Customer instructions conveyed by the Service configuration, applicable policies, and specific authorized support actions, except where applicable law requires or permits another action. Customer instructions cannot compel illegal conduct, unauthorized disclosures, bypass of security safeguards, or conduct contrary to mandatory provider rules. We may refuse or suspend instructions that reasonably appear unlawful or seriously harmful, investigate credible abuse and notify the Customer when appropriate and lawful.</p>
+            <p>Providing the Service does not mean HeyNaj Flow sponsors, represents, approves, verifies or participates in the Customer's independent business, offers, website content or actions. The Customer is responsible for the legality and accuracy of its products, uploaded Knowledge, visitor notices, collection practices, advertising and follow-up messages. <strong>This allocation does not excuse HeyNaj Flow's own negligent or unlawful conduct or mandatory legal duties.</strong></p>
+            <h2>6. Data Categories and Specific Flows</h2>
+            <ol><li><strong>Visitor interaction:</strong> A typed or spoken request results in a session/inquiry record and may create a persistent transcript, recap, category and timestamps.</li><li><strong>Contact:</strong> Name, email or phone can be supplied through Required/Soft forms or voluntarily in text/voice and may be associated with the same inquiry. <strong>Lead Capture Off does not prevent conversation retention or volunteered contact extraction.</strong></li><li><strong>Knowledge:</strong> Customer-approved files, notes and approved Question Review answers are stored in the Customer workspace and eligible material is selected for AI responses.</li><li><strong>Page URL:</strong> Embedded sessions generally store source HTTP(S) origin plus pathname at session creation, without query or fragment; attribution can be unknown.</li><li><strong>AI processing:</strong> Relevant excerpts of conversation, public business profile, instructions and approved Knowledge are sent to the Customer-selected AI provider for requested generation.</li><li><strong>Notifications:</strong> Customer-configured email or Web Push may transmit bounded inquiry information to delivery providers/recipients; a saved email is a delivery-time snapshot and is not updated after sending.</li><li><strong>Support/security:</strong> Appropriately authorized operational records may be accessed to diagnose faults, address abuse or comply with valid law.</li></ol>
+            <h2>7. Business Documents and PDF Text Extraction</h2>
+            <p>Accepted new Business Documents are <strong>TXT, MD, DOCX and PDF</strong> up to <strong>2 MiB each</strong>; legacy `.doc` is not newly accepted but previously stored records may remain. The authenticated dashboard extracts selectable text from PDFs <strong>in the user's browser using a local Web Worker</strong>; the Customer Worker checks ownership, upload type, size and extracted-text bounds, then stores permitted original bytes and searchable text. There is no external PDF-extraction service, AI extraction call or OCR. Image-only/scanned PDFs are not searchable unless selectable text exists. Current PDF processing constraints include 100 pages, 30 seconds and 100,000 extracted characters; reading order may be imperfect.</p>
+            <p>Uploaded content may subsequently be included as relevant Knowledge in queries to the configured AI provider. A successful index means the text is eligible for retrieval, not that the AI answer is always complete. Customer is responsible for possessing the rights and legal basis to upload and use documents, including any personal information about third parties.</p>
+            <h2>8. AI, Voice, and Automated Categorization</h2>
+            <p>Current modes include <strong>Text Only</strong>, browser/device <strong>Standard Voice (Free)</strong> and supported-provider <strong>Premium Live Voice</strong>. Standard Voice uses browser/device speech functions; recognized speech is submitted through the conversational pathway. Premium can stream relevant audio, transcript and context to OpenAI Realtime or Google Gemini Live when selected and supported by the Customer's provider account.</p>
+            <p>The Service may produce AI-generated answers and <strong>Conversation recaps</strong>, preserve explicit visitor contact-channel preferences, and use rules to identify high-intent/priority inquiries or notification eligibility. These are business workflow aids, not authoritative findings about an individual's identity, creditworthiness or other legally significant status. The Customer is responsible for reviewing consequential output.</p>
+            <p>We do not independently repurpose Customer Data to train a generalized public-facing AI model. This statement is separate from the Customer's selected provider's own data-use agreement and settings. Data handling by providers must be evaluated under the actual provider terms and role.</p>
+            <h2>9. Inquiry Storage, Visibility, and Internal Notes</h2>
+            <p>A real visitor inquiry may remain stored when the visitor leaves, even without contact information. The dashboard currently displays the latest <strong>100 active inquiries</strong> as a working set; older records are not automatically deleted simply because they are absent from the visible list. Customer export of loaded/selected records may not include every older record or a complete transcript. Inquiry delete controls are distinct from display filters.</p>
+            <p>Private <strong>Internal Notes</strong> are stored for authorized Customer administration and are not automatically used as visitor-visible Knowledge or replies. Original conversation evidence is not silently rewritten when a validated contact field is corrected. The Customer controls lawful access and follow-up by its authorized representatives.</p>
+            <h2>10. Email and Web Push Delivery</h2>
+            <p>Customer email connections may use Google/Gmail/Google Workspace sender authorization or available supported provider adapters (including Microsoft, Resend, Mailgun and Postmark, subject to availability). Inquiry sending is not an inbox-reading function. Separate provider credentials and permissions may be required and provider charges/quotas remain the Customer's responsibility.</p>
+            <p>An eligible email may contain inquiry metadata, contact fields, source Page URL, recap/summary snapshot and dashboard link. A qualifying anonymous inquiry may alert even if Lead Capture is Off. A later contact update may produce a separate appropriately identified event. Email delivery is subject to deduplication/retry safeguards but cannot be guaranteed exactly once or instantly by external delivery networks.</p>
+            <p>Web Push requires saved device/browser subscription, permission and eligible settings; push payloads normally use abbreviated generic text rather than full transcripts. Delivery depends on browser/OS and push infrastructure. Published settings presently support <strong>Important inquiries only/All inquiries</strong> and <strong>Email only/Push only/Email and push</strong>, not a global None setting. Manual Important/star does not equal automatic high-intent classification.</p>
+            <h2>11. Connected Services and Recipient Categories</h2>
+            <p>Depending on customer selection, relevant service providers may include Cloudflare (runtime/database/network), Google (Gemini, authentication or permitted sending), OpenAI (AI/realtime), supported sender services (such as Microsoft/Resend/Mailgun/Postmark), browser/device speech services and Web Push infrastructure. Optional coffee transactions may be completed through PayPal, Wise, GCash or GoTyme. Not every provider is used for every installation or receives every category of data.</p>
+            <p>A provider engaged by the Customer directly using its own account may be a <strong>Customer-selected independent provider or Customer's processor</strong>, rather than a subprocessor appointed solely by HeyNaj Flow. This distinction does not remove obligations HeyNaj Flow actually owes for its own processing. Customers should examine provider terms, permissions and data location choices and avoid connecting accounts they do not have authority to use.</p>
+            <p>This general category list is not a verified exhaustive contractual list.</p>
+            <h2>12. Authorized Personnel, Confidentiality, and Security</h2>
+            <p>We will use risk-appropriate technical and organizational controls for the processing within our responsibility, including supported authentication/authorization, separation of customer workspace resources, restricted administrative access, public configuration allowlisting, protection of supported stored integration credentials, and controls around authorized deployment operations.</p>
+            <p>People authorized to access Customer Data for support, maintenance, security, compliance or lawful obligations must use it only for their authorized purpose and be subject to appropriate confidentiality requirements. Sensitive access should be limited, documented as appropriate and revoked when no longer required. We do not disclose private Admin contact fields, sender credentials or Internal Notes as public widget Knowledge merely because they are configured.</p>
+            <p>We do <strong>not</strong> claim end-to-end encryption, absolute prevention of breaches, zero vendor retention, universal residency, independently audited certification, or a recovery capability not verified for the applicable installation. Customers control security of their websites, Cloudflare accounts, integrations, provider tokens, own staff devices and locally exported data.</p>
+            <h2>13. Abuse, Fraud, and Unlawful Instructions</h2>
+            <p>Customers must not use the Service to facilitate phishing, fraud, identity theft, unauthorized surveillance, unlawful messaging, exploitation, illegal commerce or collection/disclosure of personal information without lawful authority. Customers must not instruct the assistant to impersonate officials, collect passwords or one-time codes for deception, fabricate professional authorization, or hide illegal activity.</p>
+            <p>We may review credible abuse reports, preserve evidence where lawful, suspend or restrict the relevant service access, deny unlawful instructions and cooperate with lawful requests by courts, regulators or law enforcement. We do not have a general promise to pre-screen every visitor message, and a technical account is not an endorsement of the Customer. We also will not deliberately conceal incidents or falsify records.</p>
+            <p><strong>Contractual allocation of customer responsibility and indemnification under the Terms may apply to qualifying third-party civil claims. No provision promises immunity from investigation, prosecution, statutory penalties or the Operator's own misconduct.</strong></p>
+            <h2>14. Incident Response and Breach Notification</h2>
+            <p>We will assess suspected security incidents within our sphere of control, take reasonable containment steps and maintain incident records as appropriate. When we become aware of a personal data breach affecting Customer Data for which we are the processor, we will communicate relevant available information to the Customer <strong>without undue delay</strong>, as required by applicable law and the facts available, and cooperate reasonably in assessment, containment and legally required notifications.</p>
+            <p>Under applicable Philippine rules, certain notifiable breaches require notification by the responsible personal information controller to the National Privacy Commission and affected individuals <strong>within 72 hours</strong> of knowledge/reasonable belief, subject to the rules and permitted exceptions. Each party remains responsible for obligations applicable to it, including cases where HeyNaj Flow is independently the controller. We will not contract away mandatory duties, conceal a notifiable breach or claim that notification is unnecessary merely because the Service is free.</p>
+            <p>Where possible, relevant notices/assistance may describe affected categories, incident nature, mitigation, timing, available investigation findings and appropriate contact information. Security-sensitive evidence may be disclosed only to authorized persons and as law permits.</p>
+            <h2>15. Data Subject Requests and Regulatory Inquiries</h2>
+            <p>The Customer is generally the primary contact for requests about the Customer's visitor data. We will reasonably assist the Customer in responding to properly validated access, correction, deletion, blocking, portability or objection requests where law requires and the relevant data/function is within our ability to control. We may require sufficient verification before disclosing a transcript or account information. When acting independently as controller, HeyNaj Flow will address requests within its own responsibility.</p>
+            <p>For legally valid court, regulator and law-enforcement requests, we may preserve or disclose information only within the applicable legal authority and documented process. We may seek clarification or challenge overbroad or invalid demands where lawful. A Customer may not instruct us to destroy evidence subject to a valid preservation duty or conceal unlawful processing.</p>
+            <h2>16. Retention, Return and Deletion</h2>
+            <p>Customer records may remain in the customer-owned D1 and associated resources until a supported deletion action, authorized account/workspace lifecycle process or other lawful instruction takes effect, subject to backups, technical limits and legitimate legal retention obligations. The latest-100 display constraint is <strong>not</strong> a retention limit. We do not represent that disconnecting an integration deletes existing inquiries, or that deleting local data recalls delivered email, provider records or backups held outside our control.</p>
+            <p>Where required and feasible, we will provide reasonable means for Customer access, export, deletion or authorized termination handling, subject to available product functionality, security, law and directly controlled infrastructure. Current loaded-row CSV is not a complete database archive or full transcript export. We will not promise an unavailable one-click deletion of every external copy.</p>
+            <p>If the Customer retains control of Cloudflare resources after termination, the Customer must also manage its own remaining resources and stored data.</p>
+            <h2>17. International Transfers and Location</h2>
+            <p>Enabled infrastructure and providers may transfer or process information across jurisdictions. The customer-owned Cloudflare account is not a guarantee that every AI, voice, notification, authentication or support operation stays within the Philippines or one Cloudflare region. Each party will implement appropriate safeguards when law requires and will accurately communicate its actual selected provider configurations.</p>
+            <h2>18. Assistance, Audit Requests, and Cooperation</h2>
+            <p>Taking account of available information, confidentiality, security and the nature of processing, we will provide reasonable assistance with legally applicable security questions, controller compliance inquiries, privacy impact assessments, incident handling and data subject requests. Requests for invasive tests, production database access, proprietary code, unrelated customers' information or confidential provider records are subject to written authorization, availability, legal limits and appropriate safeguards. Nothing here grants unlimited audit rights or permits access to another customer's workspace.</p>
+            <h2>19. Customer Responsibility, Indemnification, and Non-Waivable Duties</h2>
+            <p>The Customer must independently comply with applicable data protection, consumer, marketing, anti-fraud, content and other laws governing its business and visitor relationships. The Customer is responsible for selecting a lawful basis; displaying notices; gaining required consents; limiting content uploaded into Knowledge; sending lawful messages; responding to legal demands concerning its own conduct; and supervising authorized account users.</p>
+            <p>The Terms of Service include provisions concerning customer-caused losses, qualifying third-party claims, defense cooperation and limits of liability. Those provisions apply <strong>only to the extent enforceable under applicable law</strong>. They do not eliminate HeyNaj Flow's own duty to protect data under its control or transfer to a Customer liability attributable to HeyNaj Flow's unlawful acts, gross negligence where non-waivable, willful misconduct or mandatory statutory obligations. A Customer's breach of these terms does not by itself prove a crime; enforcement must be evidence-based and lawful.</p>
+            <h2>20. Changes, Priority, and Contact</h2>
+            <p>This policy may be updated as our processing, vendors, functionality or governing law changes. The effective/updated date shows the published version. Where required by law or an applicable signed agreement, changes affecting processing terms will be communicated and agreed through the necessary process. A separately executed DPA may prevail as stated in that agreement; otherwise the Terms, Privacy Policy and this Data Handling Policy should be read consistently without undermining mandatory rights.</p>
+            <p><strong>Contact:</strong> <a href="mailto:heynajflow@gmail.com">heynajflow@gmail.com</a></p>
+            <p><strong>Related policies:</strong> <a href="/terms-of-service.html">Terms of Service</a> · <a href="/privacy-policy.html">Privacy Policy</a></p>
 
-            <p>This Data Processing Addendum / Data Handling Policy ("DPA") forms part of the agreement between HeyNaj Flow and the customer using the Service.</p>
-
-            <h2>1. Parties</h2>
-            <p>This DPA is between the customer using the Service and Renzhu Rhy Tayko, operating as HeyNaj Flow.</p>
-            <ul>
-                <li>Provider: Renzhu Rhy Tayko, doing business as HeyNaj Flow</li>
-                <li>Address: Batinguel, Dumaguete City, Negros Oriental 6200, Philippines</li>
-                <li>Email: heynajflow@gmail.com</li>
-            </ul>
-
-            <h2>2. Purpose</h2>
-            <p>This DPA explains how HeyNaj Flow processes personal data on behalf of customers and summarizes the data-handling practices used in connection with the Service.</p>
-
-            <h2>3. Roles of the Parties</h2>
-            <p>For customer data processed through the Service, the customer is generally the controller or business that decides why and how the data is used, and HeyNaj Flow is generally the processor or service provider acting on the customer's instructions.</p>
-            <p>HeyNaj Flow may also act as an independent controller for its own business purposes such as billing, legal compliance, fraud prevention, security, service administration, and direct communications with customer representatives.</p>
-
-            <h2>4. Service Description</h2>
-            <p>HeyNaj Flow provides AI-assisted website chat, optional voice interaction, lead capture, routing, knowledge syncing, notifications, booking handoff, optional dashboard or app tools, and managed setup or support services.</p>
-            <p>In the standard service model, the customer provides materials through a secured Google Drive folder or another approved channel, and HeyNaj Flow configures the deployment based on those materials.</p>
-
-            <h2>5. Categories of Personal Data</h2>
-            <ul>
-                <li>names, email addresses, phone numbers, and company information;</li>
-                <li>chat messages, inquiry content, voice messages, audio interaction data, lead details, and summaries;</li>
-                <li>booking-related details;</li>
-                <li>uploaded business documents, FAQs, and other submitted knowledge materials;</li>
-                <li>information about customer representatives who provide instructions or materials;</li>
-                <li>optional dashboard or support-tool activity; and</li>
-                <li>other personal data the customer chooses to provide through the Service.</li>
-            </ul>
-
-            <h2>6. Categories of Data Subjects</h2>
-            <p>Depending on how the customer uses the Service, data subjects may include customer personnel, leads, prospects, website visitors, end users interacting with a deployed HeyNaj Flow widget, and other individuals whose information the customer provides through the Service.</p>
-
-            <h2>7. Nature and Purpose of Processing</h2>
-            <ul>
-                <li>host and operate the Service;</li>
-                <li>ingest, store, review, and sync knowledge materials;</li>
-                <li>process chat and voice interactions where enabled;</li>
-                <li>generate AI-assisted responses based on configured rules and inputs;</li>
-                <li>notify the customer of leads, inquiries, or abandoned interactions;</li>
-                <li>provide logs, summaries, transcripts, notifications, and agreed support or admin tools;</li>
-                <li>support troubleshooting, maintenance, and security; and</li>
-                <li>improve reliability, detect misuse, and maintain the technical environment, subject to applicable law and contractual commitments.</li>
-            </ul>
-
-            <h2>8. Customer Instructions and Responsibilities</h2>
-            <p>HeyNaj Flow will process customer data only on documented customer instructions, as necessary to provide the Service, as required by law, or as otherwise permitted by written agreement.</p>
-            <ul>
-                <li>have a lawful basis to collect and submit customer data;</li>
-                <li>make sure instructions are lawful;</li>
-                <li>decide whether the Service is appropriate for the intended use case;</li>
-                <li>keep materials in the secured folder or other approved submission channel accurate and up to date; and</li>
-                <li>review knowledge sources, FAQs, prompts, fallback responses, booking links, promotions, and lead-capture settings.</li>
-            </ul>
-
-            <h2>9. Confidentiality</h2>
-            <p>HeyNaj Flow will ensure that people authorized to process customer data are subject to confidentiality obligations or appropriate duties of confidentiality.</p>
-
-            <h2>10. Security Measures</h2>
-            <p>HeyNaj Flow will use commercially reasonable technical and organizational measures designed to protect customer data, taking into account the nature of the data and the risks involved.</p>
-            <ul>
-                <li>access controls and authentication protections;</li>
-                <li>limited-access practices;</li>
-                <li>secured third-party platforms and approved file-submission channels;</li>
-                <li>logging and monitoring;</li>
-                <li>data segregation where applicable;</li>
-                <li>backup and recovery measures;</li>
-                <li>vendor management; and</li>
-                <li>incident-handling procedures.</li>
-            </ul>
-            <p>No security measure is perfect or absolute.</p>
-
-            <h2>11. Subprocessors</h2>
-            <p>The customer authorizes HeyNaj Flow to use subprocessors as reasonably necessary to provide the Service, including providers for hosting, storage, document management, communications, analytics, AI processing, booking tools, support tooling, and workflow infrastructure.</p>
-            <p>Depending on deployment, subprocessors may include Google services, Google Drive, AppSheet, OpenAI, Gemini, and other support, infrastructure, or workflow providers reasonably needed to operate the Service.</p>
-
-            <h2>12. International Transfers</h2>
-            <p>Because the Service may rely on global cloud and software providers, customer data may be processed in countries other than the customer's own country. Where required, HeyNaj Flow will use reasonable steps and appropriate safeguards for such transfers.</p>
-
-            <h2>13. Data Subject Rights Assistance</h2>
-            <p>Taking into account the nature of the processing, HeyNaj Flow will provide reasonable assistance, where legally required and commercially appropriate, so the customer can respond to valid data-subject requests.</p>
-
-            <h2>14. Security Incident Assistance</h2>
-            <p>Taking into account the nature of the processing and the information available, HeyNaj Flow will provide reasonable assistance with security incidents involving customer data, legally required breach-response support, relevant investigations into confirmed incidents, and other reasonable compliance-related cooperation tied to the Service.</p>
-
-            <h2>15. Return or Deletion of Data</h2>
-            <p>After termination or expiration of the Service, and subject to applicable law, technical limitations, contractual obligations, and reasonable retention practices, HeyNaj Flow will delete or return customer data as agreed with the customer.</p>
-
-            <h2>16. AI and Knowledge Materials</h2>
-            <p>The customer acknowledges that AI-assisted output depends in part on the knowledge materials, configuration, and rules used in the deployment. Inconsistent, conflicting, or outdated materials may lead to inconsistent responses.</p>
-            <p>Customer business content submitted for a deployment is not used by HeyNaj Flow to train public-facing open AI models for general use, except where the customer separately instructs, authorizes, or enables a workflow that clearly requires that use.</p>
-
-            <h2>17. Sensitive or Regulated Data</h2>
-            <p>Unless expressly agreed in writing and properly configured, the customer should not use the Service to process highly sensitive personal data, health data, children's data, government identification numbers, payment card data, regulated financial data, or other data requiring specialized safeguards.</p>
-
-            <h2>18. Audit and Information Rights</h2>
-            <p>Upon reasonable written request, HeyNaj Flow will provide information reasonably necessary to demonstrate compliance with this DPA, subject to confidentiality, security, proportionality, and administrative limits. If a formal audit right is needed, it should be addressed in a separate written agreement.</p>
-
-            <h2>19. Contact</h2>
-            <p>For questions about this DPA or our data-handling practices, contact heynajflow@gmail.com.</p>
-
-            <div class="legal-links">
-                <a href="/terms-of-service.html">Terms of Service</a>
-                <a href="/privacy-policy.html">Privacy Policy</a>
+            <div class="legal-policy-links">
+                <a class="legal-policy-link" href="/terms-of-service.html">Terms of Service</a>
+                <a class="legal-policy-link" href="/privacy-policy.html">Privacy Policy</a>
             </div>
         </main>
 
-        <footer>
-            <div class="footer-note">
-                <div>&copy; 2026 HeyNaj Flow. All rights reserved.</div>
-                <div>Built to help websites answer faster and capture cleaner leads.</div>
-            </div>
-        </footer>
     </div>
+
+        <!-- SITE_FOOTER:START -->
+<footer class="site-footer">
+  <div class="site-footer-panel">
+    <div class="footer-grid slim">
+      <div>
+        <div class="site-footer-brand"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="footer-brand-logo" width="40" height="40"><div class="site-footer-brand-name">HeyNaj Flow</div></div>
+        <p class="site-footer-description">Website conversations don&rsquo;t have to stop when you sleep.</p>
+      </div>
+      <div class="site-footer-action"><a href="https://heynajflow.com/get-started/" class="site-footer-cta">Get Started</a></div>
+    </div>
+  </div>
+  <div class="site-footer-legal">
+    <p>&copy; 2026 HeyNaj Flow. All rights reserved.</p>
+    <nav aria-label="Legal"><a href="/terms-of-service.html">Terms of Service</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/data-handling-policy.html">Data Handling Policy</a><a href="https://www.linkedin.com/company/heynajflow/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav>
+  </div>
+</footer>
+<!-- SITE_FOOTER:END -->
 </body>
 </html>
 

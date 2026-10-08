@@ -9,210 +9,76 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/assets/site-navigation.css">
-    <script defer src="/assets/site-navigation.js"></script>
-    <style>
-        * { box-sizing: border-box; }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            min-height: 100svh;
-            margin: 0;
-            background: #faf9f4;
-            color: #0f172a;
-            font-family: 'Be Vietnam Pro', sans-serif;
-            line-height: 1.5;
-        }
-
-        a { color: inherit; text-decoration: none; }
-        button { font: inherit; }
-
-        .gateway-main {
-            display: grid;
-            flex: 1;
-            align-content: center;
-            padding: 4.5rem 1.5rem;
-        }
-
-        .gateway-card {
-            width: 100%;
-            max-width: 46.25rem;
-            margin: 0 auto;
-            padding: 3.5rem 3rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 2rem;
-            background: #fff;
-            box-shadow: 0 22px 60px -40px rgba(15, 23, 42, 0.25);
-            text-align: center;
-        }
-
-        .gateway-eyebrow {
-            margin: 0 0 1.25rem;
-            color: #475569;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-        }
-
-        .gateway-card h1 {
-            margin: 0;
-            font-size: 3rem;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1.15;
-            text-wrap: balance;
-        }
-
-        .gateway-description {
-            max-width: 36rem;
-            margin: 1.5rem auto 0;
-            color: #475569;
-            font-size: 1.0625rem;
-            line-height: 1.8;
-        }
-
-        .gateway-actions {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .gateway-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 3rem;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid #ffdc32;
-            border-radius: 999px;
-            background: #ffdc32;
-            font-size: 0.9375rem;
-            font-weight: 800;
-        }
-
-        .gateway-primary:hover { background: #f5ce20; border-color: #f5ce20; }
-
-        .gateway-secondary {
-            display: inline-flex;
-            align-items: center;
-            min-height: 2.75rem;
-            color: #475569;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        .gateway-secondary:hover, .gateway-footer a:hover { color: #0f172a; }
-
-        .gateway-note {
-            max-width: 31rem;
-            margin: 1.5rem auto 0;
-            color: #64748b;
-            font-size: 0.8125rem;
-            line-height: 1.8;
-        }
-
-        .gateway-footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0 1.5rem 2rem;
-            text-align: center;
-        }
-
-        .gateway-footer-brand { margin: 0; font-size: 0.875rem; font-weight: 800; }
-
-        .gateway-footer nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.25rem 1.5rem;
-            color: #475569;
-            font-size: 0.75rem;
-        }
-
-        .gateway-footer nav a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 2.75rem;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        .gateway-main a:focus-visible, .gateway-footer a:focus-visible {
-            outline: 3px solid #475569;
-            outline-offset: 4px;
-        }
-
-        @media (max-width: 767px) {
-            .gateway-main { padding: 3rem 1.25rem; }
-            .gateway-card { padding: 2.5rem 1.5rem; border-radius: 1.5rem; }
-            .gateway-card h1 { font-size: 2.125rem; }
-            .gateway-description { font-size: 1rem; }
-        }
-
-        @media (max-width: 479px) {
-            .gateway-primary { width: 100%; padding-right: 1rem; padding-left: 1rem; }
-        }
-    </style>
+<link rel="stylesheet" href="/assets/get-started.css">
+<!-- SITE_SHELL_STYLES:START -->
+<link rel="stylesheet" href="/assets/site-navigation.css?v=20261008-shell2">
+  <link rel="stylesheet" href="/assets/site-footer.css?v=20261008-shell2">
+  <script defer src="/assets/site-navigation.js"></script>
+<!-- SITE_SHELL_STYLES:END -->
 </head>
-<body>
-    <header class="site-sticky-header">
-    <nav class="site-navigation" aria-label="Main navigation">
-        <a href="https://heynajflow.com/" class="site-brand" aria-label="HeyNaj Flow home">
-            <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" width="36" height="36">
-            <span>HeyNaj Flow</span>
-        </a>
-        <div class="site-navigation-links">
-            <a href="https://heynajflow.com/#how-it-works">How It Works</a>
-            <a href="https://heynajflow.com/#features">Features</a>
-            <a href="https://heynajflow.com/blog/">Blog</a>
-        </div>
-        <div class="site-navigation-actions">
-            <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
-            <a class="site-navigation-button site-get-started" href="https://heynajflow.com/get-started/" aria-current="page">Get Started</a>
-        </div>
-        <button type="button" class="site-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-mobile-menu">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
-        </button>
-    </nav>
-    <div id="site-mobile-menu" class="site-mobile-menu" hidden>
-        <nav aria-label="Mobile navigation">
-            <a href="https://heynajflow.com/#how-it-works">How It Works</a>
-            <a href="https://heynajflow.com/#features">Features</a>
-            <a href="https://heynajflow.com/blog/">Blog</a>
-            <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
-        </nav>
+<body class="get-started-page">
+    <!-- SITE_NAVIGATION:START -->
+<header class="site-sticky-header">
+  <nav class="site-navigation" aria-label="Main navigation">
+    <a href="https://heynajflow.com/" class="site-brand" aria-label="HeyNaj Flow home">
+      <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" width="36" height="36">
+      <span>HeyNaj Flow</span>
+    </a>
+    <div class="site-navigation-links">
+      <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+      <a href="https://heynajflow.com/#features">Features</a>
+      <a href="https://heynajflow.com/blog/">Blog</a>
     </div>
+    <div class="site-navigation-actions">
+      <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+      <a class="site-navigation-button site-get-started" href="https://heynajflow.com/get-started/" aria-current="page">Get Started</a>
+    </div>
+    <button type="button" class="site-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-mobile-menu"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+  </nav>
+  <div id="site-mobile-menu" class="site-mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+      <a href="https://heynajflow.com/#features">Features</a>
+      <a href="https://heynajflow.com/blog/">Blog</a>
+      <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+    </nav>
+  </div>
 </header>
+<!-- SITE_NAVIGATION:END -->
 
     <main id="main-content" class="gateway-main">
-        <section class="gateway-card" aria-labelledby="gateway-heading">
-            <p class="gateway-eyebrow">HEYNAJ FLOW WORKSPACE</p>
-            <h1 id="gateway-heading">Get Started with HeyNaj Flow</h1>
-            <p class="gateway-description">Create or access your HeyNaj Flow workspace to configure your website assistant, add business Knowledge, manage Inquiries, and connect HeyNaj Flow to your website.</p>
-            <div class="gateway-actions">
-                <a class="gateway-primary" href="https://heynaj-flow-control.heynajflow.workers.dev/">Open HeyNaj Flow Workspace</a>
-                <a class="gateway-secondary" href="https://heynajflow.com/">Back to HeyNaj Flow</a>
+        <section class="gateway-shell" aria-labelledby="gateway-heading">
+            <div class="gateway-panel">
+                <p class="gateway-eyebrow">Get Started</p>
+                <h1 id="gateway-heading">Get Started with HeyNaj Flow</h1>
+                <p class="gateway-description">Create or access your HeyNaj Flow workspace to configure your website assistant, add business Knowledge, manage Inquiries, and connect HeyNaj Flow to your website.</p>
+                <div class="gateway-actions">
+                    <a class="gateway-primary" href="https://heynaj-flow-control.heynajflow.workers.dev/">Open HeyNaj Flow Workspace</a>
+                    <a class="gateway-secondary" href="https://heynajflow.com/">Back to HeyNaj Flow</a>
+                </div>
+                <p class="gateway-note">HeyNaj Flow is free to use. Connected third-party services may have their own usage limits or charges.</p>
             </div>
-            <p class="gateway-note">HeyNaj Flow is free to use. Connected third-party services may have their own usage limits or charges.</p>
         </section>
     </main>
 
-    <footer class="gateway-footer">
-        <p class="gateway-footer-brand">HeyNaj Flow</p>
-        <nav aria-label="Legal">
-            <a href="/privacy-policy.html">Privacy Policy</a>
-            <a href="/terms-of-service.html">Terms of Service</a>
-            <a href="/data-handling-policy.html">Data Handling Policy</a>
-        </nav>
-    </footer>
+    <!-- SITE_FOOTER:START -->
+<footer class="site-footer">
+  <div class="site-footer-panel">
+    <div class="footer-grid slim">
+      <div>
+        <div class="site-footer-brand"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="footer-brand-logo" width="40" height="40"><div class="site-footer-brand-name">HeyNaj Flow</div></div>
+        <p class="site-footer-description">Website conversations don&rsquo;t have to stop when you sleep.</p>
+      </div>
+      <div class="site-footer-action"><a href="https://heynajflow.com/get-started/" class="site-footer-cta">Get Started</a></div>
+    </div>
+  </div>
+  <div class="site-footer-legal">
+    <p>&copy; 2026 HeyNaj Flow. All rights reserved.</p>
+    <nav aria-label="Legal"><a href="/terms-of-service.html">Terms of Service</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/data-handling-policy.html">Data Handling Policy</a><a href="https://www.linkedin.com/company/heynajflow/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav>
+  </div>
+</footer>
+<!-- SITE_FOOTER:END -->
+
+    <script async src="https://heynaj-flow-a08bd193-938.renz-heynajflow-64f.workers.dev/loader.js"></script>
 </body>
 </html>
-

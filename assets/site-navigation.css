@@ -13,6 +13,12 @@
     color: #0f172a;
 }
 
+.site-sticky-header a,
+.site-sticky-header a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
 .site-navigation {
     position: relative;
     display: grid;

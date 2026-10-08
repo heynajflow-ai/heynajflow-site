@@ -38,120 +38,145 @@
         .footer-note { display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:center; color:#64748b; font-size:.88rem; }
         @media (max-width:720px) { .nav-shell { flex-direction:column; align-items:flex-start; } .content-card { padding:22px; } }
     </style>
+    <link rel="stylesheet" href="/assets/legal-pages.css">
+<!-- SITE_SHELL_STYLES:START -->
+<link rel="stylesheet" href="/assets/site-navigation.css?v=20261008-shell2">
+  <link rel="stylesheet" href="/assets/site-footer.css?v=20261008-shell2">
+  <script defer src="/assets/site-navigation.js"></script>
+<!-- SITE_SHELL_STYLES:END -->
 </head>
-<body>
+<body class="legal-page">
+<!-- SITE_NAVIGATION:START -->
+<header class="site-sticky-header">
+  <nav class="site-navigation" aria-label="Main navigation">
+    <a href="https://heynajflow.com/" class="site-brand" aria-label="HeyNaj Flow home">
+      <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" width="36" height="36">
+      <span>HeyNaj Flow</span>
+    </a>
+    <div class="site-navigation-links">
+      <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+      <a href="https://heynajflow.com/#features">Features</a>
+      <a href="https://heynajflow.com/blog/">Blog</a>
+    </div>
+    <div class="site-navigation-actions">
+      <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+      <a class="site-navigation-button site-get-started" href="https://heynajflow.com/get-started/">Get Started</a>
+    </div>
+    <button type="button" class="site-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-mobile-menu"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+  </nav>
+  <div id="site-mobile-menu" class="site-mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="https://heynajflow.com/#how-it-works">How It Works</a>
+      <a href="https://heynajflow.com/#features">Features</a>
+      <a href="https://heynajflow.com/blog/">Blog</a>
+      <a class="site-navigation-button site-github" href="https://github.com/heynajflow-ai/heynaj-flow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.16a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.09-1.16 3.09-1.16.61 1.55.23 2.69.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Star on GitHub</span></a>
+    </nav>
+  </div>
+</header>
+<!-- SITE_NAVIGATION:END -->
     <div class="shell">
-        <div class="nav-shell">
-            <a class="brand" href="/">
-                <img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo">
-                <span>HeyNaj Flow</span>
-            </a>
-            <a class="back-link" href="/">Back to Home</a>
-        </div>
-
-        <section class="hero">
+<section class="hero">
             <div class="eyebrow">Legal</div>
             <h1>Privacy Policy</h1>
             <p>This page explains what personal data HeyNaj Flow may collect, how that data is used, and the choices available to users and customers.</p>
         </section>
 
         <main class="glass-card content-card">
-            <p class="meta"><strong>Last Updated:</strong> July 11, 2026</p>
+            <p class="meta legal-document-meta"><span><strong>HeyNaj Flow</strong></span><span><strong>Last updated:</strong> October 8, 2026</span><span><strong>Effective date:</strong> October 8, 2026</span></p>
+            <p>This Privacy Policy explains how HeyNaj Flow (the “Service,” “we,” “us,” or “our”) handles personal information when people visit our website, create or administer an account, use the dashboard or website assistant, interact with a customer-installed widget, or voluntarily participate in community support. It applies alongside our <a href="/terms-of-service.html">Terms of Service</a> and <a href="/data-handling-policy.html">Data Handling Policy</a>.</p>
+            <h2>1. Operator and Contact</h2>
+            <p>HeyNaj Flow is an independently operated software platform maintained by <strong>Renzhu Rhy Tayko</strong> (the “Operator”) under the HeyNaj Flow name. This wording does not assert that HeyNaj Flow is separately incorporated or has a particular business-registration status.</p>
+            <ul><li><strong>Platform:</strong> HeyNaj Flow</li><li><strong>Country of operation:</strong> Philippines</li><li><strong>Privacy and legal inquiries:</strong> <a href="mailto:heynajflow@gmail.com">heynajflow@gmail.com</a></li></ul>
+            <p>Additional identity, registration, representative, or contact details will be provided when required by applicable law. The Operator is identified for accountability; identifying the Operator does not make the Operator a party to customers' independent visitor transactions or a guarantor of customer conduct.</p>
+            <h2>2. Our Role and the Customer's Role</h2>
+            <p>For platform accounts, authentication, installation management, security, our own website, support, and optional community recognition, HeyNaj Flow may determine processing purposes and act as the relevant <strong>personal information controller</strong> under applicable Philippine law.</p>
+            <p>For visitor conversations, business Knowledge, inquiries, customer-selected notification recipients, and related records processed to deliver a website owner's configured service, the <strong>website owner/customer generally determines the business purpose</strong> and ordinarily acts as controller. HeyNaj Flow generally provides processing and technical functionality on that customer's instructions, subject to the extent to which HeyNaj Flow independently determines any purpose or means under law. Actual roles depend on the specific activity; merely calling someone a processor cannot remove legally imposed obligations.</p>
+            <p>Customers are independently responsible for choosing lawful purposes, supplying their own visitor notices, identifying a lawful basis, obtaining required consent where applicable, honoring applicable requests, and using contact details lawfully. A customer's unlawful conduct is not authorized, approved, or endorsed by HeyNaj Flow. These responsibilities do not relieve us of obligations imposed on us by law.</p>
+            <p>If you interacted with a widget installed on another organization's website, <strong>contact that website owner first</strong> about the content and purpose of its collection. We will reasonably help route or address requests affecting data we process on that customer's behalf.</p>
+            <h2>3. Information We May Collect</h2>
+            <p><strong>Platform users and website owners:</strong> account name and email, authentication identifiers, public business name/website/country/time zone, private administrative contact details, Cloudflare installation and account metadata, connection status, AI/widget settings, support communications, optional notification recipient, push-subscription and delivery state, and related service/security events.</p>
+            <p><strong>Website visitors using a customer widget:</strong> submitted chat content; relevant voice transcripts and voice-session events; voluntarily provided names, email addresses and telephone numbers; form responses; expressed preferred follow-up channel; inquiry and session identifiers; started/activity timestamps; source Page URL; conversation summaries/recaps; classification such as anonymous/contact-bearing or high-intent; and related request or delivery states.</p>
+            <p><strong>Customer workspace content:</strong> uploaded business files, extracted searchable text, Knowledge Notes, Question Review items and approved answers, settings and Instructions, and private Internal Notes entered by the website owner.</p>
+            <p><strong>Optional community support:</strong> supporter name/handle, submitted amount/currency/channel, optional proof or receipt, consent/visibility choices, review and verification state. A report of support is not itself proof of completed payment.</p>
+            <p><strong>Technical information:</strong> limited request, device/browser, authorization, diagnostic, security and error information reasonably necessary for the operation and protection of enabled services. This document does not assert an exhaustive tracking-technology or cookie inventory; the deployed website and integrations should be separately inventoried and any required cookie notice or preference controls provided.</p>
+            <h2>4. Anonymous Inquiries and Lead Capture Choices</h2>
+            <p>Customer Lead Capture modes include <strong>Off, Soft capture, and Required</strong>. Required may require a valid name, email address and phone number before entering the conversation. Soft capture allows conversations before an optional request for contact information. Off disables the normal contact-capture form or invitation for that mode.</p>
+            <p><strong>Off does not mean that no data is saved.</strong> A meaningful chat or voice conversation may still be retained as an anonymous inquiry; validated contact details voluntarily provided in chat or speech may be associated with the same inquiry. Lead Capture Off also does not independently disable eligible customer-configured notifications. A name or “Visitor #” label does not necessarily identify a person across visits or devices.</p>
+            <h2>5. Why Information Is Processed</h2>
+            <p>Depending on the context and the applicable lawful basis, we or the website owner may use data to: operate accounts and installations; authenticate users; supply and secure the widget and dashboard; answer questions using customer-approved Knowledge; retain inquiries and contact information; generate conversation recaps; recognize follow-up preferences; organize Question Review; produce configured email or Web Push alerts; support customers; investigate misuse; prevent fraud and unauthorized access; comply with applicable law; and protect legal rights.</p>
+            <p>The appropriate lawful basis may include consent, contractual necessity, legal obligation, legitimate interests where applicable, or another basis permitted under law. <strong>We do not assert that consent is automatically obtained simply because a visitor opens a widget.</strong> The website owner must select and provide an appropriate notice and basis for its uses, including follow-up marketing where required.</p>
+            <h2>6. AI-Assisted Conversations and Summaries</h2>
+            <p>An enabled customer-selected AI provider may receive relevant visitor messages, approved business Knowledge, public business context and system instructions needed to answer a request or prepare a recap. Summaries and recaps may reflect a visitor's purpose, follow-up preference, contact information and stated next steps. These outputs may be incomplete or inaccurate and should be reviewed before important decisions.</p>
+            <p>HeyNaj Flow does not itself use customer-controlled inquiry content or business Knowledge to train a generalized public-facing AI model. <strong>This statement does not override the selected provider's separate terms or retention and training settings.</strong> Website owners should review the provider agreement and configuration they select.</p>
+            <p>Automated rules may recognize contact-bearing, high-intent or priority inquiries and eligibility for notifications. These are workflow signals, not verified conclusions about an individual or a substitute for human decisions in legal, credit, employment, health, or similarly consequential matters.</p>
+            <h2>7. Text, Standard Voice and Premium Live Voice</h2>
+            <p><strong>Text Only</strong> sends the relevant typed conversation to the configured answering system. <strong>Standard Voice</strong> relies on compatible browser/device speech recognition and synthesis; its recognized text may be processed and saved as the inquiry transcript. The browser, operating system or device speech services may independently process audio in accordance with their own practices.</p>
+            <p><strong>Premium Live Voice</strong> may send microphone audio, transcript events, approved contextual Knowledge, instructions and relevant conversation state to a supported realtime provider such as OpenAI Realtime or Google Gemini Live. Where available, captions/transcripts may be shown and conversation evidence retained for history, contact capture, recap and notification workflows. Speech quality and availability depend on the browser, provider and account configuration.</p>
+            <p>Visitors should not share passwords, payment credentials, sensitive identity documents or unnecessary sensitive information by voice or text.</p>
+            <h2>8. Knowledge Documents and PDF Handling</h2>
+            <p>The accepted current system supports new <strong>TXT, MD, DOCX and PDF</strong> uploads, up to <strong>2 MiB per file</strong>. Selectable-text PDF extraction runs in the authenticated dashboard browser through a local browser Web Worker; extracted searchable text and original file are then submitted to the customer's workspace. PDF extraction does not use an external AI extraction service or OCR. Scanned/image-only PDF images are not converted to searchable text; mixed PDFs yield only selectable text. PDF processing is limited to 100 pages, a 30-second worker deadline and 100,000 searchable extracted characters. Legacy `.doc` files may remain historically stored but are not accepted for new uploads or replacement.</p>
+            <p>When a customer subsequently asks the assistant to use approved Knowledge, relevant extracted text may be supplied to that customer's selected AI provider. Customers must have authority to upload and use the documents and must not include unnecessary confidential or sensitive personal information.</p>
+            <h2>9. Source Page URL</h2>
+            <p>For embedded widgets, the source Page URL is generally captured <strong>at session creation</strong> and stores the HTTP(S) origin plus pathname, <strong>without query parameters or fragments</strong>. It normally remains the source for that inquiry rather than continuously recording navigation. An embedded source exchange may fail, leaving attribution unknown; direct widget use may identify the widget URL instead.</p>
+            <p>Page URL gives the owner context for the inquiry; it is <strong>not</strong> a promise of full web analytics, UTM tracking, complete browsing history or proof of website ownership.</p>
+            <h2>10. Customer Dashboard and Internal Notes</h2>
+            <p>The customer dashboard presents a bounded recent set (currently the latest <strong>100 active inquiries</strong>), while older records may remain retained. Display limits are <strong>not</strong> retention limits. Authorized customer users may view transcripts, summaries, contact information, Page URL, read/priority state and other inquiry information. A customer may save a private Internal Note, which is not published to visitors or automatically used as AI Knowledge.</p>
+            <p>The customer may delete individual or selected inquiry records through supported controls. A CSV export covers loaded/selected information and should not be treated as a complete export of every archived transcript or record.</p>
+            <h2>11. Email and Web Push</h2>
+            <p>Customers may connect permitted sender services and choose eligible inquiry notifications. Available inquiry-scope choices currently include <strong>Important inquiries only</strong> and <strong>All inquiries</strong>, with delivery choices <strong>Email only</strong>, <strong>Push only</strong>, or <strong>Email and push</strong>; there is not a current global “None” setting. A manually starred inquiry is not the same thing as automatic high-intent qualification. A qualifying anonymous inquiry may still trigger an alert.</p>
+            <p>Inquiry emails may contain selected contact information, the conversation recap or summary snapshot, inquiry metadata and a link to view the conversation. Email-sending integrations, including supported Gmail/Google Workspace connections, are intended for sender authorization and sending—not general inbox reading. Browser/device push-subscription information is used for configured Web Push; push content is generally more limited than the full authenticated conversation.</p>
+            <p>Sending an alert may involve the customer's chosen email provider, recipient mailbox, push infrastructure and other services. Delivery may be delayed or unavailable. Providers and recipients can independently retain messages already sent.</p>
+            <h2>12. Third Parties and International Processing</h2>
+            <p>Data may be processed through the customer's Cloudflare Worker/D1 resources and, depending on enabled functionality, the HeyNaj Flow Control service, Cloudflare, Google, OpenAI, a supported email sender such as Resend/Mailgun/Postmark/Microsoft, relevant browser/device speech functions and Web Push infrastructure. Optional donation transactions take place through the chosen payment channel, potentially PayPal, Wise, GCash or GoTyme. Not every provider receives every category of data.</p>
+            <p>Information may be handled outside the Philippines. Customer-owned Cloudflare hosting does not mean data never leaves the customer's account. Connected providers may operate under contracts directly with the customer or, where applicable, as our subprocessors. We will use or support legally required safeguards appropriate to our actual role; customer-selected provider terms also apply.</p>
+            <h2>13. Google User Data and Connected Sender Permissions</h2>
+            <p>Where a customer authorizes a Google account for inquiry email sending, the Service uses only the relevant authorized sender identity, tokens and sending functionality necessary for the enabled purpose and requested connection tests. <strong>It is not intended to read the customer's Gmail inbox, search messages, extract mailbox content for Knowledge, or sell Google user data.</strong> Customer Content is not made available to a generalized AI model merely because a Gmail sender is connected.</p>
+            <p>Google API data will be used, transferred and retained only in accordance with the relevant authorized function and applicable Google API Services User Data Policy, including the Limited Use requirements where applicable. We do not sell such data or use it for advertising. We do not allow humans to read Google user data except where valid consent or another applicable Limited Use exception permits it (for example, security investigation, necessary support, legal compliance, or appropriately aggregated internal operations). Revoking an authorization may stop future sending, but it does not recall delivered email or necessarily erase independently retained provider data. Customers may also revoke app access in the connected provider's account settings.</p>
+            <h2>14. Community Support and Public Recognition</h2>
+            <p>Optional coffee contributions do not change ordinary HeyNaj Flow feature access. Submitted supporter information and optional receipts are used to review a support report. Only verified, consented and non-hidden entries should appear publicly. A public listing may show a handle and amount/currency; payment details or full receipts should not be public. Published leaderboards currently load a bounded set rather than an exhaustive donor register. Customers and supporters should avoid supplying unnecessary financial, identification or sensitive information in receipts.</p>
+            <h2>15. Security, Access, and Misuse Protection</h2>
+            <p>We use reasonable risk-appropriate technical and organizational controls for functions under our control, including authenticated access, workspace separation, restricted public configuration, and protected integration secrets where supported. No system is immune to threats. We do <strong>not</strong> promise end-to-end encryption, zero third-party retention, absolute prevention of unauthorized access, or a security certification not independently obtained.</p>
+            <p>Customers are responsible for the legality of the website they operate and the visitor information they collect, for lawful notices and communications, for maintaining their credentials, and for configuring third-party accounts securely. Fraud, impersonation, phishing, illegal surveillance, unlawful personal-data collection and similar misuse are prohibited by the Terms. We may investigate credible reports, restrict abusive use, preserve records where lawful, and cooperate with valid court or regulatory demands. We do not routinely certify the legality of every customer site or review every conversation in advance. <strong>Nothing here relieves us of our own legal obligations or protects any person from liability for that person's own unlawful acts.</strong></p>
+            <p>Report suspected abuse or security issues to <a href="mailto:heynajflow@gmail.com">heynajflow@gmail.com</a>. We will assess reports in light of available evidence, safety, applicable law and the scope of our actual access to the customer's systems.</p>
+            <h2>16. Retention and Deletion</h2>
+            <p>We retain information only as long as reasonably necessary for the relevant lawful purposes, customer instructions, security, legal compliance, legal claims and service operation. Customer workspace records may remain until deleted under available controls or an applicable account/workspace deletion process. <strong>The latest-100 dashboard limit is not a deletion schedule.</strong> Retention periods may differ for credentials, logs, support, billing/donation verification, sent notifications and third-party copies.</p>
+            <p>Users and customers may request applicable access, correction, blocking, deletion or other privacy action. We will assess requests according to the data controller's role, the location of the information, legal retention requirements and what the Service can technically perform. Deletion from HeyNaj Flow cannot guarantee removal of information independently held by a recipient, provider or customer-controlled backup.</p>
+            <h2>17. Data Subject Rights</h2>
+            <p>Subject to law and the actual controller/processor relationship, individuals may have rights to notice, access, objection, correction, erasure or blocking, data portability, and other statutory rights; they may also complain to the Philippine National Privacy Commission where appropriate. To make a request, contact <a href="mailto:heynajflow@gmail.com">heynajflow@gmail.com</a>, providing enough non-sensitive detail to locate the data. Requests for a customer website's visitor records may need to be addressed to that website owner as controller. We will not disclose someone else's inquiry or private data merely because a requester claims ownership of it; verification may be required.</p>
+            <h2>18. Children and Sensitive Data</h2>
+            <p>The Service is a general business website-assistance tool and is not presented as a dedicated children's service, healthcare records system, payment-card vault or other specially regulated data platform. Customers must not use it to collect sensitive personal information or children's data without the legal basis, required notices and safeguards applicable to their use. Visitors should avoid providing sensitive information that is not necessary for their inquiry. If such information is submitted, it may exist in the conversation until lawfully removed.</p>
+            <h2>19. Data Breaches</h2>
+            <p>We will investigate credible reports of security incidents involving data within our responsibility and take reasonable containment and remedial steps. Where an incident is a notifiable personal data breach, the relevant controller or other legally responsible party must meet mandatory Philippine notification requirements, including applicable <strong>72-hour</strong> rules. When acting as processor, we will inform and assist the customer without undue delay with available facts, subject to law, feasibility, security and the actual incident. We will not knowingly conceal a reportable breach or promise that contract wording overrides mandatory reporting duties.</p>
+            <h2>20. Changes and Contact</h2>
+            <p>We may update this Privacy Policy for changes in functionality, providers, law or practice. The displayed updated date identifies the version. When legally required, we will provide additional notice or seek the relevant agreement/consent before processing in a materially different way. Earlier practices are not retrospectively rewritten by posting new text.</p>
+            <p><strong>Contact:</strong> <a href="mailto:heynajflow@gmail.com">heynajflow@gmail.com</a></p>
+            <p><strong>Related policies:</strong> <a href="/terms-of-service.html">Terms of Service</a> · <a href="/data-handling-policy.html">Data Handling Policy</a></p>
 
-            <p>This Privacy Policy explains how HeyNaj Flow collects, uses, shares, and protects personal data when you visit our website, interact with our chat widget, use our services, or communicate with us.</p>
-
-            <h2>1. Who We Are</h2>
-            <p>HeyNaj Flow is operated by Renzhu Rhy Tayko, doing business as HeyNaj Flow.</p>
-            <ul>
-                <li>Name: Renzhu Rhy Tayko</li>
-                <li>Brand Name: HeyNaj Flow</li>
-                <li>Address: Batinguel, Dumaguete City, Negros Oriental 6200, Philippines</li>
-                <li>Email: heynajflow@gmail.com</li>
-                <li>Website: https://heynajflow.com</li>
-                <li>Privacy Contact: heynajflow@gmail.com</li>
-            </ul>
-
-            <h2>2. Who This Policy Applies To</h2>
-            <p>This Privacy Policy applies to website visitors, prospective customers, customers and their representatives, people who submit materials through a secured folder or another approved channel, website visitors who interact with a HeyNaj Flow widget, and other individuals whose personal data we process in connection with the Service.</p>
-            <p>Depending on the situation, HeyNaj Flow may act as a data controller for its own business purposes or as a data processor or service provider on behalf of a customer.</p>
-
-            <h2>3. Personal Data We Collect</h2>
-            <p>We may collect:</p>
-            <ul>
-                <li>name, email, phone number, company details, billing and contact details;</li>
-                <li>communications, onboarding details, instructions, preferences, branding materials, booking links, and promotion details;</li>
-                <li>files, FAQs, and other submitted business content used to configure the Service;</li>
-                <li>chat messages, conversation transcripts, lead form responses, booking or routing details, summaries, abandonment data, and support requests;</li>
-                <li>voice messages or related audio interaction data where voice features are enabled;</li>
-                <li>device information, browser information, IP address, approximate location, cookies, analytics, and navigation data; and</li>
-                <li>information from connected tools, public business websites, or business contacts shared by partners, agencies, affiliates, or resellers.</li>
-            </ul>
-
-            <h2>4. How We Use Personal Data</h2>
-            <ul>
-                <li>provide, operate, and support the Service;</li>
-                <li>configure and maintain chat widgets, workflows, support tools, and optional dashboards or apps;</li>
-                <li>process customer knowledge materials and instructions;</li>
-                <li>generate AI-assisted responses based on configured sources and rules;</li>
-                <li>capture, route, summarize, and store leads or inquiries;</li>
-                <li>send notifications, abandonment alerts, operational alerts, and follow-up communications;</li>
-                <li>coordinate onboarding, setup, deployment, updates, and support;</li>
-                <li>manage billing, renewals, invoicing, and commercial relationships;</li>
-                <li>analyze product performance, usage, and quality; and</li>
-                <li>prevent misuse, fraud, or security incidents and comply with legal obligations.</li>
-            </ul>
-
-            <h2>5. Legal Bases for Processing</h2>
-            <p>Where required by applicable law, we may rely on performance of a contract, legitimate interests, consent, compliance with legal obligations, and the establishment, exercise, or defense of legal claims.</p>
-
-            <h2>6. How We Share Personal Data</h2>
-            <p>We may share personal data with hosting, storage, document, workflow, communication, support, analytics, security, booking, CRM, and AI providers, as well as professional advisers, affiliates, successors, acquirers, regulators, courts, or law enforcement where reasonably necessary or required by law.</p>
-
-            <h2>7. AI-Specific Processing</h2>
-            <p>HeyNaj Flow may process uploaded business content and FAQs, prompts, messages, AI-generated responses, voice inputs and outputs where enabled, lead details, fallback messages, routing rules, booking links, and lead-capture settings in order to configure and operate the customer's deployment.</p>
-            <p>Customer business content submitted for a customer deployment is not used by HeyNaj Flow to train public-facing open AI models for general use, except where a customer separately instructs, authorizes, or enables a workflow that clearly requires that use.</p>
-
-            <h2>8. International Transfers</h2>
-            <p>Because the Service may use third-party providers and cloud-based tools, personal data may be processed in countries other than your own. Where required, we use reasonable steps and appropriate safeguards for such transfers.</p>
-
-            <h2>9. Data Retention</h2>
-            <p>We keep personal data only as long as reasonably necessary for providing the Service, maintaining records, handling support and follow-up, complying with legal, tax, accounting, or regulatory obligations, resolving disputes, and enforcing our agreements.</p>
-
-            <h2>10. Security</h2>
-            <p>We use commercially reasonable technical and organizational measures to help protect personal data. These may include access controls, secured third-party systems, logging, monitoring, and internal handling procedures. No method of transmission, storage, or processing is completely secure, and we cannot guarantee absolute security.</p>
-
-            <h2>11. Your Rights</h2>
-            <p>Depending on your location and applicable law, you may have rights to access, correct, delete, restrict, object, request portability, withdraw consent, and lodge a complaint with a competent authority.</p>
-            <p>To exercise these rights, contact heynajflow@gmail.com. If we process your data on behalf of a customer, we may direct your request to that customer or work with that customer to respond.</p>
-
-            <h2>12. Cookies and Similar Technologies</h2>
-            <p>We may use cookies and similar technologies to operate and secure the website, remember preferences, understand traffic and usage patterns, and improve website content, functionality, and performance. If required by law, we will request consent for non-essential cookies.</p>
-
-            <h2>13. Children's Data</h2>
-            <p>HeyNaj Flow is not intended for children under 18, and we do not knowingly collect personal data from children in violation of applicable law.</p>
-
-            <h2>14. Third-Party Websites and Services</h2>
-            <p>The Service may link to or interact with third-party websites, platforms, booking services, storage providers, and other tools. We are not responsible for the privacy practices of those third parties.</p>
-
-            <h2>15. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. If we make material changes, we may post the updated version on our website, revise the "Last Updated" date, or provide notice through another reasonable method.</p>
-
-            <h2>16. Contact</h2>
-            <p>For privacy questions, requests, or complaints, contact heynajflow@gmail.com.</p>
-
-            <div class="legal-links">
-                <a href="/terms-of-service.html">Terms of Service</a>
-                <a href="/data-handling-policy.html">Data Handling Policy</a>
+            <div class="legal-policy-links">
+                <a class="legal-policy-link" href="/terms-of-service.html">Terms of Service</a>
+                <a class="legal-policy-link" href="/data-handling-policy.html">Data Handling Policy</a>
             </div>
         </main>
 
-        <footer>
-            <div class="footer-note">
-                <div>&copy; 2026 HeyNaj Flow. All rights reserved.</div>
-                <div>Built to help websites answer faster and capture cleaner leads.</div>
-            </div>
-        </footer>
     </div>
+
+        <!-- SITE_FOOTER:START -->
+<footer class="site-footer">
+  <div class="site-footer-panel">
+    <div class="footer-grid slim">
+      <div>
+        <div class="site-footer-brand"><img src="https://res.cloudinary.com/dt5j91krt/image/upload/v1775798166/HeyNaj_Logo_Widget_sfb5pe.png" alt="HeyNaj Flow logo" class="footer-brand-logo" width="40" height="40"><div class="site-footer-brand-name">HeyNaj Flow</div></div>
+        <p class="site-footer-description">Website conversations don&rsquo;t have to stop when you sleep.</p>
+      </div>
+      <div class="site-footer-action"><a href="https://heynajflow.com/get-started/" class="site-footer-cta">Get Started</a></div>
+    </div>
+  </div>
+  <div class="site-footer-legal">
+    <p>&copy; 2026 HeyNaj Flow. All rights reserved.</p>
+    <nav aria-label="Legal"><a href="/terms-of-service.html">Terms of Service</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/data-handling-policy.html">Data Handling Policy</a><a href="https://www.linkedin.com/company/heynajflow/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav>
+  </div>
+</footer>
+<!-- SITE_FOOTER:END -->
 </body>
 </html>
 
